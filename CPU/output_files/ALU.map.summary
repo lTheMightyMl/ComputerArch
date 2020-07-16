@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Jul 14 00:58:52 2020
+Analysis & Synthesis Status : Successful - Fri Jul 17 02:31:20 2020
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : ALU
-Top-level Entity Name : CPU
+Top-level Entity Name : HW7
 Family : Cyclone II
-Total logic elements : 615
-    Total combinational functions : 615
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 110
+Total logic elements : 2,457
+    Total combinational functions : 2,457
+    Dedicated logic registers : 992
+Total registers : 992
+Total pins : 114
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
