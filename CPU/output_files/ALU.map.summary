@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Jul 17 02:31:20 2020
+Analysis & Synthesis Status : Successful - Sat Jul 18 02:41:15 2020
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : ALU
-Top-level Entity Name : HW7
+Top-level Entity Name : MEM_TEST
 Family : Cyclone II
-Total logic elements : 2,457
-    Total combinational functions : 2,457
-    Dedicated logic registers : 992
-Total registers : 992
-Total pins : 114
+Total logic elements : 30
+    Total combinational functions : 30
+    Dedicated logic registers : 30
+Total registers : 30
+Total pins : 75
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 8,192
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

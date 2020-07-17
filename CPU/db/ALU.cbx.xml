@@ -1,39 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="ALU">
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst65|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst74|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst83|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_decode1:inst51|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_isf.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst66|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst75|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst84|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst67|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst76|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst85|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst59|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst60|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst68|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst77|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst86|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst61|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst69|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst70|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst78|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst87|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux0:inst10|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_0qc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst62|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst71|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst79|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst80|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst88|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux0:inst11|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_0qc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst63|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst72|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst81|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst89|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst64|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst73|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HW7|lpm_mux1:inst82|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MEM_TEST|ICACHE_TWO:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_oo71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MEM_TEST|PC:inst2|lpm_add_sub0:inst3|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_dph.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MEM_TEST|PC:inst2|lpm_mux1:inst7|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
