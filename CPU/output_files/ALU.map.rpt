@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Tue Jul 21 22:34:22 2020
+Wed Jul 22 00:57:14 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -18,7 +18,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated
+ 13. Source assignments for ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated
  14. Parameter Settings for User Entity Instance: ALU:inst106|cmp:inst5|lpm_compare:LPM_COMPARE_component
  15. Parameter Settings for User Entity Instance: ALU:inst106|zero:inst8|lpm_compare:LPM_COMPARE_component
  16. Parameter Settings for User Entity Instance: ALU:inst106|out:inst7|lpm_mux:LPM_MUX_component
@@ -30,7 +30,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  22. Parameter Settings for User Entity Instance: LPM_DFF:IR
  23. Parameter Settings for User Entity Instance: CU:inst3|lpm_shiftreg2:inst1000|lpm_shiftreg:LPM_SHIFTREG_component
  24. Parameter Settings for User Entity Instance: CU:inst3|lpm_add_sub1:inst9|lpm_add_sub:LPM_ADD_SUB_component
- 25. Parameter Settings for User Entity Instance: ICACHE20:inst|altsyncram:altsyncram_component
+ 25. Parameter Settings for User Entity Instance: ICACHE40:inst|altsyncram:altsyncram_component
  26. Parameter Settings for User Entity Instance: NEW_PC:inst1|lpm_shiftreg5:inst9|lpm_shiftreg:LPM_SHIFTREG_component
  27. Parameter Settings for User Entity Instance: NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst2|lpm_mux:LPM_MUX_component
  28. Parameter Settings for User Entity Instance: NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst|lpm_mux:LPM_MUX_component
@@ -136,7 +136,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jul 21 22:34:22 2020           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 22 00:57:13 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; CPU                                             ;
@@ -145,7 +145,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 3,382                                           ;
 ;     Dedicated logic registers      ; 1,146                                           ;
 ; Total registers                    ; 1146                                            ;
-; Total pins                         ; 158                                             ;
+; Total pins                         ; 190                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 655,360                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -248,93 +248,93 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
-; HW6/sign_extend.bdf              ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/HW6/sign_extend.bdf                        ;         ;
-; HW6/Shift_left2_32bit.bdf        ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/HW6/Shift_left2_32bit.bdf                  ;         ;
-; HW6/shift_left_2_26bit.bdf       ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/HW6/shift_left_2_26bit.bdf                 ;         ;
-; HW6/PC_comb_logic.bdf            ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/HW6/PC_comb_logic.bdf                      ;         ;
-; HW6/FA_32bit.bdf                 ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_32bit.bdf                           ;         ;
-; HW6/FA_16bit.bdf                 ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_16bit.bdf                           ;         ;
-; HW6/FA_4bit.bdf                  ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_4bit.bdf                            ;         ;
-; HW6/FA_1bit.bdf                  ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_1bit.bdf                            ;         ;
-; HW7/lpm_shiftreg0.v              ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v                        ;         ;
-; HW7/lpm_mux1.v                   ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v                             ;         ;
-; HW7/lpm_mux0.v                   ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux0.v                             ;         ;
-; HW7/lpm_decode1.v                ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_decode1.v                          ;         ;
-; HW7/lpm_constant0.v              ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_constant0.v                        ;         ;
-; HW7/HW7.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/HW7/HW7.bdf                                ;         ;
-; ALU.bdf                          ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/ALU.bdf                                    ;         ;
-; add.v                            ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/add.v                                      ;         ;
-; sub.v                            ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/sub.v                                      ;         ;
-; shr.v                            ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/shr.v                                      ;         ;
-; shl.v                            ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/shl.v                                      ;         ;
-; cmp.v                            ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/cmp.v                                      ;         ;
-; min.v                            ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/min.v                                      ;         ;
-; out.v                            ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/out.v                                      ;         ;
-; zero.v                           ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/zero.v                                     ;         ;
-; CPU.bdf                          ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/CPU.bdf                                    ;         ;
-; ZERO_EXT10.bdf                   ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/ZERO_EXT10.bdf                             ;         ;
-; CU.bdf                           ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/CU.bdf                                     ;         ;
-; lpm_add_sub1.v                   ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/lpm_add_sub1.v                             ;         ;
-; ICACHE20.v                       ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/ICACHE20.v                                 ;         ;
-; lpm_shiftreg2.v                  ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/lpm_shiftreg2.v                            ;         ;
-; CPU.mif                          ; yes             ; User Memory Initialization File    ; D:/altera/13.0sp1/Projects/CPU/CPU.mif                                    ;         ;
-; HW6/lpm_mux3.v                   ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_mux3.v                             ;         ;
-; HW6/lpm_constant2.v              ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_constant2.v                        ;         ;
-; HW6/lpm_constant3.v              ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_constant3.v                        ;         ;
-; HW6/NEW_PC.bdf                   ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/CPU/HW6/NEW_PC.bdf                             ;         ;
-; HW6/lpm_shiftreg5.v              ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_shiftreg5.v                        ;         ;
-; lpm_constantzero.v               ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/lpm_constantzero.v                         ;         ;
-; lpm_constantminusOne.v           ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/lpm_constantminusOne.v                     ;         ;
-; lpm_mux10.v                      ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/CPU/lpm_mux10.v                                ;         ;
-; lpm_compare.tdf                  ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
-; comptree.inc                     ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/comptree.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
-; db/cmpr_6mg.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/cmpr_6mg.tdf                            ;         ;
-; db/cmpr_2hi.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/cmpr_2hi.tdf                            ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; db/mux_hoc.tdf                   ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/mux_hoc.tdf                             ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
-; addcore.inc                      ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
-; look_add.inc                     ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_4mi.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/add_sub_4mi.tdf                         ;         ;
-; db/add_sub_nfh.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/add_sub_nfh.tdf                         ;         ;
-; lpm_clshift.tdf                  ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_clshift.tdf         ;         ;
-; db/lpm_clshift_vjc.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/lpm_clshift_vjc.tdf                     ;         ;
-; db/lpm_clshift_ukb.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/lpm_clshift_ukb.tdf                     ;         ;
-; db/mux_9oc.tdf                   ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/mux_9oc.tdf                             ;         ;
-; lpm_dff.tdf                      ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_dff.tdf             ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
-; lpm_shiftreg.tdf                 ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_shiftreg.tdf        ;         ;
-; db/add_sub_qnh.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/add_sub_qnh.tdf                         ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc              ;         ;
-; altram.inc                       ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc              ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_4071.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/altsyncram_4071.tdf                     ;         ;
-; db/decode_9oa.tdf                ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/decode_9oa.tdf                          ;         ;
-; db/mux_3kb.tdf                   ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/mux_3kb.tdf                             ;         ;
-; db/mux_boc.tdf                   ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/mux_boc.tdf                             ;         ;
-; lpm_constant.tdf                 ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.tdf        ;         ;
-; db/mux_0qc.tdf                   ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/mux_0qc.tdf                             ;         ;
-; lpm_decode.tdf                   ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.tdf          ;         ;
-; declut.inc                       ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/declut.inc              ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
-; db/decode_isf.tdf                ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/CPU/db/decode_isf.tdf                          ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+; HW6/sign_extend.bdf              ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/sign_extend.bdf                        ;         ;
+; HW6/Shift_left2_32bit.bdf        ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/Shift_left2_32bit.bdf                  ;         ;
+; HW6/shift_left_2_26bit.bdf       ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/shift_left_2_26bit.bdf                 ;         ;
+; HW6/PC_comb_logic.bdf            ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/PC_comb_logic.bdf                      ;         ;
+; HW6/FA_32bit.bdf                 ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_32bit.bdf                           ;         ;
+; HW6/FA_16bit.bdf                 ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_16bit.bdf                           ;         ;
+; HW6/FA_4bit.bdf                  ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_4bit.bdf                            ;         ;
+; HW6/FA_1bit.bdf                  ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_1bit.bdf                            ;         ;
+; HW7/lpm_shiftreg0.v              ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v                        ;         ;
+; HW7/lpm_mux1.v                   ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v                             ;         ;
+; HW7/lpm_mux0.v                   ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux0.v                             ;         ;
+; HW7/lpm_decode1.v                ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_decode1.v                          ;         ;
+; HW7/lpm_constant0.v              ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_constant0.v                        ;         ;
+; HW7/HW7.bdf                      ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW7/HW7.bdf                                ;         ;
+; ALU.bdf                          ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/ALU.bdf                                    ;         ;
+; add.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/add.v                                      ;         ;
+; sub.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/sub.v                                      ;         ;
+; shr.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/shr.v                                      ;         ;
+; shl.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/shl.v                                      ;         ;
+; cmp.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/cmp.v                                      ;         ;
+; min.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/min.v                                      ;         ;
+; out.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/out.v                                      ;         ;
+; zero.v                           ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/zero.v                                     ;         ;
+; CPU.bdf                          ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/CPU.bdf                                    ;         ;
+; ZERO_EXT10.bdf                   ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/ZERO_EXT10.bdf                             ;         ;
+; CU.bdf                           ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/CU.bdf                                     ;         ;
+; lpm_add_sub1.v                   ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/lpm_add_sub1.v                             ;         ;
+; lpm_shiftreg2.v                  ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/lpm_shiftreg2.v                            ;         ;
+; HW6/lpm_mux3.v                   ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_mux3.v                             ;         ;
+; HW6/lpm_constant2.v              ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_constant2.v                        ;         ;
+; HW6/lpm_constant3.v              ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_constant3.v                        ;         ;
+; HW6/NEW_PC.bdf                   ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/NEW_PC.bdf                             ;         ;
+; HW6/lpm_shiftreg5.v              ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_shiftreg5.v                        ;         ;
+; lpm_constantzero.v               ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/lpm_constantzero.v                         ;         ;
+; lpm_constantminusOne.v           ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/lpm_constantminusOne.v                     ;         ;
+; lpm_mux10.v                      ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/lpm_mux10.v                                ;         ;
+; ICACHE40.v                       ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/ICACHE40.v                                 ;         ;
+; lpm_compare.tdf                  ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
+; comptree.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/comptree.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; db/cmpr_6mg.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/cmpr_6mg.tdf                            ;         ;
+; db/cmpr_2hi.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/cmpr_2hi.tdf                            ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; db/mux_hoc.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/mux_hoc.tdf                             ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_4mi.tdf               ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/add_sub_4mi.tdf                         ;         ;
+; db/add_sub_nfh.tdf               ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/add_sub_nfh.tdf                         ;         ;
+; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_clshift.tdf         ;         ;
+; db/lpm_clshift_vjc.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/lpm_clshift_vjc.tdf                     ;         ;
+; db/lpm_clshift_ukb.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/lpm_clshift_ukb.tdf                     ;         ;
+; db/mux_9oc.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/mux_9oc.tdf                             ;         ;
+; lpm_dff.tdf                      ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_dff.tdf             ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_shiftreg.tdf        ;         ;
+; db/add_sub_qnh.tdf               ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/add_sub_qnh.tdf                         ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_ht71.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/altsyncram_ht71.tdf                     ;         ;
+; instruction4.mif                 ; yes             ; Auto-Found Memory Initialization File  ; D:/altera/13.0sp1/Projects/CPU/instruction4.mif                           ;         ;
+; db/decode_9oa.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/decode_9oa.tdf                          ;         ;
+; db/mux_3kb.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/mux_3kb.tdf                             ;         ;
+; db/mux_boc.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/mux_boc.tdf                             ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.tdf        ;         ;
+; db/mux_0qc.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/mux_0qc.tdf                             ;         ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.tdf          ;         ;
+; declut.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/declut.inc              ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; db/decode_isf.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/decode_isf.tdf                          ;         ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -358,13 +358,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- Dedicated logic registers            ; 1146   ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 158    ;
+; I/O pins                                    ; 190    ;
 ; Total memory bits                           ; 655360 ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; CLOCK  ;
 ; Maximum fan-out                             ; 1306   ;
-; Total fan-out                               ; 17673  ;
-; Average fan-out                             ; 3.65   ;
+; Total fan-out                               ; 17705  ;
+; Average fan-out                             ; 3.63   ;
 +---------------------------------------------+--------+
 
 
@@ -373,7 +373,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |CPU                                           ; 3382 (0)          ; 1146 (0)     ; 655360      ; 0            ; 0       ; 0         ; 158  ; 0            ; |CPU                                                                                                     ; work         ;
+; |CPU                                           ; 3382 (0)          ; 1146 (0)     ; 655360      ; 0            ; 0       ; 0         ; 190  ; 0            ; |CPU                                                                                                     ; work         ;
 ;    |ALU:inst106|                               ; 576 (2)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ALU:inst106                                                                                         ; work         ;
 ;       |add:inst|                               ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ALU:inst106|add:inst                                                                                ; work         ;
 ;          |lpm_add_sub:LPM_ADD_SUB_component|   ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ALU:inst106|add:inst|lpm_add_sub:LPM_ADD_SUB_component                                              ; work         ;
@@ -567,11 +567,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_shiftreg:LPM_SHIFTREG_component| ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|HW7:RF|lpm_shiftreg0:inst53|lpm_shiftreg:LPM_SHIFTREG_component                                     ; work         ;
 ;       |lpm_shiftreg0:inst54|                   ; 0 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|HW7:RF|lpm_shiftreg0:inst54                                                                         ; work         ;
 ;          |lpm_shiftreg:LPM_SHIFTREG_component| ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|HW7:RF|lpm_shiftreg0:inst54|lpm_shiftreg:LPM_SHIFTREG_component                                     ; work         ;
-;    |ICACHE20:inst|                             ; 108 (0)           ; 6 (0)        ; 655360      ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ICACHE20:inst                                                                                       ; work         ;
-;       |altsyncram:altsyncram_component|        ; 108 (0)           ; 6 (0)        ; 655360      ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ICACHE20:inst|altsyncram:altsyncram_component                                                       ; work         ;
-;          |altsyncram_4071:auto_generated|      ; 108 (0)           ; 6 (6)        ; 655360      ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated                        ; work         ;
-;             |decode_9oa:deep_decode|           ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated|decode_9oa:deep_decode ; work         ;
-;             |mux_3kb:mux2|                     ; 100 (100)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated|mux_3kb:mux2           ; work         ;
+;    |ICACHE40:inst|                             ; 108 (0)           ; 6 (0)        ; 655360      ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ICACHE40:inst                                                                                       ; work         ;
+;       |altsyncram:altsyncram_component|        ; 108 (0)           ; 6 (0)        ; 655360      ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ICACHE40:inst|altsyncram:altsyncram_component                                                       ; work         ;
+;          |altsyncram_ht71:auto_generated|      ; 108 (0)           ; 6 (6)        ; 655360      ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated                        ; work         ;
+;             |decode_9oa:deep_decode|           ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|decode_9oa:deep_decode ; work         ;
+;             |mux_3kb:mux2|                     ; 100 (100)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|mux_3kb:mux2           ; work         ;
 ;    |NEW_PC:inst1|                              ; 98 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|NEW_PC:inst1                                                                                        ; work         ;
 ;       |PC_comb_logic:inst|                     ; 84 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|NEW_PC:inst1|PC_comb_logic:inst                                                                     ; work         ;
 ;          |FA_32bit:inst10|                     ; 39 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10                                                     ; work         ;
@@ -656,13 +656,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                     ;
-+-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+---------+
-; Name                                                                                    ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF     ;
-+-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+---------+
-; ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 32768        ; 20           ; --           ; --           ; 655360 ; CPU.mif ;
-+-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                              ;
++-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+------------------+
+; Name                                                                                    ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF              ;
++-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+------------------+
+; ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 32768        ; 20           ; --           ; --           ; 655360 ; instruction4.mif ;
++-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -670,7 +670,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-------------------------------------------------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                          ; IP Include File                                       ;
 +--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-------------------------------------------------------+
-; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |CPU|ICACHE20:inst                                       ; D:/altera/13.0sp1/Projects/CPU/ICACHE20.v             ;
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |CPU|ICACHE40:inst                                       ; D:/altera/13.0sp1/Projects/CPU/ICACHE40.v             ;
 ; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst       ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_mux3.v         ;
 ; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst2      ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_mux3.v         ;
 ; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_constant2:inst3 ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_constant2.v    ;
@@ -800,7 +800,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------------------------------------------------+
-; Source assignments for ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated ;
+; Source assignments for ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                    ;
 +---------------------------------+--------------------+------+---------------------------------------+
@@ -1042,7 +1042,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ICACHE20:inst|altsyncram:altsyncram_component ;
+; Parameter Settings for User Entity Instance: ICACHE40:inst|altsyncram:altsyncram_component ;
 +------------------------------------+----------------------+--------------------------------+
 ; Parameter Name                     ; Value                ; Type                           ;
 +------------------------------------+----------------------+--------------------------------+
@@ -1084,7 +1084,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
-; INIT_FILE                          ; CPU.mif              ; Untyped                        ;
+; INIT_FILE                          ; instruction4.mif     ; Untyped                        ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                        ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                        ;
@@ -1097,7 +1097,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
 ; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                        ;
-; CBXI_PARAMETER                     ; altsyncram_4071      ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_ht71      ; Untyped                        ;
 +------------------------------------+----------------------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -2612,7 +2612,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                      ; Value                                         ;
 +-------------------------------------------+-----------------------------------------------+
 ; Number of entity instances                ; 1                                             ;
-; Entity Instance                           ; ICACHE20:inst|altsyncram:altsyncram_component ;
+; Entity Instance                           ; ICACHE40:inst|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; ROM                                           ;
 ;     -- WIDTH_A                            ; 20                                            ;
 ;     -- NUMWORDS_A                         ; 32768                                         ;
@@ -2631,7 +2631,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:14     ;
+; Top            ; 00:00:15     ;
 +----------------+--------------+
 
 
@@ -2641,7 +2641,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jul 21 22:33:59 2020
+    Info: Processing started: Wed Jul 22 00:56:48 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file hw6/sign_extend.bdf
@@ -2741,6 +2741,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file lpm_con
     Info (12023): Found entity 1: lpm_constantminusOne
 Info (12021): Found 1 design units, including 1 entities, in source file lpm_mux10.v
     Info (12023): Found entity 1: lpm_mux10
+Info (12021): Found 1 design units, including 1 entities, in source file icache30.v
+    Info (12023): Found entity 1: ICACHE30
+Info (12021): Found 1 design units, including 1 entities, in source file icache40.v
+    Info (12023): Found entity 1: ICACHE40
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst106"
 Info (12128): Elaborating entity "cmp" for hierarchy "ALU:inst106|cmp:inst5"
@@ -2856,13 +2860,13 @@ Info (12133): Instantiated megafunction "CU:inst3|lpm_add_sub1:inst9|lpm_add_sub
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_qnh.tdf
     Info (12023): Found entity 1: add_sub_qnh
 Info (12128): Elaborating entity "add_sub_qnh" for hierarchy "CU:inst3|lpm_add_sub1:inst9|lpm_add_sub:LPM_ADD_SUB_component|add_sub_qnh:auto_generated"
-Info (12128): Elaborating entity "ICACHE20" for hierarchy "ICACHE20:inst"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ICACHE20:inst|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "ICACHE20:inst|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "ICACHE20:inst|altsyncram:altsyncram_component" with the following parameter:
+Info (12128): Elaborating entity "ICACHE40" for hierarchy "ICACHE40:inst"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ICACHE40:inst|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "ICACHE40:inst|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "ICACHE40:inst|altsyncram:altsyncram_component" with the following parameter:
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "CPU.mif"
+    Info (12134): Parameter "init_file" = "instruction4.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
@@ -2873,15 +2877,15 @@ Info (12133): Instantiated megafunction "ICACHE20:inst|altsyncram:altsyncram_com
     Info (12134): Parameter "widthad_a" = "15"
     Info (12134): Parameter "width_a" = "20"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4071.tdf
-    Info (12023): Found entity 1: altsyncram_4071
-Info (12128): Elaborating entity "altsyncram_4071" for hierarchy "ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ht71.tdf
+    Info (12023): Found entity 1: altsyncram_ht71
+Info (12128): Elaborating entity "altsyncram_ht71" for hierarchy "ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated"
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_9oa.tdf
     Info (12023): Found entity 1: decode_9oa
-Info (12128): Elaborating entity "decode_9oa" for hierarchy "ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated|decode_9oa:deep_decode"
+Info (12128): Elaborating entity "decode_9oa" for hierarchy "ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|decode_9oa:deep_decode"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_3kb.tdf
     Info (12023): Found entity 1: mux_3kb
-Info (12128): Elaborating entity "mux_3kb" for hierarchy "ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated|mux_3kb:mux2"
+Info (12128): Elaborating entity "mux_3kb" for hierarchy "ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|mux_3kb:mux2"
 Info (12128): Elaborating entity "NEW_PC" for hierarchy "NEW_PC:inst1"
 Info (12128): Elaborating entity "lpm_shiftreg5" for hierarchy "NEW_PC:inst1|lpm_shiftreg5:inst9"
 Info (12128): Elaborating entity "lpm_shiftreg" for hierarchy "NEW_PC:inst1|lpm_shiftreg5:inst9|lpm_shiftreg:LPM_SHIFTREG_component"
@@ -3012,15 +3016,15 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pc[0]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3802 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3834 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 156 output pins
+    Info (21059): Implemented 188 output pins
     Info (21061): Implemented 3484 logic cells
     Info (21064): Implemented 160 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 44 warnings
-    Info: Peak virtual memory: 4674 megabytes
-    Info: Processing ended: Tue Jul 21 22:34:22 2020
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4679 megabytes
+    Info: Processing ended: Wed Jul 22 00:57:14 2020
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:25
 
 

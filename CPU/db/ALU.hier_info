@@ -23,7 +23,7 @@ instr[19] <= LPM_DFF:IR.q[19]
 inst_cache_en <= CU:inst3.INST_MEM_EN
 CLOCK => CU:inst3.clock
 CLOCK => LPM_DFF:IR.clock
-CLOCK => ICACHE20:inst.clock
+CLOCK => ICACHE40:inst.clock
 CLOCK => NEW_PC:inst1.CLOCK
 CLOCK => LPM_DFF:A_REG.clock
 CLOCK => HW7:RF.Clock
@@ -134,6 +134,38 @@ ReadDataTwo[31] <= HW7:RF.Read_Data_2[31]
 zero <= ALU:inst106.zero
 sgn <= ALU:inst106.sgn
 overflow <= ALU:inst106.overflow
+ALU_INSTANT_OUT[0] <= ALU:inst106.out[0]
+ALU_INSTANT_OUT[1] <= ALU:inst106.out[1]
+ALU_INSTANT_OUT[2] <= ALU:inst106.out[2]
+ALU_INSTANT_OUT[3] <= ALU:inst106.out[3]
+ALU_INSTANT_OUT[4] <= ALU:inst106.out[4]
+ALU_INSTANT_OUT[5] <= ALU:inst106.out[5]
+ALU_INSTANT_OUT[6] <= ALU:inst106.out[6]
+ALU_INSTANT_OUT[7] <= ALU:inst106.out[7]
+ALU_INSTANT_OUT[8] <= ALU:inst106.out[8]
+ALU_INSTANT_OUT[9] <= ALU:inst106.out[9]
+ALU_INSTANT_OUT[10] <= ALU:inst106.out[10]
+ALU_INSTANT_OUT[11] <= ALU:inst106.out[11]
+ALU_INSTANT_OUT[12] <= ALU:inst106.out[12]
+ALU_INSTANT_OUT[13] <= ALU:inst106.out[13]
+ALU_INSTANT_OUT[14] <= ALU:inst106.out[14]
+ALU_INSTANT_OUT[15] <= ALU:inst106.out[15]
+ALU_INSTANT_OUT[16] <= ALU:inst106.out[16]
+ALU_INSTANT_OUT[17] <= ALU:inst106.out[17]
+ALU_INSTANT_OUT[18] <= ALU:inst106.out[18]
+ALU_INSTANT_OUT[19] <= ALU:inst106.out[19]
+ALU_INSTANT_OUT[20] <= ALU:inst106.out[20]
+ALU_INSTANT_OUT[21] <= ALU:inst106.out[21]
+ALU_INSTANT_OUT[22] <= ALU:inst106.out[22]
+ALU_INSTANT_OUT[23] <= ALU:inst106.out[23]
+ALU_INSTANT_OUT[24] <= ALU:inst106.out[24]
+ALU_INSTANT_OUT[25] <= ALU:inst106.out[25]
+ALU_INSTANT_OUT[26] <= ALU:inst106.out[26]
+ALU_INSTANT_OUT[27] <= ALU:inst106.out[27]
+ALU_INSTANT_OUT[28] <= ALU:inst106.out[28]
+ALU_INSTANT_OUT[29] <= ALU:inst106.out[29]
+ALU_INSTANT_OUT[30] <= ALU:inst106.out[30]
+ALU_INSTANT_OUT[31] <= ALU:inst106.out[31]
 write_date[0] <= Write_Data[0].DB_MAX_OUTPUT_PORT_TYPE
 write_date[1] <= Write_Data[1].DB_MAX_OUTPUT_PORT_TYPE
 write_date[2] <= Write_Data[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -4543,7 +4575,7 @@ result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
 result[1] <= sum_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CPU|ICACHE20:inst
+|CPU|ICACHE40:inst
 address[0] => address[0]~14.IN1
 address[1] => address[1]~13.IN1
 address[2] => address[2]~12.IN1
@@ -4582,7 +4614,7 @@ q[18] <= altsyncram:altsyncram_component.q_a
 q[19] <= altsyncram:altsyncram_component.q_a
 
 
-|CPU|ICACHE20:inst|altsyncram:altsyncram_component
+|CPU|ICACHE40:inst|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -4608,25 +4640,25 @@ data_a[17] => ~NO_FANOUT~
 data_a[18] => ~NO_FANOUT~
 data_a[19] => ~NO_FANOUT~
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_4071:auto_generated.address_a[0]
-address_a[1] => altsyncram_4071:auto_generated.address_a[1]
-address_a[2] => altsyncram_4071:auto_generated.address_a[2]
-address_a[3] => altsyncram_4071:auto_generated.address_a[3]
-address_a[4] => altsyncram_4071:auto_generated.address_a[4]
-address_a[5] => altsyncram_4071:auto_generated.address_a[5]
-address_a[6] => altsyncram_4071:auto_generated.address_a[6]
-address_a[7] => altsyncram_4071:auto_generated.address_a[7]
-address_a[8] => altsyncram_4071:auto_generated.address_a[8]
-address_a[9] => altsyncram_4071:auto_generated.address_a[9]
-address_a[10] => altsyncram_4071:auto_generated.address_a[10]
-address_a[11] => altsyncram_4071:auto_generated.address_a[11]
-address_a[12] => altsyncram_4071:auto_generated.address_a[12]
-address_a[13] => altsyncram_4071:auto_generated.address_a[13]
-address_a[14] => altsyncram_4071:auto_generated.address_a[14]
+address_a[0] => altsyncram_ht71:auto_generated.address_a[0]
+address_a[1] => altsyncram_ht71:auto_generated.address_a[1]
+address_a[2] => altsyncram_ht71:auto_generated.address_a[2]
+address_a[3] => altsyncram_ht71:auto_generated.address_a[3]
+address_a[4] => altsyncram_ht71:auto_generated.address_a[4]
+address_a[5] => altsyncram_ht71:auto_generated.address_a[5]
+address_a[6] => altsyncram_ht71:auto_generated.address_a[6]
+address_a[7] => altsyncram_ht71:auto_generated.address_a[7]
+address_a[8] => altsyncram_ht71:auto_generated.address_a[8]
+address_a[9] => altsyncram_ht71:auto_generated.address_a[9]
+address_a[10] => altsyncram_ht71:auto_generated.address_a[10]
+address_a[11] => altsyncram_ht71:auto_generated.address_a[11]
+address_a[12] => altsyncram_ht71:auto_generated.address_a[12]
+address_a[13] => altsyncram_ht71:auto_generated.address_a[13]
+address_a[14] => altsyncram_ht71:auto_generated.address_a[14]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_4071:auto_generated.clock0
+clock0 => altsyncram_ht71:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -4636,33 +4668,33 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_4071:auto_generated.q_a[0]
-q_a[1] <= altsyncram_4071:auto_generated.q_a[1]
-q_a[2] <= altsyncram_4071:auto_generated.q_a[2]
-q_a[3] <= altsyncram_4071:auto_generated.q_a[3]
-q_a[4] <= altsyncram_4071:auto_generated.q_a[4]
-q_a[5] <= altsyncram_4071:auto_generated.q_a[5]
-q_a[6] <= altsyncram_4071:auto_generated.q_a[6]
-q_a[7] <= altsyncram_4071:auto_generated.q_a[7]
-q_a[8] <= altsyncram_4071:auto_generated.q_a[8]
-q_a[9] <= altsyncram_4071:auto_generated.q_a[9]
-q_a[10] <= altsyncram_4071:auto_generated.q_a[10]
-q_a[11] <= altsyncram_4071:auto_generated.q_a[11]
-q_a[12] <= altsyncram_4071:auto_generated.q_a[12]
-q_a[13] <= altsyncram_4071:auto_generated.q_a[13]
-q_a[14] <= altsyncram_4071:auto_generated.q_a[14]
-q_a[15] <= altsyncram_4071:auto_generated.q_a[15]
-q_a[16] <= altsyncram_4071:auto_generated.q_a[16]
-q_a[17] <= altsyncram_4071:auto_generated.q_a[17]
-q_a[18] <= altsyncram_4071:auto_generated.q_a[18]
-q_a[19] <= altsyncram_4071:auto_generated.q_a[19]
+q_a[0] <= altsyncram_ht71:auto_generated.q_a[0]
+q_a[1] <= altsyncram_ht71:auto_generated.q_a[1]
+q_a[2] <= altsyncram_ht71:auto_generated.q_a[2]
+q_a[3] <= altsyncram_ht71:auto_generated.q_a[3]
+q_a[4] <= altsyncram_ht71:auto_generated.q_a[4]
+q_a[5] <= altsyncram_ht71:auto_generated.q_a[5]
+q_a[6] <= altsyncram_ht71:auto_generated.q_a[6]
+q_a[7] <= altsyncram_ht71:auto_generated.q_a[7]
+q_a[8] <= altsyncram_ht71:auto_generated.q_a[8]
+q_a[9] <= altsyncram_ht71:auto_generated.q_a[9]
+q_a[10] <= altsyncram_ht71:auto_generated.q_a[10]
+q_a[11] <= altsyncram_ht71:auto_generated.q_a[11]
+q_a[12] <= altsyncram_ht71:auto_generated.q_a[12]
+q_a[13] <= altsyncram_ht71:auto_generated.q_a[13]
+q_a[14] <= altsyncram_ht71:auto_generated.q_a[14]
+q_a[15] <= altsyncram_ht71:auto_generated.q_a[15]
+q_a[16] <= altsyncram_ht71:auto_generated.q_a[16]
+q_a[17] <= altsyncram_ht71:auto_generated.q_a[17]
+q_a[18] <= altsyncram_ht71:auto_generated.q_a[18]
+q_a[19] <= altsyncram_ht71:auto_generated.q_a[19]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|CPU|ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated
+|CPU|ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -6777,7 +6809,7 @@ q_a[18] <= mux_3kb:mux2.result[18]
 q_a[19] <= mux_3kb:mux2.result[19]
 
 
-|CPU|ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated|decode_9oa:deep_decode
+|CPU|ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|decode_9oa:deep_decode
 data[0] => w_anode661w[1]~2.IN0
 data[0] => w_anode678w[1].IN1
 data[0] => w_anode688w[1]~1.IN0
@@ -6820,7 +6852,7 @@ eq[6] <= w_anode728w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode738w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CPU|ICACHE20:inst|altsyncram:altsyncram_component|altsyncram_4071:auto_generated|mux_3kb:mux2
+|CPU|ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|mux_3kb:mux2
 data[0] => _~841.IN0
 data[0] => _~850.IN0
 data[1] => _~798.IN0
