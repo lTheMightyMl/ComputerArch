@@ -1,3 +1,4 @@
+/* Simulator = Quartus II Simulator */
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -662,7 +663,7 @@ SIGNAL("sgn")
 	PARENT = "";
 }
 
-SIGNAL("write_date")
+SIGNAL("write_data")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -679,7 +680,7 @@ SIGNAL("write_date[31]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[30]")
@@ -689,7 +690,7 @@ SIGNAL("write_date[30]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[29]")
@@ -699,7 +700,7 @@ SIGNAL("write_date[29]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[28]")
@@ -709,7 +710,7 @@ SIGNAL("write_date[28]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[27]")
@@ -719,7 +720,7 @@ SIGNAL("write_date[27]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[26]")
@@ -729,7 +730,7 @@ SIGNAL("write_date[26]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[25]")
@@ -739,7 +740,7 @@ SIGNAL("write_date[25]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[24]")
@@ -749,7 +750,7 @@ SIGNAL("write_date[24]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[23]")
@@ -759,7 +760,7 @@ SIGNAL("write_date[23]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[22]")
@@ -769,7 +770,7 @@ SIGNAL("write_date[22]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[21]")
@@ -779,7 +780,7 @@ SIGNAL("write_date[21]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[20]")
@@ -789,7 +790,7 @@ SIGNAL("write_date[20]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[19]")
@@ -799,7 +800,7 @@ SIGNAL("write_date[19]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[18]")
@@ -809,7 +810,7 @@ SIGNAL("write_date[18]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[17]")
@@ -819,7 +820,7 @@ SIGNAL("write_date[17]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[16]")
@@ -829,7 +830,7 @@ SIGNAL("write_date[16]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[15]")
@@ -839,7 +840,7 @@ SIGNAL("write_date[15]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[14]")
@@ -849,7 +850,7 @@ SIGNAL("write_date[14]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[13]")
@@ -859,7 +860,7 @@ SIGNAL("write_date[13]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[12]")
@@ -869,7 +870,7 @@ SIGNAL("write_date[12]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[11]")
@@ -879,7 +880,7 @@ SIGNAL("write_date[11]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[10]")
@@ -889,7 +890,7 @@ SIGNAL("write_date[10]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[9]")
@@ -899,7 +900,7 @@ SIGNAL("write_date[9]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[8]")
@@ -909,7 +910,7 @@ SIGNAL("write_date[8]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[7]")
@@ -919,7 +920,7 @@ SIGNAL("write_date[7]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[6]")
@@ -929,7 +930,7 @@ SIGNAL("write_date[6]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[5]")
@@ -939,7 +940,7 @@ SIGNAL("write_date[5]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[4]")
@@ -949,7 +950,7 @@ SIGNAL("write_date[4]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[3]")
@@ -959,7 +960,7 @@ SIGNAL("write_date[3]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[2]")
@@ -969,7 +970,7 @@ SIGNAL("write_date[2]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[1]")
@@ -979,7 +980,7 @@ SIGNAL("write_date[1]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("write_date[0]")
@@ -989,7 +990,7 @@ SIGNAL("write_date[0]")
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "write_date";
+	PARENT = "write_data";
 }
 
 SIGNAL("zero")
@@ -1543,8 +1544,8 @@ TRANSITION_LIST("RESET")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 990.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 970.0;
 	}
 }
 
@@ -2450,9 +2451,9 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "write_date";
+	CHANNEL = "write_data";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 60;
 	TREE_LEVEL = 0;
 	CHILDREN = 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92;
@@ -2462,7 +2463,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[31]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 61;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2472,7 +2473,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[30]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 62;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2482,7 +2483,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[29]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 63;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2492,7 +2493,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[28]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 64;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2502,7 +2503,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[27]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 65;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2512,7 +2513,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[26]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 66;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2522,7 +2523,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[25]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 67;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2532,7 +2533,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[24]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 68;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2542,7 +2543,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[23]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 69;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2552,7 +2553,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[22]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 70;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2562,7 +2563,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[21]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 71;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2572,7 +2573,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[20]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 72;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2582,7 +2583,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[19]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 73;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2592,7 +2593,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[18]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 74;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2602,7 +2603,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[17]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 75;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2612,7 +2613,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[16]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 76;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2622,7 +2623,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[15]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 77;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2632,7 +2633,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[14]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 78;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2642,7 +2643,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[13]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 79;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2652,7 +2653,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[12]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 80;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2662,7 +2663,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[11]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 81;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2672,7 +2673,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[10]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 82;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2682,7 +2683,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[9]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 83;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2692,7 +2693,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[8]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 84;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2702,7 +2703,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 85;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2712,7 +2713,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 86;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2722,7 +2723,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 87;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2732,7 +2733,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 88;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2742,7 +2743,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 89;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2752,7 +2753,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 90;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2762,7 +2763,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 91;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2772,7 +2773,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "write_date[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Signed;
 	TREE_INDEX = 92;
 	TREE_LEVEL = 1;
 	PARENT = 60;
@@ -2780,7 +2781,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "do_update";
+	CHANNEL = "inst_cache_en";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 93;
@@ -2789,7 +2790,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "inst_cache_en";
+	CHANNEL = "do_update";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 94;
@@ -2798,7 +2799,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "is_shamt_load";
+	CHANNEL = "reg_write";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 95;
@@ -2807,7 +2808,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "reg_write";
+	CHANNEL = "is_shamt_load";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 96;

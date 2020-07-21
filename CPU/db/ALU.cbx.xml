@@ -46,7 +46,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux0:inst10|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_0qc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst79|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst88|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|ICACHE20:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_8r61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|ICACHE20:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_4071.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|lpm_mux1:inst13|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
