@@ -23,7 +23,7 @@ instr[19] <= LPM_DFF:IR.q[19]
 inst_cache_en <= CU:inst3.INST_MEM_EN
 CLOCK => CU:inst3.clock
 CLOCK => LPM_DFF:IR.clock
-CLOCK => ICACHE40:inst.clock
+CLOCK => ICACHE40:inst14.clock
 CLOCK => NEW_PC:inst1.CLOCK
 CLOCK => LPM_DFF:A_REG.clock
 CLOCK => HW7:RF.Clock
@@ -4575,7 +4575,7 @@ result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
 result[1] <= sum_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CPU|ICACHE40:inst
+|CPU|ICACHE40:inst14
 address[0] => address[0]~14.IN1
 address[1] => address[1]~13.IN1
 address[2] => address[2]~12.IN1
@@ -4614,7 +4614,7 @@ q[18] <= altsyncram:altsyncram_component.q_a
 q[19] <= altsyncram:altsyncram_component.q_a
 
 
-|CPU|ICACHE40:inst|altsyncram:altsyncram_component
+|CPU|ICACHE40:inst14|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -4694,7 +4694,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|CPU|ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated
+|CPU|ICACHE40:inst14|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -6809,7 +6809,7 @@ q_a[18] <= mux_3kb:mux2.result[18]
 q_a[19] <= mux_3kb:mux2.result[19]
 
 
-|CPU|ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|decode_9oa:deep_decode
+|CPU|ICACHE40:inst14|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|decode_9oa:deep_decode
 data[0] => w_anode661w[1]~2.IN0
 data[0] => w_anode678w[1].IN1
 data[0] => w_anode688w[1]~1.IN0
@@ -6852,7 +6852,7 @@ eq[6] <= w_anode728w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode738w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CPU|ICACHE40:inst|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|mux_3kb:mux2
+|CPU|ICACHE40:inst14|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|mux_3kb:mux2
 data[0] => _~841.IN0
 data[0] => _~850.IN0
 data[1] => _~798.IN0

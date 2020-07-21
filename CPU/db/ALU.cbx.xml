@@ -9,6 +9,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst60|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst61|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst70|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|ICACHE40:inst14|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ht71.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|ALU:inst106|zero:inst8|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_2hi.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst62|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst71|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
@@ -19,7 +20,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst64|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst73|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst82|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|ICACHE40:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ht71.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|lpm_constantzero:inst7|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_9k6.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|ALU:inst106|shr:inst2|lpm_clshift:LPM_CLSHIFT_component" CBX_FILE_NAME="lpm_clshift_vjc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|HW7:RF|lpm_mux1:inst65|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>

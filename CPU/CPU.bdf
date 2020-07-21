@@ -213,7 +213,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect -80 560 96 576)
+	(rect 664 88 840 104)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "pc[31..0]" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
@@ -1146,7 +1146,7 @@ applicable agreement for further details.
 (symbol
 	(rect 216 584 432 712)
 	(text "ICACHE40" (rect 77 0 150 16)(font "Arial" (font_size 10)))
-	(text "inst" (rect 8 112 25 124)(font "Arial" ))
+	(text "inst14" (rect 8 112 37 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1402,12 +1402,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "PC[31..0]" (rect -136 560 -89 572)(font "Arial" ))
-	(pt -88 568)
-	(pt -80 568)
-	(bus)
-)
-(connector
 	(text "INSTR[19..0]" (rect 464 464 528 476)(font "Arial" ))
 	(pt 528 472)
 	(pt 536 472)
@@ -1513,7 +1507,7 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "CLOCK" (rect 242 152 279 164)(font "Arial" ))
+	(text "CLOCK" (rect 218 152 255 164)(font "Arial" ))
 	(pt 216 168)
 	(pt 264 168)
 )
@@ -1577,6 +1571,12 @@ applicable agreement for further details.
 (connector
 	(pt 1672 584)
 	(pt 1856 584)
+	(bus)
+)
+(connector
+	(text "PC[31..0]" (rect 608 88 655 100)(font "Arial" ))
+	(pt 656 96)
+	(pt 664 96)
 	(bus)
 )
 (junction (pt 1672 584))
