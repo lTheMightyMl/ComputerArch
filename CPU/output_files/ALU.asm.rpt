@@ -1,5 +1,5 @@
 Assembler report for ALU
-Tue Jul 21 19:21:29 2020
+Tue Jul 21 20:23:42 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: X:/University/BSc/Project/CA/ComputerArch/CPU/output_files/ALU.sof
-  6. Assembler Device Options: X:/University/BSc/Project/CA/ComputerArch/CPU/output_files/ALU.pof
+  5. Assembler Device Options: D:/altera/13.0sp1/Projects/CPU/output_files/ALU.sof
+  6. Assembler Device Options: D:/altera/13.0sp1/Projects/CPU/output_files/ALU.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jul 21 19:21:29 2020 ;
+; Assembler Status      ; Successful - Tue Jul 21 20:23:42 2020 ;
 ; Revision Name         ; ALU                                   ;
 ; Top-level Entity Name ; CPU                                   ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------+
-; Assembler Generated Files                                          ;
-+--------------------------------------------------------------------+
-; File Name                                                          ;
-+--------------------------------------------------------------------+
-; X:/University/BSc/Project/CA/ComputerArch/CPU/output_files/ALU.sof ;
-; X:/University/BSc/Project/CA/ComputerArch/CPU/output_files/ALU.pof ;
-+--------------------------------------------------------------------+
++-----------------------------------------------------+
+; Assembler Generated Files                           ;
++-----------------------------------------------------+
+; File Name                                           ;
++-----------------------------------------------------+
+; D:/altera/13.0sp1/Projects/CPU/output_files/ALU.sof ;
+; D:/altera/13.0sp1/Projects/CPU/output_files/ALU.pof ;
++-----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Assembler Device Options: X:/University/BSc/Project/CA/ComputerArch/CPU/output_files/ALU.sof ;
-+----------------+-----------------------------------------------------------------------------+
-; Option         ; Setting                                                                     ;
-+----------------+-----------------------------------------------------------------------------+
-; Device         ; EP2C70F672C6                                                                ;
-; JTAG usercode  ; 0x008C1B03                                                                  ;
-; Checksum       ; 0x008C1B03                                                                  ;
-+----------------+-----------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Assembler Device Options: D:/altera/13.0sp1/Projects/CPU/output_files/ALU.sof ;
++----------------+--------------------------------------------------------------+
+; Option         ; Setting                                                      ;
++----------------+--------------------------------------------------------------+
+; Device         ; EP2C70F672C6                                                 ;
+; JTAG usercode  ; 0x008D9C29                                                   ;
+; Checksum       ; 0x008D9C29                                                   ;
++----------------+--------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Assembler Device Options: X:/University/BSc/Project/CA/ComputerArch/CPU/output_files/ALU.pof ;
-+--------------------+-------------------------------------------------------------------------+
-; Option             ; Setting                                                                 ;
-+--------------------+-------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                  ;
-; JTAG usercode      ; 0x00000000                                                              ;
-; Checksum           ; 0x1841F2CB                                                              ;
-; Compression Ratio  ; 3                                                                       ;
-+--------------------+-------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Assembler Device Options: D:/altera/13.0sp1/Projects/CPU/output_files/ALU.pof ;
++--------------------+----------------------------------------------------------+
+; Option             ; Setting                                                  ;
++--------------------+----------------------------------------------------------+
+; Device             ; EPCS16                                                   ;
+; JTAG usercode      ; 0x00000000                                               ;
+; Checksum           ; 0x18257F71                                               ;
+; Compression Ratio  ; 3                                                        ;
++--------------------+----------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jul 21 19:21:19 2020
+    Info: Processing started: Tue Jul 21 20:23:39 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off CPU -c ALU
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4602 megabytes
-    Info: Processing ended: Tue Jul 21 19:21:29 2020
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 4600 megabytes
+    Info: Processing ended: Tue Jul 21 20:23:42 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
