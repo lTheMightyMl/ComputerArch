@@ -24,46 +24,46 @@ inst_cache_en <= CU:inst3.INST_MEM_EN
 CLOCK => CU:inst3.clock
 CLOCK => LPM_DFF:IR.clock
 CLOCK => ICACHE20:inst.clock
-CLOCK => PC:inst2.CLK
+CLOCK => NEW_PC:inst1.CLOCK
 CLOCK => LPM_DFF:A_REG.clock
 CLOCK => HW7:RF.Clock
 CLOCK => LPM_DFF:ALU_OUT.clock
 CLOCK => LPM_DFF:B_REG.clock
 RESET => CU:inst3.async_reset
-RESET => PC:inst2.PC_CLR
+RESET => NEW_PC:inst1.RESET
 RESET => HW7:RF.Clear
-pc[0] <= PC:inst2.PC[0]
-pc[1] <= PC:inst2.PC[1]
-pc[2] <= PC:inst2.PC[2]
-pc[3] <= PC:inst2.PC[3]
-pc[4] <= PC:inst2.PC[4]
-pc[5] <= PC:inst2.PC[5]
-pc[6] <= PC:inst2.PC[6]
-pc[7] <= PC:inst2.PC[7]
-pc[8] <= PC:inst2.PC[8]
-pc[9] <= PC:inst2.PC[9]
-pc[10] <= PC:inst2.PC[10]
-pc[11] <= PC:inst2.PC[11]
-pc[12] <= PC:inst2.PC[12]
-pc[13] <= PC:inst2.PC[13]
-pc[14] <= PC:inst2.PC[14]
-pc[15] <= PC:inst2.PC[15]
-pc[16] <= PC:inst2.PC[16]
-pc[17] <= PC:inst2.PC[17]
-pc[18] <= PC:inst2.PC[18]
-pc[19] <= PC:inst2.PC[19]
-pc[20] <= PC:inst2.PC[20]
-pc[21] <= PC:inst2.PC[21]
-pc[22] <= PC:inst2.PC[22]
-pc[23] <= PC:inst2.PC[23]
-pc[24] <= PC:inst2.PC[24]
-pc[25] <= PC:inst2.PC[25]
-pc[26] <= PC:inst2.PC[26]
-pc[27] <= PC:inst2.PC[27]
-pc[28] <= PC:inst2.PC[28]
-pc[29] <= PC:inst2.PC[29]
-pc[30] <= PC:inst2.PC[30]
-pc[31] <= PC:inst2.PC[31]
+pc[0] <= NEW_PC:inst1.PC_OUT[0]
+pc[1] <= NEW_PC:inst1.PC_OUT[1]
+pc[2] <= NEW_PC:inst1.PC_OUT[2]
+pc[3] <= NEW_PC:inst1.PC_OUT[3]
+pc[4] <= NEW_PC:inst1.PC_OUT[4]
+pc[5] <= NEW_PC:inst1.PC_OUT[5]
+pc[6] <= NEW_PC:inst1.PC_OUT[6]
+pc[7] <= NEW_PC:inst1.PC_OUT[7]
+pc[8] <= NEW_PC:inst1.PC_OUT[8]
+pc[9] <= NEW_PC:inst1.PC_OUT[9]
+pc[10] <= NEW_PC:inst1.PC_OUT[10]
+pc[11] <= NEW_PC:inst1.PC_OUT[11]
+pc[12] <= NEW_PC:inst1.PC_OUT[12]
+pc[13] <= NEW_PC:inst1.PC_OUT[13]
+pc[14] <= NEW_PC:inst1.PC_OUT[14]
+pc[15] <= NEW_PC:inst1.PC_OUT[15]
+pc[16] <= NEW_PC:inst1.PC_OUT[16]
+pc[17] <= NEW_PC:inst1.PC_OUT[17]
+pc[18] <= NEW_PC:inst1.PC_OUT[18]
+pc[19] <= NEW_PC:inst1.PC_OUT[19]
+pc[20] <= NEW_PC:inst1.PC_OUT[20]
+pc[21] <= NEW_PC:inst1.PC_OUT[21]
+pc[22] <= NEW_PC:inst1.PC_OUT[22]
+pc[23] <= NEW_PC:inst1.PC_OUT[23]
+pc[24] <= NEW_PC:inst1.PC_OUT[24]
+pc[25] <= NEW_PC:inst1.PC_OUT[25]
+pc[26] <= NEW_PC:inst1.PC_OUT[26]
+pc[27] <= NEW_PC:inst1.PC_OUT[27]
+pc[28] <= NEW_PC:inst1.PC_OUT[28]
+pc[29] <= NEW_PC:inst1.PC_OUT[29]
+pc[30] <= NEW_PC:inst1.PC_OUT[30]
+pc[31] <= NEW_PC:inst1.PC_OUT[31]
 do_update <= CU:inst3.DO_UPDATE
 ReadDataOne[0] <= HW7:RF.Read_Data_1[0]
 ReadDataOne[1] <= HW7:RF.Read_Data_1[1]
@@ -7523,45 +7523,159 @@ sel[2] => result_node[0]~38.IN0
 sel[2] => _~838.IN0
 
 
-|CPU|PC:inst2
-PC[0] <= LPM_DFF:inst.q[0]
-PC[1] <= LPM_DFF:inst.q[1]
-PC[2] <= LPM_DFF:inst.q[2]
-PC[3] <= LPM_DFF:inst.q[3]
-PC[4] <= LPM_DFF:inst.q[4]
-PC[5] <= LPM_DFF:inst.q[5]
-PC[6] <= LPM_DFF:inst.q[6]
-PC[7] <= LPM_DFF:inst.q[7]
-PC[8] <= LPM_DFF:inst.q[8]
-PC[9] <= LPM_DFF:inst.q[9]
-PC[10] <= LPM_DFF:inst.q[10]
-PC[11] <= LPM_DFF:inst.q[11]
-PC[12] <= LPM_DFF:inst.q[12]
-PC[13] <= LPM_DFF:inst.q[13]
-PC[14] <= LPM_DFF:inst.q[14]
-PC[15] <= LPM_DFF:inst.q[15]
-PC[16] <= LPM_DFF:inst.q[16]
-PC[17] <= LPM_DFF:inst.q[17]
-PC[18] <= LPM_DFF:inst.q[18]
-PC[19] <= LPM_DFF:inst.q[19]
-PC[20] <= LPM_DFF:inst.q[20]
-PC[21] <= LPM_DFF:inst.q[21]
-PC[22] <= LPM_DFF:inst.q[22]
-PC[23] <= LPM_DFF:inst.q[23]
-PC[24] <= LPM_DFF:inst.q[24]
-PC[25] <= LPM_DFF:inst.q[25]
-PC[26] <= LPM_DFF:inst.q[26]
-PC[27] <= LPM_DFF:inst.q[27]
-PC[28] <= LPM_DFF:inst.q[28]
-PC[29] <= LPM_DFF:inst.q[29]
-PC[30] <= LPM_DFF:inst.q[30]
-PC[31] <= LPM_DFF:inst.q[31]
-CLK => LPM_DFF:inst.clock
-PC_CLR => LPM_DFF:inst.sclr
-DO_UPDATE => lpm_mux1:inst7.sel
+|CPU|NEW_PC:inst1
+PC_OUT[0] <= lpm_shiftreg5:inst9.q[0]
+PC_OUT[1] <= lpm_shiftreg5:inst9.q[1]
+PC_OUT[2] <= lpm_shiftreg5:inst9.q[2]
+PC_OUT[3] <= lpm_shiftreg5:inst9.q[3]
+PC_OUT[4] <= lpm_shiftreg5:inst9.q[4]
+PC_OUT[5] <= lpm_shiftreg5:inst9.q[5]
+PC_OUT[6] <= lpm_shiftreg5:inst9.q[6]
+PC_OUT[7] <= lpm_shiftreg5:inst9.q[7]
+PC_OUT[8] <= lpm_shiftreg5:inst9.q[8]
+PC_OUT[9] <= lpm_shiftreg5:inst9.q[9]
+PC_OUT[10] <= lpm_shiftreg5:inst9.q[10]
+PC_OUT[11] <= lpm_shiftreg5:inst9.q[11]
+PC_OUT[12] <= lpm_shiftreg5:inst9.q[12]
+PC_OUT[13] <= lpm_shiftreg5:inst9.q[13]
+PC_OUT[14] <= lpm_shiftreg5:inst9.q[14]
+PC_OUT[15] <= lpm_shiftreg5:inst9.q[15]
+PC_OUT[16] <= lpm_shiftreg5:inst9.q[16]
+PC_OUT[17] <= lpm_shiftreg5:inst9.q[17]
+PC_OUT[18] <= lpm_shiftreg5:inst9.q[18]
+PC_OUT[19] <= lpm_shiftreg5:inst9.q[19]
+PC_OUT[20] <= lpm_shiftreg5:inst9.q[20]
+PC_OUT[21] <= lpm_shiftreg5:inst9.q[21]
+PC_OUT[22] <= lpm_shiftreg5:inst9.q[22]
+PC_OUT[23] <= lpm_shiftreg5:inst9.q[23]
+PC_OUT[24] <= lpm_shiftreg5:inst9.q[24]
+PC_OUT[25] <= lpm_shiftreg5:inst9.q[25]
+PC_OUT[26] <= lpm_shiftreg5:inst9.q[26]
+PC_OUT[27] <= lpm_shiftreg5:inst9.q[27]
+PC_OUT[28] <= lpm_shiftreg5:inst9.q[28]
+PC_OUT[29] <= lpm_shiftreg5:inst9.q[29]
+PC_OUT[30] <= lpm_shiftreg5:inst9.q[30]
+PC_OUT[31] <= lpm_shiftreg5:inst9.q[31]
+RESET => lpm_shiftreg5:inst9.sclr
+CLOCK => lpm_shiftreg5:inst9.clock
+BRACNH => PC_comb_logic:inst.Branch
+JUMP => PC_comb_logic:inst.Jump
+BRANCH_OFFEST[0] => PC_comb_logic:inst.BranchOffset[0]
+BRANCH_OFFEST[1] => PC_comb_logic:inst.BranchOffset[1]
+BRANCH_OFFEST[2] => PC_comb_logic:inst.BranchOffset[2]
+BRANCH_OFFEST[3] => PC_comb_logic:inst.BranchOffset[3]
+BRANCH_OFFEST[4] => PC_comb_logic:inst.BranchOffset[4]
+BRANCH_OFFEST[5] => PC_comb_logic:inst.BranchOffset[5]
+BRANCH_OFFEST[6] => PC_comb_logic:inst.BranchOffset[6]
+BRANCH_OFFEST[7] => PC_comb_logic:inst.BranchOffset[7]
+BRANCH_OFFEST[8] => PC_comb_logic:inst.BranchOffset[8]
+BRANCH_OFFEST[9] => PC_comb_logic:inst.BranchOffset[9]
+BRANCH_OFFEST[10] => PC_comb_logic:inst.BranchOffset[10]
+BRANCH_OFFEST[11] => PC_comb_logic:inst.BranchOffset[11]
+BRANCH_OFFEST[12] => PC_comb_logic:inst.BranchOffset[12]
+BRANCH_OFFEST[13] => PC_comb_logic:inst.BranchOffset[13]
+BRANCH_OFFEST[14] => PC_comb_logic:inst.BranchOffset[14]
+BRANCH_OFFEST[15] => PC_comb_logic:inst.BranchOffset[15]
+JUMP_OFFSET[0] => PC_comb_logic:inst.jumpAddress[0]
+JUMP_OFFSET[1] => PC_comb_logic:inst.jumpAddress[1]
+JUMP_OFFSET[2] => PC_comb_logic:inst.jumpAddress[2]
+JUMP_OFFSET[3] => PC_comb_logic:inst.jumpAddress[3]
+JUMP_OFFSET[4] => PC_comb_logic:inst.jumpAddress[4]
+JUMP_OFFSET[5] => PC_comb_logic:inst.jumpAddress[5]
+JUMP_OFFSET[6] => PC_comb_logic:inst.jumpAddress[6]
+JUMP_OFFSET[7] => PC_comb_logic:inst.jumpAddress[7]
+JUMP_OFFSET[8] => PC_comb_logic:inst.jumpAddress[8]
+JUMP_OFFSET[9] => PC_comb_logic:inst.jumpAddress[9]
+JUMP_OFFSET[10] => PC_comb_logic:inst.jumpAddress[10]
+JUMP_OFFSET[11] => PC_comb_logic:inst.jumpAddress[11]
+JUMP_OFFSET[12] => PC_comb_logic:inst.jumpAddress[12]
+JUMP_OFFSET[13] => PC_comb_logic:inst.jumpAddress[13]
+JUMP_OFFSET[14] => PC_comb_logic:inst.jumpAddress[14]
+JUMP_OFFSET[15] => PC_comb_logic:inst.jumpAddress[15]
+JUMP_OFFSET[16] => PC_comb_logic:inst.jumpAddress[16]
+JUMP_OFFSET[17] => PC_comb_logic:inst.jumpAddress[17]
+JUMP_OFFSET[18] => PC_comb_logic:inst.jumpAddress[18]
+JUMP_OFFSET[19] => PC_comb_logic:inst.jumpAddress[19]
+JUMP_OFFSET[20] => PC_comb_logic:inst.jumpAddress[20]
+JUMP_OFFSET[21] => PC_comb_logic:inst.jumpAddress[21]
+JUMP_OFFSET[22] => PC_comb_logic:inst.jumpAddress[22]
+JUMP_OFFSET[23] => PC_comb_logic:inst.jumpAddress[23]
+JUMP_OFFSET[24] => PC_comb_logic:inst.jumpAddress[24]
+JUMP_OFFSET[25] => PC_comb_logic:inst.jumpAddress[25]
 
 
-|CPU|PC:inst2|LPM_DFF:inst
+|CPU|NEW_PC:inst1|lpm_shiftreg5:inst9
+clock => clock~0.IN1
+data[0] => data[0]~31.IN1
+data[1] => data[1]~30.IN1
+data[2] => data[2]~29.IN1
+data[3] => data[3]~28.IN1
+data[4] => data[4]~27.IN1
+data[5] => data[5]~26.IN1
+data[6] => data[6]~25.IN1
+data[7] => data[7]~24.IN1
+data[8] => data[8]~23.IN1
+data[9] => data[9]~22.IN1
+data[10] => data[10]~21.IN1
+data[11] => data[11]~20.IN1
+data[12] => data[12]~19.IN1
+data[13] => data[13]~18.IN1
+data[14] => data[14]~17.IN1
+data[15] => data[15]~16.IN1
+data[16] => data[16]~15.IN1
+data[17] => data[17]~14.IN1
+data[18] => data[18]~13.IN1
+data[19] => data[19]~12.IN1
+data[20] => data[20]~11.IN1
+data[21] => data[21]~10.IN1
+data[22] => data[22]~9.IN1
+data[23] => data[23]~8.IN1
+data[24] => data[24]~7.IN1
+data[25] => data[25]~6.IN1
+data[26] => data[26]~5.IN1
+data[27] => data[27]~4.IN1
+data[28] => data[28]~3.IN1
+data[29] => data[29]~2.IN1
+data[30] => data[30]~1.IN1
+data[31] => data[31]~0.IN1
+load => load~0.IN1
+sclr => sclr~0.IN1
+shiftin => shiftin~0.IN1
+q[0] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[1] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[2] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[3] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[4] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[5] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[6] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[7] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[8] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[9] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[10] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[11] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[12] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[13] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[14] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[15] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[16] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[17] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[18] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[19] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[20] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[21] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[22] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[23] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[24] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[25] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[26] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[27] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[28] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[29] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[30] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+q[31] <= lpm_shiftreg:LPM_SHIFTREG_component.q
+
+
+|CPU|NEW_PC:inst1|lpm_shiftreg5:inst9|lpm_shiftreg:LPM_SHIFTREG_component
 data[0] => _~65.IN1
 data[1] => _~64.IN1
 data[2] => _~63.IN1
@@ -7658,43 +7772,42 @@ enable => dffs[3].ENA
 enable => dffs[2].ENA
 enable => dffs[1].ENA
 enable => dffs[0].ENA
-shiftin => _~32.IN1
-shiften => _~1.IN0
-shiften => _~2.IN0
-shiften => _~3.IN0
-shiften => _~4.IN0
-shiften => _~5.IN0
-shiften => _~6.IN0
-shiften => _~7.IN0
-shiften => _~8.IN0
-shiften => _~9.IN0
-shiften => _~10.IN0
-shiften => _~11.IN0
-shiften => _~12.IN0
-shiften => _~13.IN0
-shiften => _~14.IN0
-shiften => _~15.IN0
-shiften => _~16.IN0
-shiften => _~17.IN0
-shiften => _~18.IN0
-shiften => _~19.IN0
-shiften => _~20.IN0
-shiften => _~21.IN0
-shiften => _~22.IN0
-shiften => _~23.IN0
-shiften => _~24.IN0
-shiften => _~25.IN0
-shiften => _~26.IN0
-shiften => _~27.IN0
-shiften => _~28.IN0
-shiften => _~29.IN0
-shiften => _~30.IN0
-shiften => _~31.IN0
-shiften => _~32.IN0
-shiften => _~33.IN0
+shiftin => _~33.IN1
+load => _~1.IN0
+load => _~34.IN0
+load => _~35.IN0
+load => _~36.IN0
+load => _~37.IN0
+load => _~38.IN0
+load => _~39.IN0
+load => _~40.IN0
+load => _~41.IN0
+load => _~42.IN0
+load => _~43.IN0
+load => _~44.IN0
+load => _~45.IN0
+load => _~46.IN0
+load => _~47.IN0
+load => _~48.IN0
+load => _~49.IN0
+load => _~50.IN0
+load => _~51.IN0
+load => _~52.IN0
+load => _~53.IN0
+load => _~54.IN0
+load => _~55.IN0
+load => _~56.IN0
+load => _~57.IN0
+load => _~58.IN0
+load => _~59.IN0
+load => _~60.IN0
+load => _~61.IN0
+load => _~62.IN0
+load => _~63.IN0
+load => _~64.IN0
+load => _~65.IN0
 aclr => ~NO_FANOUT~
 aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
 sclr => _~0.IN0
 sset => _~98.IN0
 sset => _~99.IN0
@@ -7728,7 +7841,6 @@ sset => _~126.IN0
 sset => _~127.IN0
 sset => _~128.IN0
 sset => _~129.IN0
-sconst => ~NO_FANOUT~
 q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -7764,7 +7876,118 @@ q[31] <= dffs[31].DB_MAX_OUTPUT_PORT_TYPE
 shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CPU|PC:inst2|lpm_mux1:inst7
+|CPU|NEW_PC:inst1|PC_comb_logic:inst
+OUT[0] <= lpm_mux3:inst2.result[0]
+OUT[1] <= lpm_mux3:inst2.result[1]
+OUT[2] <= lpm_mux3:inst2.result[2]
+OUT[3] <= lpm_mux3:inst2.result[3]
+OUT[4] <= lpm_mux3:inst2.result[4]
+OUT[5] <= lpm_mux3:inst2.result[5]
+OUT[6] <= lpm_mux3:inst2.result[6]
+OUT[7] <= lpm_mux3:inst2.result[7]
+OUT[8] <= lpm_mux3:inst2.result[8]
+OUT[9] <= lpm_mux3:inst2.result[9]
+OUT[10] <= lpm_mux3:inst2.result[10]
+OUT[11] <= lpm_mux3:inst2.result[11]
+OUT[12] <= lpm_mux3:inst2.result[12]
+OUT[13] <= lpm_mux3:inst2.result[13]
+OUT[14] <= lpm_mux3:inst2.result[14]
+OUT[15] <= lpm_mux3:inst2.result[15]
+OUT[16] <= lpm_mux3:inst2.result[16]
+OUT[17] <= lpm_mux3:inst2.result[17]
+OUT[18] <= lpm_mux3:inst2.result[18]
+OUT[19] <= lpm_mux3:inst2.result[19]
+OUT[20] <= lpm_mux3:inst2.result[20]
+OUT[21] <= lpm_mux3:inst2.result[21]
+OUT[22] <= lpm_mux3:inst2.result[22]
+OUT[23] <= lpm_mux3:inst2.result[23]
+OUT[24] <= lpm_mux3:inst2.result[24]
+OUT[25] <= lpm_mux3:inst2.result[25]
+OUT[26] <= lpm_mux3:inst2.result[26]
+OUT[27] <= lpm_mux3:inst2.result[27]
+OUT[28] <= lpm_mux3:inst2.result[28]
+OUT[29] <= lpm_mux3:inst2.result[29]
+OUT[30] <= lpm_mux3:inst2.result[30]
+OUT[31] <= lpm_mux3:inst2.result[31]
+Jump => lpm_mux3:inst2.sel
+PC31 => FA_32bit:inst10.A[31]
+PC30 => FA_32bit:inst10.A[30]
+PC29 => FA_32bit:inst10.A[29]
+PC28 => FA_32bit:inst10.A[28]
+PC27 => FA_32bit:inst10.A[27]
+PC26 => FA_32bit:inst10.A[26]
+PC25 => FA_32bit:inst10.A[25]
+PC24 => FA_32bit:inst10.A[24]
+PC23 => FA_32bit:inst10.A[23]
+PC22 => FA_32bit:inst10.A[22]
+PC21 => FA_32bit:inst10.A[21]
+PC20 => FA_32bit:inst10.A[20]
+PC19 => FA_32bit:inst10.A[19]
+PC18 => FA_32bit:inst10.A[18]
+PC17 => FA_32bit:inst10.A[17]
+PC16 => FA_32bit:inst10.A[16]
+PC15 => FA_32bit:inst10.A[15]
+PC14 => FA_32bit:inst10.A[14]
+PC13 => FA_32bit:inst10.A[13]
+PC12 => FA_32bit:inst10.A[12]
+PC11 => FA_32bit:inst10.A[11]
+PC10 => FA_32bit:inst10.A[10]
+PC9 => FA_32bit:inst10.A[9]
+PC8 => FA_32bit:inst10.A[8]
+PC7 => FA_32bit:inst10.A[7]
+PC6 => FA_32bit:inst10.A[6]
+PC5 => FA_32bit:inst10.A[5]
+PC4 => FA_32bit:inst10.A[4]
+PC3 => FA_32bit:inst10.A[3]
+PC2 => FA_32bit:inst10.A[2]
+PC1 => FA_32bit:inst10.A[1]
+PC0 => FA_32bit:inst10.A[0]
+Branch => lpm_mux3:inst.sel
+BranchOffset[0] => sign_extend:inst14.IN[0]
+BranchOffset[1] => sign_extend:inst14.IN[1]
+BranchOffset[2] => sign_extend:inst14.IN[2]
+BranchOffset[3] => sign_extend:inst14.IN[3]
+BranchOffset[4] => sign_extend:inst14.IN[4]
+BranchOffset[5] => sign_extend:inst14.IN[5]
+BranchOffset[6] => sign_extend:inst14.IN[6]
+BranchOffset[7] => sign_extend:inst14.IN[7]
+BranchOffset[8] => sign_extend:inst14.IN[8]
+BranchOffset[9] => sign_extend:inst14.IN[9]
+BranchOffset[10] => sign_extend:inst14.IN[10]
+BranchOffset[11] => sign_extend:inst14.IN[11]
+BranchOffset[12] => sign_extend:inst14.IN[12]
+BranchOffset[13] => sign_extend:inst14.IN[13]
+BranchOffset[14] => sign_extend:inst14.IN[14]
+BranchOffset[15] => sign_extend:inst14.IN[15]
+jumpAddress[0] => shift_left_2_26bit:inst16.IN[0]
+jumpAddress[1] => shift_left_2_26bit:inst16.IN[1]
+jumpAddress[2] => shift_left_2_26bit:inst16.IN[2]
+jumpAddress[3] => shift_left_2_26bit:inst16.IN[3]
+jumpAddress[4] => shift_left_2_26bit:inst16.IN[4]
+jumpAddress[5] => shift_left_2_26bit:inst16.IN[5]
+jumpAddress[6] => shift_left_2_26bit:inst16.IN[6]
+jumpAddress[7] => shift_left_2_26bit:inst16.IN[7]
+jumpAddress[8] => shift_left_2_26bit:inst16.IN[8]
+jumpAddress[9] => shift_left_2_26bit:inst16.IN[9]
+jumpAddress[10] => shift_left_2_26bit:inst16.IN[10]
+jumpAddress[11] => shift_left_2_26bit:inst16.IN[11]
+jumpAddress[12] => shift_left_2_26bit:inst16.IN[12]
+jumpAddress[13] => shift_left_2_26bit:inst16.IN[13]
+jumpAddress[14] => shift_left_2_26bit:inst16.IN[14]
+jumpAddress[15] => shift_left_2_26bit:inst16.IN[15]
+jumpAddress[16] => shift_left_2_26bit:inst16.IN[16]
+jumpAddress[17] => shift_left_2_26bit:inst16.IN[17]
+jumpAddress[18] => shift_left_2_26bit:inst16.IN[18]
+jumpAddress[19] => shift_left_2_26bit:inst16.IN[19]
+jumpAddress[20] => shift_left_2_26bit:inst16.IN[20]
+jumpAddress[21] => shift_left_2_26bit:inst16.IN[21]
+jumpAddress[22] => shift_left_2_26bit:inst16.IN[22]
+jumpAddress[23] => shift_left_2_26bit:inst16.IN[23]
+jumpAddress[24] => shift_left_2_26bit:inst16.IN[24]
+jumpAddress[25] => shift_left_2_26bit:inst16.IN[25]
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst2
 data0x[0] => sub_wire2[0].IN1
 data0x[1] => sub_wire2[1].IN1
 data0x[2] => sub_wire2[2].IN1
@@ -7864,7 +8087,7 @@ result[30] <= lpm_mux:LPM_MUX_component.result
 result[31] <= lpm_mux:LPM_MUX_component.result
 
 
-|CPU|PC:inst2|lpm_mux1:inst7|lpm_mux:LPM_MUX_component
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst2|lpm_mux:LPM_MUX_component
 data[0][0] => mux_9oc:auto_generated.data[0]
 data[0][1] => mux_9oc:auto_generated.data[1]
 data[0][2] => mux_9oc:auto_generated.data[2]
@@ -7967,7 +8190,7 @@ result[30] <= mux_9oc:auto_generated.result[30]
 result[31] <= mux_9oc:auto_generated.result[31]
 
 
-|CPU|PC:inst2|lpm_mux1:inst7|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst2|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated
 data[0] => result_node[0]~63.IN1
 data[1] => result_node[1]~61.IN1
 data[2] => result_node[2]~59.IN1
@@ -8130,276 +8353,2629 @@ sel[0] => result_node[0]~62.IN0
 sel[0] => _~31.IN0
 
 
-|CPU|PC:inst2|lpm_add_sub0:inst3
-dataa[0] => dataa[0]~31.IN1
-dataa[1] => dataa[1]~30.IN1
-dataa[2] => dataa[2]~29.IN1
-dataa[3] => dataa[3]~28.IN1
-dataa[4] => dataa[4]~27.IN1
-dataa[5] => dataa[5]~26.IN1
-dataa[6] => dataa[6]~25.IN1
-dataa[7] => dataa[7]~24.IN1
-dataa[8] => dataa[8]~23.IN1
-dataa[9] => dataa[9]~22.IN1
-dataa[10] => dataa[10]~21.IN1
-dataa[11] => dataa[11]~20.IN1
-dataa[12] => dataa[12]~19.IN1
-dataa[13] => dataa[13]~18.IN1
-dataa[14] => dataa[14]~17.IN1
-dataa[15] => dataa[15]~16.IN1
-dataa[16] => dataa[16]~15.IN1
-dataa[17] => dataa[17]~14.IN1
-dataa[18] => dataa[18]~13.IN1
-dataa[19] => dataa[19]~12.IN1
-dataa[20] => dataa[20]~11.IN1
-dataa[21] => dataa[21]~10.IN1
-dataa[22] => dataa[22]~9.IN1
-dataa[23] => dataa[23]~8.IN1
-dataa[24] => dataa[24]~7.IN1
-dataa[25] => dataa[25]~6.IN1
-dataa[26] => dataa[26]~5.IN1
-dataa[27] => dataa[27]~4.IN1
-dataa[28] => dataa[28]~3.IN1
-dataa[29] => dataa[29]~2.IN1
-dataa[30] => dataa[30]~1.IN1
-dataa[31] => dataa[31]~0.IN1
-result[0] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[1] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[2] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[3] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[4] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[5] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[6] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[7] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[8] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[9] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[10] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[11] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[12] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[13] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[14] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[15] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[16] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[17] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[18] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[19] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[20] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[21] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[22] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[23] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[24] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[25] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[26] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[27] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[28] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[29] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[30] <= lpm_add_sub:LPM_ADD_SUB_component.result
-result[31] <= lpm_add_sub:LPM_ADD_SUB_component.result
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20
+COUT <= FA_16bit:inst1.COUT
+CIN => FA_16bit:inst.CIN
+A[0] => FA_16bit:inst.A[0]
+A[1] => FA_16bit:inst.A[1]
+A[2] => FA_16bit:inst.A[2]
+A[3] => FA_16bit:inst.A[3]
+A[4] => FA_16bit:inst.A[4]
+A[5] => FA_16bit:inst.A[5]
+A[6] => FA_16bit:inst.A[6]
+A[7] => FA_16bit:inst.A[7]
+A[8] => FA_16bit:inst.A[8]
+A[9] => FA_16bit:inst.A[9]
+A[10] => FA_16bit:inst.A[10]
+A[11] => FA_16bit:inst.A[11]
+A[12] => FA_16bit:inst.A[12]
+A[13] => FA_16bit:inst.A[13]
+A[14] => FA_16bit:inst.A[14]
+A[15] => FA_16bit:inst.A[15]
+A[16] => FA_16bit:inst1.A[0]
+A[17] => FA_16bit:inst1.A[1]
+A[18] => FA_16bit:inst1.A[2]
+A[19] => FA_16bit:inst1.A[3]
+A[20] => FA_16bit:inst1.A[4]
+A[21] => FA_16bit:inst1.A[5]
+A[22] => FA_16bit:inst1.A[6]
+A[23] => FA_16bit:inst1.A[7]
+A[24] => FA_16bit:inst1.A[8]
+A[25] => FA_16bit:inst1.A[9]
+A[26] => FA_16bit:inst1.A[10]
+A[27] => FA_16bit:inst1.A[11]
+A[28] => FA_16bit:inst1.A[12]
+A[29] => FA_16bit:inst1.A[13]
+A[30] => FA_16bit:inst1.A[14]
+A[31] => FA_16bit:inst1.A[15]
+B[0] => FA_16bit:inst.B[0]
+B[1] => FA_16bit:inst.B[1]
+B[2] => FA_16bit:inst.B[2]
+B[3] => FA_16bit:inst.B[3]
+B[4] => FA_16bit:inst.B[4]
+B[5] => FA_16bit:inst.B[5]
+B[6] => FA_16bit:inst.B[6]
+B[7] => FA_16bit:inst.B[7]
+B[8] => FA_16bit:inst.B[8]
+B[9] => FA_16bit:inst.B[9]
+B[10] => FA_16bit:inst.B[10]
+B[11] => FA_16bit:inst.B[11]
+B[12] => FA_16bit:inst.B[12]
+B[13] => FA_16bit:inst.B[13]
+B[14] => FA_16bit:inst.B[14]
+B[15] => FA_16bit:inst.B[15]
+B[16] => FA_16bit:inst1.B[0]
+B[17] => FA_16bit:inst1.B[1]
+B[18] => FA_16bit:inst1.B[2]
+B[19] => FA_16bit:inst1.B[3]
+B[20] => FA_16bit:inst1.B[4]
+B[21] => FA_16bit:inst1.B[5]
+B[22] => FA_16bit:inst1.B[6]
+B[23] => FA_16bit:inst1.B[7]
+B[24] => FA_16bit:inst1.B[8]
+B[25] => FA_16bit:inst1.B[9]
+B[26] => FA_16bit:inst1.B[10]
+B[27] => FA_16bit:inst1.B[11]
+B[28] => FA_16bit:inst1.B[12]
+B[29] => FA_16bit:inst1.B[13]
+B[30] => FA_16bit:inst1.B[14]
+B[31] => FA_16bit:inst1.B[15]
+SUM[0] <= FA_16bit:inst.SUM[0]
+SUM[1] <= FA_16bit:inst.SUM[1]
+SUM[2] <= FA_16bit:inst.SUM[2]
+SUM[3] <= FA_16bit:inst.SUM[3]
+SUM[4] <= FA_16bit:inst.SUM[4]
+SUM[5] <= FA_16bit:inst.SUM[5]
+SUM[6] <= FA_16bit:inst.SUM[6]
+SUM[7] <= FA_16bit:inst.SUM[7]
+SUM[8] <= FA_16bit:inst.SUM[8]
+SUM[9] <= FA_16bit:inst.SUM[9]
+SUM[10] <= FA_16bit:inst.SUM[10]
+SUM[11] <= FA_16bit:inst.SUM[11]
+SUM[12] <= FA_16bit:inst.SUM[12]
+SUM[13] <= FA_16bit:inst.SUM[13]
+SUM[14] <= FA_16bit:inst.SUM[14]
+SUM[15] <= FA_16bit:inst.SUM[15]
+SUM[16] <= FA_16bit:inst1.SUM[0]
+SUM[17] <= FA_16bit:inst1.SUM[1]
+SUM[18] <= FA_16bit:inst1.SUM[2]
+SUM[19] <= FA_16bit:inst1.SUM[3]
+SUM[20] <= FA_16bit:inst1.SUM[4]
+SUM[21] <= FA_16bit:inst1.SUM[5]
+SUM[22] <= FA_16bit:inst1.SUM[6]
+SUM[23] <= FA_16bit:inst1.SUM[7]
+SUM[24] <= FA_16bit:inst1.SUM[8]
+SUM[25] <= FA_16bit:inst1.SUM[9]
+SUM[26] <= FA_16bit:inst1.SUM[10]
+SUM[27] <= FA_16bit:inst1.SUM[11]
+SUM[28] <= FA_16bit:inst1.SUM[12]
+SUM[29] <= FA_16bit:inst1.SUM[13]
+SUM[30] <= FA_16bit:inst1.SUM[14]
+SUM[31] <= FA_16bit:inst1.SUM[15]
 
 
-|CPU|PC:inst2|lpm_add_sub0:inst3|lpm_add_sub:LPM_ADD_SUB_component
-dataa[0] => add_sub_dph:auto_generated.dataa[0]
-dataa[1] => add_sub_dph:auto_generated.dataa[1]
-dataa[2] => add_sub_dph:auto_generated.dataa[2]
-dataa[3] => add_sub_dph:auto_generated.dataa[3]
-dataa[4] => add_sub_dph:auto_generated.dataa[4]
-dataa[5] => add_sub_dph:auto_generated.dataa[5]
-dataa[6] => add_sub_dph:auto_generated.dataa[6]
-dataa[7] => add_sub_dph:auto_generated.dataa[7]
-dataa[8] => add_sub_dph:auto_generated.dataa[8]
-dataa[9] => add_sub_dph:auto_generated.dataa[9]
-dataa[10] => add_sub_dph:auto_generated.dataa[10]
-dataa[11] => add_sub_dph:auto_generated.dataa[11]
-dataa[12] => add_sub_dph:auto_generated.dataa[12]
-dataa[13] => add_sub_dph:auto_generated.dataa[13]
-dataa[14] => add_sub_dph:auto_generated.dataa[14]
-dataa[15] => add_sub_dph:auto_generated.dataa[15]
-dataa[16] => add_sub_dph:auto_generated.dataa[16]
-dataa[17] => add_sub_dph:auto_generated.dataa[17]
-dataa[18] => add_sub_dph:auto_generated.dataa[18]
-dataa[19] => add_sub_dph:auto_generated.dataa[19]
-dataa[20] => add_sub_dph:auto_generated.dataa[20]
-dataa[21] => add_sub_dph:auto_generated.dataa[21]
-dataa[22] => add_sub_dph:auto_generated.dataa[22]
-dataa[23] => add_sub_dph:auto_generated.dataa[23]
-dataa[24] => add_sub_dph:auto_generated.dataa[24]
-dataa[25] => add_sub_dph:auto_generated.dataa[25]
-dataa[26] => add_sub_dph:auto_generated.dataa[26]
-dataa[27] => add_sub_dph:auto_generated.dataa[27]
-dataa[28] => add_sub_dph:auto_generated.dataa[28]
-dataa[29] => add_sub_dph:auto_generated.dataa[29]
-dataa[30] => add_sub_dph:auto_generated.dataa[30]
-dataa[31] => add_sub_dph:auto_generated.dataa[31]
-datab[0] => add_sub_dph:auto_generated.datab[0]
-datab[1] => add_sub_dph:auto_generated.datab[1]
-datab[2] => add_sub_dph:auto_generated.datab[2]
-datab[3] => add_sub_dph:auto_generated.datab[3]
-datab[4] => add_sub_dph:auto_generated.datab[4]
-datab[5] => add_sub_dph:auto_generated.datab[5]
-datab[6] => add_sub_dph:auto_generated.datab[6]
-datab[7] => add_sub_dph:auto_generated.datab[7]
-datab[8] => add_sub_dph:auto_generated.datab[8]
-datab[9] => add_sub_dph:auto_generated.datab[9]
-datab[10] => add_sub_dph:auto_generated.datab[10]
-datab[11] => add_sub_dph:auto_generated.datab[11]
-datab[12] => add_sub_dph:auto_generated.datab[12]
-datab[13] => add_sub_dph:auto_generated.datab[13]
-datab[14] => add_sub_dph:auto_generated.datab[14]
-datab[15] => add_sub_dph:auto_generated.datab[15]
-datab[16] => add_sub_dph:auto_generated.datab[16]
-datab[17] => add_sub_dph:auto_generated.datab[17]
-datab[18] => add_sub_dph:auto_generated.datab[18]
-datab[19] => add_sub_dph:auto_generated.datab[19]
-datab[20] => add_sub_dph:auto_generated.datab[20]
-datab[21] => add_sub_dph:auto_generated.datab[21]
-datab[22] => add_sub_dph:auto_generated.datab[22]
-datab[23] => add_sub_dph:auto_generated.datab[23]
-datab[24] => add_sub_dph:auto_generated.datab[24]
-datab[25] => add_sub_dph:auto_generated.datab[25]
-datab[26] => add_sub_dph:auto_generated.datab[26]
-datab[27] => add_sub_dph:auto_generated.datab[27]
-datab[28] => add_sub_dph:auto_generated.datab[28]
-datab[29] => add_sub_dph:auto_generated.datab[29]
-datab[30] => add_sub_dph:auto_generated.datab[30]
-datab[31] => add_sub_dph:auto_generated.datab[31]
-cin => ~NO_FANOUT~
-add_sub => ~NO_FANOUT~
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1
+COUT <= FA_4bit:inst2.COUT
+CIN => FA_4bit:inst3.CIN
+A[0] => FA_4bit:inst3.A[0]
+A[1] => FA_4bit:inst3.A[1]
+A[2] => FA_4bit:inst3.A[2]
+A[3] => FA_4bit:inst3.A[3]
+A[4] => FA_4bit:inst.A[0]
+A[5] => FA_4bit:inst.A[1]
+A[6] => FA_4bit:inst.A[2]
+A[7] => FA_4bit:inst.A[3]
+A[8] => FA_4bit:inst1.A[0]
+A[9] => FA_4bit:inst1.A[1]
+A[10] => FA_4bit:inst1.A[2]
+A[11] => FA_4bit:inst1.A[3]
+A[12] => FA_4bit:inst2.A[0]
+A[13] => FA_4bit:inst2.A[1]
+A[14] => FA_4bit:inst2.A[2]
+A[15] => FA_4bit:inst2.A[3]
+B[0] => FA_4bit:inst3.B[0]
+B[1] => FA_4bit:inst3.B[1]
+B[2] => FA_4bit:inst3.B[2]
+B[3] => FA_4bit:inst3.B[3]
+B[4] => FA_4bit:inst.B[0]
+B[5] => FA_4bit:inst.B[1]
+B[6] => FA_4bit:inst.B[2]
+B[7] => FA_4bit:inst.B[3]
+B[8] => FA_4bit:inst1.B[0]
+B[9] => FA_4bit:inst1.B[1]
+B[10] => FA_4bit:inst1.B[2]
+B[11] => FA_4bit:inst1.B[3]
+B[12] => FA_4bit:inst2.B[0]
+B[13] => FA_4bit:inst2.B[1]
+B[14] => FA_4bit:inst2.B[2]
+B[15] => FA_4bit:inst2.B[3]
+SUM[0] <= FA_4bit:inst3.SUM[0]
+SUM[1] <= FA_4bit:inst3.SUM[1]
+SUM[2] <= FA_4bit:inst3.SUM[2]
+SUM[3] <= FA_4bit:inst3.SUM[3]
+SUM[4] <= FA_4bit:inst.SUM[0]
+SUM[5] <= FA_4bit:inst.SUM[1]
+SUM[6] <= FA_4bit:inst.SUM[2]
+SUM[7] <= FA_4bit:inst.SUM[3]
+SUM[8] <= FA_4bit:inst1.SUM[0]
+SUM[9] <= FA_4bit:inst1.SUM[1]
+SUM[10] <= FA_4bit:inst1.SUM[2]
+SUM[11] <= FA_4bit:inst1.SUM[3]
+SUM[12] <= FA_4bit:inst2.SUM[0]
+SUM[13] <= FA_4bit:inst2.SUM[1]
+SUM[14] <= FA_4bit:inst2.SUM[2]
+SUM[15] <= FA_4bit:inst2.SUM[3]
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst1
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst3
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst
+COUT <= FA_4bit:inst2.COUT
+CIN => FA_4bit:inst3.CIN
+A[0] => FA_4bit:inst3.A[0]
+A[1] => FA_4bit:inst3.A[1]
+A[2] => FA_4bit:inst3.A[2]
+A[3] => FA_4bit:inst3.A[3]
+A[4] => FA_4bit:inst.A[0]
+A[5] => FA_4bit:inst.A[1]
+A[6] => FA_4bit:inst.A[2]
+A[7] => FA_4bit:inst.A[3]
+A[8] => FA_4bit:inst1.A[0]
+A[9] => FA_4bit:inst1.A[1]
+A[10] => FA_4bit:inst1.A[2]
+A[11] => FA_4bit:inst1.A[3]
+A[12] => FA_4bit:inst2.A[0]
+A[13] => FA_4bit:inst2.A[1]
+A[14] => FA_4bit:inst2.A[2]
+A[15] => FA_4bit:inst2.A[3]
+B[0] => FA_4bit:inst3.B[0]
+B[1] => FA_4bit:inst3.B[1]
+B[2] => FA_4bit:inst3.B[2]
+B[3] => FA_4bit:inst3.B[3]
+B[4] => FA_4bit:inst.B[0]
+B[5] => FA_4bit:inst.B[1]
+B[6] => FA_4bit:inst.B[2]
+B[7] => FA_4bit:inst.B[3]
+B[8] => FA_4bit:inst1.B[0]
+B[9] => FA_4bit:inst1.B[1]
+B[10] => FA_4bit:inst1.B[2]
+B[11] => FA_4bit:inst1.B[3]
+B[12] => FA_4bit:inst2.B[0]
+B[13] => FA_4bit:inst2.B[1]
+B[14] => FA_4bit:inst2.B[2]
+B[15] => FA_4bit:inst2.B[3]
+SUM[0] <= FA_4bit:inst3.SUM[0]
+SUM[1] <= FA_4bit:inst3.SUM[1]
+SUM[2] <= FA_4bit:inst3.SUM[2]
+SUM[3] <= FA_4bit:inst3.SUM[3]
+SUM[4] <= FA_4bit:inst.SUM[0]
+SUM[5] <= FA_4bit:inst.SUM[1]
+SUM[6] <= FA_4bit:inst.SUM[2]
+SUM[7] <= FA_4bit:inst.SUM[3]
+SUM[8] <= FA_4bit:inst1.SUM[0]
+SUM[9] <= FA_4bit:inst1.SUM[1]
+SUM[10] <= FA_4bit:inst1.SUM[2]
+SUM[11] <= FA_4bit:inst1.SUM[3]
+SUM[12] <= FA_4bit:inst2.SUM[0]
+SUM[13] <= FA_4bit:inst2.SUM[1]
+SUM[14] <= FA_4bit:inst2.SUM[2]
+SUM[15] <= FA_4bit:inst2.SUM[3]
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst2
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst1
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst3
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst3|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst3|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst3|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst3|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10
+COUT <= FA_16bit:inst1.COUT
+CIN => FA_16bit:inst.CIN
+A[0] => FA_16bit:inst.A[0]
+A[1] => FA_16bit:inst.A[1]
+A[2] => FA_16bit:inst.A[2]
+A[3] => FA_16bit:inst.A[3]
+A[4] => FA_16bit:inst.A[4]
+A[5] => FA_16bit:inst.A[5]
+A[6] => FA_16bit:inst.A[6]
+A[7] => FA_16bit:inst.A[7]
+A[8] => FA_16bit:inst.A[8]
+A[9] => FA_16bit:inst.A[9]
+A[10] => FA_16bit:inst.A[10]
+A[11] => FA_16bit:inst.A[11]
+A[12] => FA_16bit:inst.A[12]
+A[13] => FA_16bit:inst.A[13]
+A[14] => FA_16bit:inst.A[14]
+A[15] => FA_16bit:inst.A[15]
+A[16] => FA_16bit:inst1.A[0]
+A[17] => FA_16bit:inst1.A[1]
+A[18] => FA_16bit:inst1.A[2]
+A[19] => FA_16bit:inst1.A[3]
+A[20] => FA_16bit:inst1.A[4]
+A[21] => FA_16bit:inst1.A[5]
+A[22] => FA_16bit:inst1.A[6]
+A[23] => FA_16bit:inst1.A[7]
+A[24] => FA_16bit:inst1.A[8]
+A[25] => FA_16bit:inst1.A[9]
+A[26] => FA_16bit:inst1.A[10]
+A[27] => FA_16bit:inst1.A[11]
+A[28] => FA_16bit:inst1.A[12]
+A[29] => FA_16bit:inst1.A[13]
+A[30] => FA_16bit:inst1.A[14]
+A[31] => FA_16bit:inst1.A[15]
+B[0] => FA_16bit:inst.B[0]
+B[1] => FA_16bit:inst.B[1]
+B[2] => FA_16bit:inst.B[2]
+B[3] => FA_16bit:inst.B[3]
+B[4] => FA_16bit:inst.B[4]
+B[5] => FA_16bit:inst.B[5]
+B[6] => FA_16bit:inst.B[6]
+B[7] => FA_16bit:inst.B[7]
+B[8] => FA_16bit:inst.B[8]
+B[9] => FA_16bit:inst.B[9]
+B[10] => FA_16bit:inst.B[10]
+B[11] => FA_16bit:inst.B[11]
+B[12] => FA_16bit:inst.B[12]
+B[13] => FA_16bit:inst.B[13]
+B[14] => FA_16bit:inst.B[14]
+B[15] => FA_16bit:inst.B[15]
+B[16] => FA_16bit:inst1.B[0]
+B[17] => FA_16bit:inst1.B[1]
+B[18] => FA_16bit:inst1.B[2]
+B[19] => FA_16bit:inst1.B[3]
+B[20] => FA_16bit:inst1.B[4]
+B[21] => FA_16bit:inst1.B[5]
+B[22] => FA_16bit:inst1.B[6]
+B[23] => FA_16bit:inst1.B[7]
+B[24] => FA_16bit:inst1.B[8]
+B[25] => FA_16bit:inst1.B[9]
+B[26] => FA_16bit:inst1.B[10]
+B[27] => FA_16bit:inst1.B[11]
+B[28] => FA_16bit:inst1.B[12]
+B[29] => FA_16bit:inst1.B[13]
+B[30] => FA_16bit:inst1.B[14]
+B[31] => FA_16bit:inst1.B[15]
+SUM[0] <= FA_16bit:inst.SUM[0]
+SUM[1] <= FA_16bit:inst.SUM[1]
+SUM[2] <= FA_16bit:inst.SUM[2]
+SUM[3] <= FA_16bit:inst.SUM[3]
+SUM[4] <= FA_16bit:inst.SUM[4]
+SUM[5] <= FA_16bit:inst.SUM[5]
+SUM[6] <= FA_16bit:inst.SUM[6]
+SUM[7] <= FA_16bit:inst.SUM[7]
+SUM[8] <= FA_16bit:inst.SUM[8]
+SUM[9] <= FA_16bit:inst.SUM[9]
+SUM[10] <= FA_16bit:inst.SUM[10]
+SUM[11] <= FA_16bit:inst.SUM[11]
+SUM[12] <= FA_16bit:inst.SUM[12]
+SUM[13] <= FA_16bit:inst.SUM[13]
+SUM[14] <= FA_16bit:inst.SUM[14]
+SUM[15] <= FA_16bit:inst.SUM[15]
+SUM[16] <= FA_16bit:inst1.SUM[0]
+SUM[17] <= FA_16bit:inst1.SUM[1]
+SUM[18] <= FA_16bit:inst1.SUM[2]
+SUM[19] <= FA_16bit:inst1.SUM[3]
+SUM[20] <= FA_16bit:inst1.SUM[4]
+SUM[21] <= FA_16bit:inst1.SUM[5]
+SUM[22] <= FA_16bit:inst1.SUM[6]
+SUM[23] <= FA_16bit:inst1.SUM[7]
+SUM[24] <= FA_16bit:inst1.SUM[8]
+SUM[25] <= FA_16bit:inst1.SUM[9]
+SUM[26] <= FA_16bit:inst1.SUM[10]
+SUM[27] <= FA_16bit:inst1.SUM[11]
+SUM[28] <= FA_16bit:inst1.SUM[12]
+SUM[29] <= FA_16bit:inst1.SUM[13]
+SUM[30] <= FA_16bit:inst1.SUM[14]
+SUM[31] <= FA_16bit:inst1.SUM[15]
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1
+COUT <= FA_4bit:inst2.COUT
+CIN => FA_4bit:inst3.CIN
+A[0] => FA_4bit:inst3.A[0]
+A[1] => FA_4bit:inst3.A[1]
+A[2] => FA_4bit:inst3.A[2]
+A[3] => FA_4bit:inst3.A[3]
+A[4] => FA_4bit:inst.A[0]
+A[5] => FA_4bit:inst.A[1]
+A[6] => FA_4bit:inst.A[2]
+A[7] => FA_4bit:inst.A[3]
+A[8] => FA_4bit:inst1.A[0]
+A[9] => FA_4bit:inst1.A[1]
+A[10] => FA_4bit:inst1.A[2]
+A[11] => FA_4bit:inst1.A[3]
+A[12] => FA_4bit:inst2.A[0]
+A[13] => FA_4bit:inst2.A[1]
+A[14] => FA_4bit:inst2.A[2]
+A[15] => FA_4bit:inst2.A[3]
+B[0] => FA_4bit:inst3.B[0]
+B[1] => FA_4bit:inst3.B[1]
+B[2] => FA_4bit:inst3.B[2]
+B[3] => FA_4bit:inst3.B[3]
+B[4] => FA_4bit:inst.B[0]
+B[5] => FA_4bit:inst.B[1]
+B[6] => FA_4bit:inst.B[2]
+B[7] => FA_4bit:inst.B[3]
+B[8] => FA_4bit:inst1.B[0]
+B[9] => FA_4bit:inst1.B[1]
+B[10] => FA_4bit:inst1.B[2]
+B[11] => FA_4bit:inst1.B[3]
+B[12] => FA_4bit:inst2.B[0]
+B[13] => FA_4bit:inst2.B[1]
+B[14] => FA_4bit:inst2.B[2]
+B[15] => FA_4bit:inst2.B[3]
+SUM[0] <= FA_4bit:inst3.SUM[0]
+SUM[1] <= FA_4bit:inst3.SUM[1]
+SUM[2] <= FA_4bit:inst3.SUM[2]
+SUM[3] <= FA_4bit:inst3.SUM[3]
+SUM[4] <= FA_4bit:inst.SUM[0]
+SUM[5] <= FA_4bit:inst.SUM[1]
+SUM[6] <= FA_4bit:inst.SUM[2]
+SUM[7] <= FA_4bit:inst.SUM[3]
+SUM[8] <= FA_4bit:inst1.SUM[0]
+SUM[9] <= FA_4bit:inst1.SUM[1]
+SUM[10] <= FA_4bit:inst1.SUM[2]
+SUM[11] <= FA_4bit:inst1.SUM[3]
+SUM[12] <= FA_4bit:inst2.SUM[0]
+SUM[13] <= FA_4bit:inst2.SUM[1]
+SUM[14] <= FA_4bit:inst2.SUM[2]
+SUM[15] <= FA_4bit:inst2.SUM[3]
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst2
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst1
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst3
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst
+COUT <= FA_4bit:inst2.COUT
+CIN => FA_4bit:inst3.CIN
+A[0] => FA_4bit:inst3.A[0]
+A[1] => FA_4bit:inst3.A[1]
+A[2] => FA_4bit:inst3.A[2]
+A[3] => FA_4bit:inst3.A[3]
+A[4] => FA_4bit:inst.A[0]
+A[5] => FA_4bit:inst.A[1]
+A[6] => FA_4bit:inst.A[2]
+A[7] => FA_4bit:inst.A[3]
+A[8] => FA_4bit:inst1.A[0]
+A[9] => FA_4bit:inst1.A[1]
+A[10] => FA_4bit:inst1.A[2]
+A[11] => FA_4bit:inst1.A[3]
+A[12] => FA_4bit:inst2.A[0]
+A[13] => FA_4bit:inst2.A[1]
+A[14] => FA_4bit:inst2.A[2]
+A[15] => FA_4bit:inst2.A[3]
+B[0] => FA_4bit:inst3.B[0]
+B[1] => FA_4bit:inst3.B[1]
+B[2] => FA_4bit:inst3.B[2]
+B[3] => FA_4bit:inst3.B[3]
+B[4] => FA_4bit:inst.B[0]
+B[5] => FA_4bit:inst.B[1]
+B[6] => FA_4bit:inst.B[2]
+B[7] => FA_4bit:inst.B[3]
+B[8] => FA_4bit:inst1.B[0]
+B[9] => FA_4bit:inst1.B[1]
+B[10] => FA_4bit:inst1.B[2]
+B[11] => FA_4bit:inst1.B[3]
+B[12] => FA_4bit:inst2.B[0]
+B[13] => FA_4bit:inst2.B[1]
+B[14] => FA_4bit:inst2.B[2]
+B[15] => FA_4bit:inst2.B[3]
+SUM[0] <= FA_4bit:inst3.SUM[0]
+SUM[1] <= FA_4bit:inst3.SUM[1]
+SUM[2] <= FA_4bit:inst3.SUM[2]
+SUM[3] <= FA_4bit:inst3.SUM[3]
+SUM[4] <= FA_4bit:inst.SUM[0]
+SUM[5] <= FA_4bit:inst.SUM[1]
+SUM[6] <= FA_4bit:inst.SUM[2]
+SUM[7] <= FA_4bit:inst.SUM[3]
+SUM[8] <= FA_4bit:inst1.SUM[0]
+SUM[9] <= FA_4bit:inst1.SUM[1]
+SUM[10] <= FA_4bit:inst1.SUM[2]
+SUM[11] <= FA_4bit:inst1.SUM[3]
+SUM[12] <= FA_4bit:inst2.SUM[0]
+SUM[13] <= FA_4bit:inst2.SUM[1]
+SUM[14] <= FA_4bit:inst2.SUM[2]
+SUM[15] <= FA_4bit:inst2.SUM[3]
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst2
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst1
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst3
+COUT <= FA_1bit:inst4.COUT
+A[0] => FA_1bit:inst.A
+A[1] => FA_1bit:inst2.A
+A[2] => FA_1bit:inst3.A
+A[3] => FA_1bit:inst4.A
+B[0] => FA_1bit:inst.B
+B[1] => FA_1bit:inst2.B
+B[2] => FA_1bit:inst3.B
+B[3] => FA_1bit:inst4.B
+CIN => FA_1bit:inst.CIN
+SUM[0] <= FA_1bit:inst.Sum
+SUM[1] <= FA_1bit:inst2.Sum
+SUM[2] <= FA_1bit:inst3.Sum
+SUM[3] <= FA_1bit:inst4.Sum
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst3|FA_1bit:inst4
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst3|FA_1bit:inst3
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst3|FA_1bit:inst2
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst3|FA_1bit:inst
+Sum <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst4.IN0
+B => inst6.IN1
+B => inst4.IN1
+CIN => inst7.IN1
+CIN => inst.IN1
+COUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_constant2:inst3
+result[0] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[1] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[2] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[3] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[4] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[5] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[6] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[7] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[8] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[9] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[10] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[11] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[12] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[13] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[14] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[15] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[16] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[17] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[18] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[19] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[20] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[21] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[22] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[23] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[24] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[25] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[26] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[27] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[28] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[29] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[30] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+result[31] <= lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component.result
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_constant2:inst3|lpm_constant2_lpm_constant_v09:lpm_constant2_lpm_constant_v09_component
+result[0] <= <GND>
+result[1] <= <GND>
+result[2] <= <VCC>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <GND>
+result[7] <= <GND>
+result[8] <= <GND>
+result[9] <= <GND>
+result[10] <= <GND>
+result[11] <= <GND>
+result[12] <= <GND>
+result[13] <= <GND>
+result[14] <= <GND>
+result[15] <= <GND>
+result[16] <= <GND>
+result[17] <= <GND>
+result[18] <= <GND>
+result[19] <= <GND>
+result[20] <= <GND>
+result[21] <= <GND>
+result[22] <= <GND>
+result[23] <= <GND>
+result[24] <= <GND>
+result[25] <= <GND>
+result[26] <= <GND>
+result[27] <= <GND>
+result[28] <= <GND>
+result[29] <= <GND>
+result[30] <= <GND>
+result[31] <= <GND>
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst
+data0x[0] => sub_wire2[0].IN1
+data0x[1] => sub_wire2[1].IN1
+data0x[2] => sub_wire2[2].IN1
+data0x[3] => sub_wire2[3].IN1
+data0x[4] => sub_wire2[4].IN1
+data0x[5] => sub_wire2[5].IN1
+data0x[6] => sub_wire2[6].IN1
+data0x[7] => sub_wire2[7].IN1
+data0x[8] => sub_wire2[8].IN1
+data0x[9] => sub_wire2[9].IN1
+data0x[10] => sub_wire2[10].IN1
+data0x[11] => sub_wire2[11].IN1
+data0x[12] => sub_wire2[12].IN1
+data0x[13] => sub_wire2[13].IN1
+data0x[14] => sub_wire2[14].IN1
+data0x[15] => sub_wire2[15].IN1
+data0x[16] => sub_wire2[16].IN1
+data0x[17] => sub_wire2[17].IN1
+data0x[18] => sub_wire2[18].IN1
+data0x[19] => sub_wire2[19].IN1
+data0x[20] => sub_wire2[20].IN1
+data0x[21] => sub_wire2[21].IN1
+data0x[22] => sub_wire2[22].IN1
+data0x[23] => sub_wire2[23].IN1
+data0x[24] => sub_wire2[24].IN1
+data0x[25] => sub_wire2[25].IN1
+data0x[26] => sub_wire2[26].IN1
+data0x[27] => sub_wire2[27].IN1
+data0x[28] => sub_wire2[28].IN1
+data0x[29] => sub_wire2[29].IN1
+data0x[30] => sub_wire2[30].IN1
+data0x[31] => sub_wire2[31].IN1
+data1x[0] => sub_wire2[32].IN1
+data1x[1] => sub_wire2[33].IN1
+data1x[2] => sub_wire2[34].IN1
+data1x[3] => sub_wire2[35].IN1
+data1x[4] => sub_wire2[36].IN1
+data1x[5] => sub_wire2[37].IN1
+data1x[6] => sub_wire2[38].IN1
+data1x[7] => sub_wire2[39].IN1
+data1x[8] => sub_wire2[40].IN1
+data1x[9] => sub_wire2[41].IN1
+data1x[10] => sub_wire2[42].IN1
+data1x[11] => sub_wire2[43].IN1
+data1x[12] => sub_wire2[44].IN1
+data1x[13] => sub_wire2[45].IN1
+data1x[14] => sub_wire2[46].IN1
+data1x[15] => sub_wire2[47].IN1
+data1x[16] => sub_wire2[48].IN1
+data1x[17] => sub_wire2[49].IN1
+data1x[18] => sub_wire2[50].IN1
+data1x[19] => sub_wire2[51].IN1
+data1x[20] => sub_wire2[52].IN1
+data1x[21] => sub_wire2[53].IN1
+data1x[22] => sub_wire2[54].IN1
+data1x[23] => sub_wire2[55].IN1
+data1x[24] => sub_wire2[56].IN1
+data1x[25] => sub_wire2[57].IN1
+data1x[26] => sub_wire2[58].IN1
+data1x[27] => sub_wire2[59].IN1
+data1x[28] => sub_wire2[60].IN1
+data1x[29] => sub_wire2[61].IN1
+data1x[30] => sub_wire2[62].IN1
+data1x[31] => sub_wire2[63].IN1
+sel => sub_wire5.IN1
+result[0] <= lpm_mux:LPM_MUX_component.result
+result[1] <= lpm_mux:LPM_MUX_component.result
+result[2] <= lpm_mux:LPM_MUX_component.result
+result[3] <= lpm_mux:LPM_MUX_component.result
+result[4] <= lpm_mux:LPM_MUX_component.result
+result[5] <= lpm_mux:LPM_MUX_component.result
+result[6] <= lpm_mux:LPM_MUX_component.result
+result[7] <= lpm_mux:LPM_MUX_component.result
+result[8] <= lpm_mux:LPM_MUX_component.result
+result[9] <= lpm_mux:LPM_MUX_component.result
+result[10] <= lpm_mux:LPM_MUX_component.result
+result[11] <= lpm_mux:LPM_MUX_component.result
+result[12] <= lpm_mux:LPM_MUX_component.result
+result[13] <= lpm_mux:LPM_MUX_component.result
+result[14] <= lpm_mux:LPM_MUX_component.result
+result[15] <= lpm_mux:LPM_MUX_component.result
+result[16] <= lpm_mux:LPM_MUX_component.result
+result[17] <= lpm_mux:LPM_MUX_component.result
+result[18] <= lpm_mux:LPM_MUX_component.result
+result[19] <= lpm_mux:LPM_MUX_component.result
+result[20] <= lpm_mux:LPM_MUX_component.result
+result[21] <= lpm_mux:LPM_MUX_component.result
+result[22] <= lpm_mux:LPM_MUX_component.result
+result[23] <= lpm_mux:LPM_MUX_component.result
+result[24] <= lpm_mux:LPM_MUX_component.result
+result[25] <= lpm_mux:LPM_MUX_component.result
+result[26] <= lpm_mux:LPM_MUX_component.result
+result[27] <= lpm_mux:LPM_MUX_component.result
+result[28] <= lpm_mux:LPM_MUX_component.result
+result[29] <= lpm_mux:LPM_MUX_component.result
+result[30] <= lpm_mux:LPM_MUX_component.result
+result[31] <= lpm_mux:LPM_MUX_component.result
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst|lpm_mux:LPM_MUX_component
+data[0][0] => mux_9oc:auto_generated.data[0]
+data[0][1] => mux_9oc:auto_generated.data[1]
+data[0][2] => mux_9oc:auto_generated.data[2]
+data[0][3] => mux_9oc:auto_generated.data[3]
+data[0][4] => mux_9oc:auto_generated.data[4]
+data[0][5] => mux_9oc:auto_generated.data[5]
+data[0][6] => mux_9oc:auto_generated.data[6]
+data[0][7] => mux_9oc:auto_generated.data[7]
+data[0][8] => mux_9oc:auto_generated.data[8]
+data[0][9] => mux_9oc:auto_generated.data[9]
+data[0][10] => mux_9oc:auto_generated.data[10]
+data[0][11] => mux_9oc:auto_generated.data[11]
+data[0][12] => mux_9oc:auto_generated.data[12]
+data[0][13] => mux_9oc:auto_generated.data[13]
+data[0][14] => mux_9oc:auto_generated.data[14]
+data[0][15] => mux_9oc:auto_generated.data[15]
+data[0][16] => mux_9oc:auto_generated.data[16]
+data[0][17] => mux_9oc:auto_generated.data[17]
+data[0][18] => mux_9oc:auto_generated.data[18]
+data[0][19] => mux_9oc:auto_generated.data[19]
+data[0][20] => mux_9oc:auto_generated.data[20]
+data[0][21] => mux_9oc:auto_generated.data[21]
+data[0][22] => mux_9oc:auto_generated.data[22]
+data[0][23] => mux_9oc:auto_generated.data[23]
+data[0][24] => mux_9oc:auto_generated.data[24]
+data[0][25] => mux_9oc:auto_generated.data[25]
+data[0][26] => mux_9oc:auto_generated.data[26]
+data[0][27] => mux_9oc:auto_generated.data[27]
+data[0][28] => mux_9oc:auto_generated.data[28]
+data[0][29] => mux_9oc:auto_generated.data[29]
+data[0][30] => mux_9oc:auto_generated.data[30]
+data[0][31] => mux_9oc:auto_generated.data[31]
+data[1][0] => mux_9oc:auto_generated.data[32]
+data[1][1] => mux_9oc:auto_generated.data[33]
+data[1][2] => mux_9oc:auto_generated.data[34]
+data[1][3] => mux_9oc:auto_generated.data[35]
+data[1][4] => mux_9oc:auto_generated.data[36]
+data[1][5] => mux_9oc:auto_generated.data[37]
+data[1][6] => mux_9oc:auto_generated.data[38]
+data[1][7] => mux_9oc:auto_generated.data[39]
+data[1][8] => mux_9oc:auto_generated.data[40]
+data[1][9] => mux_9oc:auto_generated.data[41]
+data[1][10] => mux_9oc:auto_generated.data[42]
+data[1][11] => mux_9oc:auto_generated.data[43]
+data[1][12] => mux_9oc:auto_generated.data[44]
+data[1][13] => mux_9oc:auto_generated.data[45]
+data[1][14] => mux_9oc:auto_generated.data[46]
+data[1][15] => mux_9oc:auto_generated.data[47]
+data[1][16] => mux_9oc:auto_generated.data[48]
+data[1][17] => mux_9oc:auto_generated.data[49]
+data[1][18] => mux_9oc:auto_generated.data[50]
+data[1][19] => mux_9oc:auto_generated.data[51]
+data[1][20] => mux_9oc:auto_generated.data[52]
+data[1][21] => mux_9oc:auto_generated.data[53]
+data[1][22] => mux_9oc:auto_generated.data[54]
+data[1][23] => mux_9oc:auto_generated.data[55]
+data[1][24] => mux_9oc:auto_generated.data[56]
+data[1][25] => mux_9oc:auto_generated.data[57]
+data[1][26] => mux_9oc:auto_generated.data[58]
+data[1][27] => mux_9oc:auto_generated.data[59]
+data[1][28] => mux_9oc:auto_generated.data[60]
+data[1][29] => mux_9oc:auto_generated.data[61]
+data[1][30] => mux_9oc:auto_generated.data[62]
+data[1][31] => mux_9oc:auto_generated.data[63]
+sel[0] => mux_9oc:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= add_sub_dph:auto_generated.result[0]
-result[1] <= add_sub_dph:auto_generated.result[1]
-result[2] <= add_sub_dph:auto_generated.result[2]
-result[3] <= add_sub_dph:auto_generated.result[3]
-result[4] <= add_sub_dph:auto_generated.result[4]
-result[5] <= add_sub_dph:auto_generated.result[5]
-result[6] <= add_sub_dph:auto_generated.result[6]
-result[7] <= add_sub_dph:auto_generated.result[7]
-result[8] <= add_sub_dph:auto_generated.result[8]
-result[9] <= add_sub_dph:auto_generated.result[9]
-result[10] <= add_sub_dph:auto_generated.result[10]
-result[11] <= add_sub_dph:auto_generated.result[11]
-result[12] <= add_sub_dph:auto_generated.result[12]
-result[13] <= add_sub_dph:auto_generated.result[13]
-result[14] <= add_sub_dph:auto_generated.result[14]
-result[15] <= add_sub_dph:auto_generated.result[15]
-result[16] <= add_sub_dph:auto_generated.result[16]
-result[17] <= add_sub_dph:auto_generated.result[17]
-result[18] <= add_sub_dph:auto_generated.result[18]
-result[19] <= add_sub_dph:auto_generated.result[19]
-result[20] <= add_sub_dph:auto_generated.result[20]
-result[21] <= add_sub_dph:auto_generated.result[21]
-result[22] <= add_sub_dph:auto_generated.result[22]
-result[23] <= add_sub_dph:auto_generated.result[23]
-result[24] <= add_sub_dph:auto_generated.result[24]
-result[25] <= add_sub_dph:auto_generated.result[25]
-result[26] <= add_sub_dph:auto_generated.result[26]
-result[27] <= add_sub_dph:auto_generated.result[27]
-result[28] <= add_sub_dph:auto_generated.result[28]
-result[29] <= add_sub_dph:auto_generated.result[29]
-result[30] <= add_sub_dph:auto_generated.result[30]
-result[31] <= add_sub_dph:auto_generated.result[31]
-cout <= <GND>
-overflow <= <GND>
+result[0] <= mux_9oc:auto_generated.result[0]
+result[1] <= mux_9oc:auto_generated.result[1]
+result[2] <= mux_9oc:auto_generated.result[2]
+result[3] <= mux_9oc:auto_generated.result[3]
+result[4] <= mux_9oc:auto_generated.result[4]
+result[5] <= mux_9oc:auto_generated.result[5]
+result[6] <= mux_9oc:auto_generated.result[6]
+result[7] <= mux_9oc:auto_generated.result[7]
+result[8] <= mux_9oc:auto_generated.result[8]
+result[9] <= mux_9oc:auto_generated.result[9]
+result[10] <= mux_9oc:auto_generated.result[10]
+result[11] <= mux_9oc:auto_generated.result[11]
+result[12] <= mux_9oc:auto_generated.result[12]
+result[13] <= mux_9oc:auto_generated.result[13]
+result[14] <= mux_9oc:auto_generated.result[14]
+result[15] <= mux_9oc:auto_generated.result[15]
+result[16] <= mux_9oc:auto_generated.result[16]
+result[17] <= mux_9oc:auto_generated.result[17]
+result[18] <= mux_9oc:auto_generated.result[18]
+result[19] <= mux_9oc:auto_generated.result[19]
+result[20] <= mux_9oc:auto_generated.result[20]
+result[21] <= mux_9oc:auto_generated.result[21]
+result[22] <= mux_9oc:auto_generated.result[22]
+result[23] <= mux_9oc:auto_generated.result[23]
+result[24] <= mux_9oc:auto_generated.result[24]
+result[25] <= mux_9oc:auto_generated.result[25]
+result[26] <= mux_9oc:auto_generated.result[26]
+result[27] <= mux_9oc:auto_generated.result[27]
+result[28] <= mux_9oc:auto_generated.result[28]
+result[29] <= mux_9oc:auto_generated.result[29]
+result[30] <= mux_9oc:auto_generated.result[30]
+result[31] <= mux_9oc:auto_generated.result[31]
 
 
-|CPU|PC:inst2|lpm_add_sub0:inst3|lpm_add_sub:LPM_ADD_SUB_component|add_sub_dph:auto_generated
-dataa[0] => op_1.IN62
-dataa[1] => op_1.IN60
-dataa[2] => op_1.IN58
-dataa[3] => op_1.IN56
-dataa[4] => op_1.IN54
-dataa[5] => op_1.IN52
-dataa[6] => op_1.IN50
-dataa[7] => op_1.IN48
-dataa[8] => op_1.IN46
-dataa[9] => op_1.IN44
-dataa[10] => op_1.IN42
-dataa[11] => op_1.IN40
-dataa[12] => op_1.IN38
-dataa[13] => op_1.IN36
-dataa[14] => op_1.IN34
-dataa[15] => op_1.IN32
-dataa[16] => op_1.IN30
-dataa[17] => op_1.IN28
-dataa[18] => op_1.IN26
-dataa[19] => op_1.IN24
-dataa[20] => op_1.IN22
-dataa[21] => op_1.IN20
-dataa[22] => op_1.IN18
-dataa[23] => op_1.IN16
-dataa[24] => op_1.IN14
-dataa[25] => op_1.IN12
-dataa[26] => op_1.IN10
-dataa[27] => op_1.IN8
-dataa[28] => op_1.IN6
-dataa[29] => op_1.IN4
-dataa[30] => op_1.IN2
-dataa[31] => op_1.IN0
-datab[0] => op_1.IN63
-datab[1] => op_1.IN61
-datab[2] => op_1.IN59
-datab[3] => op_1.IN57
-datab[4] => op_1.IN55
-datab[5] => op_1.IN53
-datab[6] => op_1.IN51
-datab[7] => op_1.IN49
-datab[8] => op_1.IN47
-datab[9] => op_1.IN45
-datab[10] => op_1.IN43
-datab[11] => op_1.IN41
-datab[12] => op_1.IN39
-datab[13] => op_1.IN37
-datab[14] => op_1.IN35
-datab[15] => op_1.IN33
-datab[16] => op_1.IN31
-datab[17] => op_1.IN29
-datab[18] => op_1.IN27
-datab[19] => op_1.IN25
-datab[20] => op_1.IN23
-datab[21] => op_1.IN21
-datab[22] => op_1.IN19
-datab[23] => op_1.IN17
-datab[24] => op_1.IN15
-datab[25] => op_1.IN13
-datab[26] => op_1.IN11
-datab[27] => op_1.IN9
-datab[28] => op_1.IN7
-datab[29] => op_1.IN5
-datab[30] => op_1.IN3
-datab[31] => op_1.IN1
-result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[8] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[9] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[10] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[11] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[12] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[13] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[14] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[15] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[16] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[17] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[18] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[19] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[20] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[21] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[22] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[23] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[24] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[25] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[26] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[27] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[28] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[29] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[30] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[31] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated
+data[0] => result_node[0]~63.IN1
+data[1] => result_node[1]~61.IN1
+data[2] => result_node[2]~59.IN1
+data[3] => result_node[3]~57.IN1
+data[4] => result_node[4]~55.IN1
+data[5] => result_node[5]~53.IN1
+data[6] => result_node[6]~51.IN1
+data[7] => result_node[7]~49.IN1
+data[8] => result_node[8]~47.IN1
+data[9] => result_node[9]~45.IN1
+data[10] => result_node[10]~43.IN1
+data[11] => result_node[11]~41.IN1
+data[12] => result_node[12]~39.IN1
+data[13] => result_node[13]~37.IN1
+data[14] => result_node[14]~35.IN1
+data[15] => result_node[15]~33.IN1
+data[16] => result_node[16]~31.IN1
+data[17] => result_node[17]~29.IN1
+data[18] => result_node[18]~27.IN1
+data[19] => result_node[19]~25.IN1
+data[20] => result_node[20]~23.IN1
+data[21] => result_node[21]~21.IN1
+data[22] => result_node[22]~19.IN1
+data[23] => result_node[23]~17.IN1
+data[24] => result_node[24]~15.IN1
+data[25] => result_node[25]~13.IN1
+data[26] => result_node[26]~11.IN1
+data[27] => result_node[27]~9.IN1
+data[28] => result_node[28]~7.IN1
+data[29] => result_node[29]~5.IN1
+data[30] => result_node[30]~3.IN1
+data[31] => result_node[31]~1.IN1
+data[32] => result_node[0]~62.IN1
+data[33] => result_node[1]~60.IN1
+data[34] => result_node[2]~58.IN1
+data[35] => result_node[3]~56.IN1
+data[36] => result_node[4]~54.IN1
+data[37] => result_node[5]~52.IN1
+data[38] => result_node[6]~50.IN1
+data[39] => result_node[7]~48.IN1
+data[40] => result_node[8]~46.IN1
+data[41] => result_node[9]~44.IN1
+data[42] => result_node[10]~42.IN1
+data[43] => result_node[11]~40.IN1
+data[44] => result_node[12]~38.IN1
+data[45] => result_node[13]~36.IN1
+data[46] => result_node[14]~34.IN1
+data[47] => result_node[15]~32.IN1
+data[48] => result_node[16]~30.IN1
+data[49] => result_node[17]~28.IN1
+data[50] => result_node[18]~26.IN1
+data[51] => result_node[19]~24.IN1
+data[52] => result_node[20]~22.IN1
+data[53] => result_node[21]~20.IN1
+data[54] => result_node[22]~18.IN1
+data[55] => result_node[23]~16.IN1
+data[56] => result_node[24]~14.IN1
+data[57] => result_node[25]~12.IN1
+data[58] => result_node[26]~10.IN1
+data[59] => result_node[27]~8.IN1
+data[60] => result_node[28]~6.IN1
+data[61] => result_node[29]~4.IN1
+data[62] => result_node[30]~2.IN1
+data[63] => result_node[31]~0.IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
+result[16] <= result_node[16].DB_MAX_OUTPUT_PORT_TYPE
+result[17] <= result_node[17].DB_MAX_OUTPUT_PORT_TYPE
+result[18] <= result_node[18].DB_MAX_OUTPUT_PORT_TYPE
+result[19] <= result_node[19].DB_MAX_OUTPUT_PORT_TYPE
+result[20] <= result_node[20].DB_MAX_OUTPUT_PORT_TYPE
+result[21] <= result_node[21].DB_MAX_OUTPUT_PORT_TYPE
+result[22] <= result_node[22].DB_MAX_OUTPUT_PORT_TYPE
+result[23] <= result_node[23].DB_MAX_OUTPUT_PORT_TYPE
+result[24] <= result_node[24].DB_MAX_OUTPUT_PORT_TYPE
+result[25] <= result_node[25].DB_MAX_OUTPUT_PORT_TYPE
+result[26] <= result_node[26].DB_MAX_OUTPUT_PORT_TYPE
+result[27] <= result_node[27].DB_MAX_OUTPUT_PORT_TYPE
+result[28] <= result_node[28].DB_MAX_OUTPUT_PORT_TYPE
+result[29] <= result_node[29].DB_MAX_OUTPUT_PORT_TYPE
+result[30] <= result_node[30].DB_MAX_OUTPUT_PORT_TYPE
+result[31] <= result_node[31].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[31]~0.IN0
+sel[0] => _~0.IN0
+sel[0] => result_node[30]~2.IN0
+sel[0] => _~1.IN0
+sel[0] => result_node[29]~4.IN0
+sel[0] => _~2.IN0
+sel[0] => result_node[28]~6.IN0
+sel[0] => _~3.IN0
+sel[0] => result_node[27]~8.IN0
+sel[0] => _~4.IN0
+sel[0] => result_node[26]~10.IN0
+sel[0] => _~5.IN0
+sel[0] => result_node[25]~12.IN0
+sel[0] => _~6.IN0
+sel[0] => result_node[24]~14.IN0
+sel[0] => _~7.IN0
+sel[0] => result_node[23]~16.IN0
+sel[0] => _~8.IN0
+sel[0] => result_node[22]~18.IN0
+sel[0] => _~9.IN0
+sel[0] => result_node[21]~20.IN0
+sel[0] => _~10.IN0
+sel[0] => result_node[20]~22.IN0
+sel[0] => _~11.IN0
+sel[0] => result_node[19]~24.IN0
+sel[0] => _~12.IN0
+sel[0] => result_node[18]~26.IN0
+sel[0] => _~13.IN0
+sel[0] => result_node[17]~28.IN0
+sel[0] => _~14.IN0
+sel[0] => result_node[16]~30.IN0
+sel[0] => _~15.IN0
+sel[0] => result_node[15]~32.IN0
+sel[0] => _~16.IN0
+sel[0] => result_node[14]~34.IN0
+sel[0] => _~17.IN0
+sel[0] => result_node[13]~36.IN0
+sel[0] => _~18.IN0
+sel[0] => result_node[12]~38.IN0
+sel[0] => _~19.IN0
+sel[0] => result_node[11]~40.IN0
+sel[0] => _~20.IN0
+sel[0] => result_node[10]~42.IN0
+sel[0] => _~21.IN0
+sel[0] => result_node[9]~44.IN0
+sel[0] => _~22.IN0
+sel[0] => result_node[8]~46.IN0
+sel[0] => _~23.IN0
+sel[0] => result_node[7]~48.IN0
+sel[0] => _~24.IN0
+sel[0] => result_node[6]~50.IN0
+sel[0] => _~25.IN0
+sel[0] => result_node[5]~52.IN0
+sel[0] => _~26.IN0
+sel[0] => result_node[4]~54.IN0
+sel[0] => _~27.IN0
+sel[0] => result_node[3]~56.IN0
+sel[0] => _~28.IN0
+sel[0] => result_node[2]~58.IN0
+sel[0] => _~29.IN0
+sel[0] => result_node[1]~60.IN0
+sel[0] => _~30.IN0
+sel[0] => result_node[0]~62.IN0
+sel[0] => _~31.IN0
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_constant3:inst4
+result[0] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[1] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[2] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[3] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[4] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[5] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[6] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[7] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[8] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[9] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[10] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[11] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[12] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[13] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[14] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[15] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[16] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[17] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[18] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[19] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[20] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[21] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[22] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[23] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[24] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[25] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[26] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[27] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[28] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[29] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[30] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+result[31] <= lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component.result
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_constant3:inst4|lpm_constant3_lpm_constant_r09:lpm_constant3_lpm_constant_r09_component
+result[0] <= <GND>
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <GND>
+result[7] <= <GND>
+result[8] <= <GND>
+result[9] <= <GND>
+result[10] <= <GND>
+result[11] <= <GND>
+result[12] <= <GND>
+result[13] <= <GND>
+result[14] <= <GND>
+result[15] <= <GND>
+result[16] <= <GND>
+result[17] <= <GND>
+result[18] <= <GND>
+result[19] <= <GND>
+result[20] <= <GND>
+result[21] <= <GND>
+result[22] <= <GND>
+result[23] <= <GND>
+result[24] <= <GND>
+result[25] <= <GND>
+result[26] <= <GND>
+result[27] <= <GND>
+result[28] <= <GND>
+result[29] <= <GND>
+result[30] <= <GND>
+result[31] <= <GND>
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|Shift_left2_32bit:inst15
+OUT[0] <= <GND>
+OUT[1] <= <GND>
+OUT[2] <= IN[0].DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= IN[1].DB_MAX_OUTPUT_PORT_TYPE
+OUT[4] <= IN[2].DB_MAX_OUTPUT_PORT_TYPE
+OUT[5] <= IN[3].DB_MAX_OUTPUT_PORT_TYPE
+OUT[6] <= IN[4].DB_MAX_OUTPUT_PORT_TYPE
+OUT[7] <= IN[5].DB_MAX_OUTPUT_PORT_TYPE
+OUT[8] <= IN[6].DB_MAX_OUTPUT_PORT_TYPE
+OUT[9] <= IN[7].DB_MAX_OUTPUT_PORT_TYPE
+OUT[10] <= IN[8].DB_MAX_OUTPUT_PORT_TYPE
+OUT[11] <= IN[9].DB_MAX_OUTPUT_PORT_TYPE
+OUT[12] <= IN[10].DB_MAX_OUTPUT_PORT_TYPE
+OUT[13] <= IN[11].DB_MAX_OUTPUT_PORT_TYPE
+OUT[14] <= IN[12].DB_MAX_OUTPUT_PORT_TYPE
+OUT[15] <= IN[13].DB_MAX_OUTPUT_PORT_TYPE
+OUT[16] <= IN[14].DB_MAX_OUTPUT_PORT_TYPE
+OUT[17] <= IN[15].DB_MAX_OUTPUT_PORT_TYPE
+OUT[18] <= IN[16].DB_MAX_OUTPUT_PORT_TYPE
+OUT[19] <= IN[17].DB_MAX_OUTPUT_PORT_TYPE
+OUT[20] <= IN[18].DB_MAX_OUTPUT_PORT_TYPE
+OUT[21] <= IN[19].DB_MAX_OUTPUT_PORT_TYPE
+OUT[22] <= IN[20].DB_MAX_OUTPUT_PORT_TYPE
+OUT[23] <= IN[21].DB_MAX_OUTPUT_PORT_TYPE
+OUT[24] <= IN[22].DB_MAX_OUTPUT_PORT_TYPE
+OUT[25] <= IN[23].DB_MAX_OUTPUT_PORT_TYPE
+OUT[26] <= IN[24].DB_MAX_OUTPUT_PORT_TYPE
+OUT[27] <= IN[25].DB_MAX_OUTPUT_PORT_TYPE
+OUT[28] <= IN[26].DB_MAX_OUTPUT_PORT_TYPE
+OUT[29] <= IN[27].DB_MAX_OUTPUT_PORT_TYPE
+OUT[30] <= IN[28].DB_MAX_OUTPUT_PORT_TYPE
+OUT[31] <= IN[29].DB_MAX_OUTPUT_PORT_TYPE
+IN[0] => OUT[2].DATAIN
+IN[1] => OUT[3].DATAIN
+IN[2] => OUT[4].DATAIN
+IN[3] => OUT[5].DATAIN
+IN[4] => OUT[6].DATAIN
+IN[5] => OUT[7].DATAIN
+IN[6] => OUT[8].DATAIN
+IN[7] => OUT[9].DATAIN
+IN[8] => OUT[10].DATAIN
+IN[9] => OUT[11].DATAIN
+IN[10] => OUT[12].DATAIN
+IN[11] => OUT[13].DATAIN
+IN[12] => OUT[14].DATAIN
+IN[13] => OUT[15].DATAIN
+IN[14] => OUT[16].DATAIN
+IN[15] => OUT[17].DATAIN
+IN[16] => OUT[18].DATAIN
+IN[17] => OUT[19].DATAIN
+IN[18] => OUT[20].DATAIN
+IN[19] => OUT[21].DATAIN
+IN[20] => OUT[22].DATAIN
+IN[21] => OUT[23].DATAIN
+IN[22] => OUT[24].DATAIN
+IN[23] => OUT[25].DATAIN
+IN[24] => OUT[26].DATAIN
+IN[25] => OUT[27].DATAIN
+IN[26] => OUT[28].DATAIN
+IN[27] => OUT[29].DATAIN
+IN[28] => OUT[30].DATAIN
+IN[29] => OUT[31].DATAIN
+IN[30] => ~NO_FANOUT~
+IN[31] => ~NO_FANOUT~
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|sign_extend:inst14
+OUT[0] <= IN[0].DB_MAX_OUTPUT_PORT_TYPE
+OUT[1] <= IN[1].DB_MAX_OUTPUT_PORT_TYPE
+OUT[2] <= IN[2].DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= IN[3].DB_MAX_OUTPUT_PORT_TYPE
+OUT[4] <= IN[4].DB_MAX_OUTPUT_PORT_TYPE
+OUT[5] <= IN[5].DB_MAX_OUTPUT_PORT_TYPE
+OUT[6] <= IN[6].DB_MAX_OUTPUT_PORT_TYPE
+OUT[7] <= IN[7].DB_MAX_OUTPUT_PORT_TYPE
+OUT[8] <= IN[8].DB_MAX_OUTPUT_PORT_TYPE
+OUT[9] <= IN[9].DB_MAX_OUTPUT_PORT_TYPE
+OUT[10] <= IN[10].DB_MAX_OUTPUT_PORT_TYPE
+OUT[11] <= IN[11].DB_MAX_OUTPUT_PORT_TYPE
+OUT[12] <= IN[12].DB_MAX_OUTPUT_PORT_TYPE
+OUT[13] <= IN[13].DB_MAX_OUTPUT_PORT_TYPE
+OUT[14] <= IN[14].DB_MAX_OUTPUT_PORT_TYPE
+OUT[15] <= OUT~16.DB_MAX_OUTPUT_PORT_TYPE
+OUT[16] <= OUT~15.DB_MAX_OUTPUT_PORT_TYPE
+OUT[17] <= OUT~14.DB_MAX_OUTPUT_PORT_TYPE
+OUT[18] <= OUT~13.DB_MAX_OUTPUT_PORT_TYPE
+OUT[19] <= OUT~12.DB_MAX_OUTPUT_PORT_TYPE
+OUT[20] <= OUT~11.DB_MAX_OUTPUT_PORT_TYPE
+OUT[21] <= OUT~10.DB_MAX_OUTPUT_PORT_TYPE
+OUT[22] <= OUT~9.DB_MAX_OUTPUT_PORT_TYPE
+OUT[23] <= OUT~8.DB_MAX_OUTPUT_PORT_TYPE
+OUT[24] <= OUT~7.DB_MAX_OUTPUT_PORT_TYPE
+OUT[25] <= OUT~6.DB_MAX_OUTPUT_PORT_TYPE
+OUT[26] <= OUT~5.DB_MAX_OUTPUT_PORT_TYPE
+OUT[27] <= OUT~4.DB_MAX_OUTPUT_PORT_TYPE
+OUT[28] <= OUT~3.DB_MAX_OUTPUT_PORT_TYPE
+OUT[29] <= OUT~2.DB_MAX_OUTPUT_PORT_TYPE
+OUT[30] <= OUT~1.DB_MAX_OUTPUT_PORT_TYPE
+OUT[31] <= OUT~0.DB_MAX_OUTPUT_PORT_TYPE
+IN[0] => OUT[0].DATAIN
+IN[1] => OUT[1].DATAIN
+IN[2] => OUT[2].DATAIN
+IN[3] => OUT[3].DATAIN
+IN[4] => OUT[4].DATAIN
+IN[5] => OUT[5].DATAIN
+IN[6] => OUT[6].DATAIN
+IN[7] => OUT[7].DATAIN
+IN[8] => OUT[8].DATAIN
+IN[9] => OUT[9].DATAIN
+IN[10] => OUT[10].DATAIN
+IN[11] => OUT[11].DATAIN
+IN[12] => OUT[12].DATAIN
+IN[13] => OUT[13].DATAIN
+IN[14] => OUT[14].DATAIN
+IN[15] => OUT~0.IN0
+IN[15] => OUT~1.IN0
+IN[15] => OUT~2.IN0
+IN[15] => OUT~3.IN0
+IN[15] => OUT~4.IN0
+IN[15] => OUT~5.IN0
+IN[15] => OUT~6.IN0
+IN[15] => OUT~7.IN0
+IN[15] => OUT~8.IN0
+IN[15] => OUT~9.IN0
+IN[15] => OUT~10.IN0
+IN[15] => OUT~11.IN0
+IN[15] => OUT~12.IN0
+IN[15] => OUT~13.IN0
+IN[15] => OUT~14.IN0
+IN[15] => OUT~15.IN0
+IN[15] => OUT~16.IN0
+IN[15] => OUT~0.IN1
+IN[15] => OUT~1.IN1
+IN[15] => OUT~2.IN1
+IN[15] => OUT~3.IN1
+IN[15] => OUT~4.IN1
+IN[15] => OUT~5.IN1
+IN[15] => OUT~6.IN1
+IN[15] => OUT~7.IN1
+IN[15] => OUT~8.IN1
+IN[15] => OUT~9.IN1
+IN[15] => OUT~10.IN1
+IN[15] => OUT~11.IN1
+IN[15] => OUT~12.IN1
+IN[15] => OUT~13.IN1
+IN[15] => OUT~14.IN1
+IN[15] => OUT~15.IN1
+IN[15] => OUT~16.IN1
+IN[15] => OUT~0.IN2
+IN[15] => OUT~1.IN2
+IN[15] => OUT~2.IN2
+IN[15] => OUT~3.IN2
+IN[15] => OUT~4.IN2
+IN[15] => OUT~5.IN2
+IN[15] => OUT~6.IN2
+IN[15] => OUT~7.IN2
+IN[15] => OUT~8.IN2
+IN[15] => OUT~9.IN2
+IN[15] => OUT~10.IN2
+IN[15] => OUT~11.IN2
+IN[15] => OUT~12.IN2
+IN[15] => OUT~13.IN2
+IN[15] => OUT~14.IN2
+IN[15] => OUT~15.IN2
+IN[15] => OUT~16.IN2
+IN[15] => OUT~0.IN3
+IN[15] => OUT~1.IN3
+IN[15] => OUT~2.IN3
+IN[15] => OUT~3.IN3
+IN[15] => OUT~4.IN3
+IN[15] => OUT~5.IN3
+IN[15] => OUT~6.IN3
+IN[15] => OUT~7.IN3
+IN[15] => OUT~8.IN3
+IN[15] => OUT~9.IN3
+IN[15] => OUT~10.IN3
+IN[15] => OUT~11.IN3
+IN[15] => OUT~12.IN3
+IN[15] => OUT~13.IN3
+IN[15] => OUT~14.IN3
+IN[15] => OUT~15.IN3
+IN[15] => OUT~16.IN3
+IN[15] => OUT~0.IN4
+IN[15] => OUT~1.IN4
+IN[15] => OUT~2.IN4
+IN[15] => OUT~3.IN4
+IN[15] => OUT~4.IN4
+IN[15] => OUT~5.IN4
+IN[15] => OUT~6.IN4
+IN[15] => OUT~7.IN4
+IN[15] => OUT~8.IN4
+IN[15] => OUT~9.IN4
+IN[15] => OUT~10.IN4
+IN[15] => OUT~11.IN4
+IN[15] => OUT~12.IN4
+IN[15] => OUT~13.IN4
+IN[15] => OUT~14.IN4
+IN[15] => OUT~15.IN4
+IN[15] => OUT~16.IN4
+IN[15] => OUT~0.IN5
+IN[15] => OUT~1.IN5
+IN[15] => OUT~2.IN5
+IN[15] => OUT~3.IN5
+IN[15] => OUT~4.IN5
+IN[15] => OUT~5.IN5
+IN[15] => OUT~6.IN5
+IN[15] => OUT~7.IN5
+IN[15] => OUT~8.IN5
+IN[15] => OUT~9.IN5
+IN[15] => OUT~10.IN5
+IN[15] => OUT~11.IN5
+IN[15] => OUT~12.IN5
+IN[15] => OUT~13.IN5
+IN[15] => OUT~14.IN5
+IN[15] => OUT~15.IN5
+IN[15] => OUT~16.IN5
+IN[15] => OUT~0.IN6
+IN[15] => OUT~1.IN6
+IN[15] => OUT~2.IN6
+IN[15] => OUT~3.IN6
+IN[15] => OUT~4.IN6
+IN[15] => OUT~5.IN6
+IN[15] => OUT~6.IN6
+IN[15] => OUT~7.IN6
+IN[15] => OUT~8.IN6
+IN[15] => OUT~9.IN6
+IN[15] => OUT~10.IN6
+IN[15] => OUT~11.IN6
+IN[15] => OUT~12.IN6
+IN[15] => OUT~13.IN6
+IN[15] => OUT~14.IN6
+IN[15] => OUT~15.IN6
+IN[15] => OUT~16.IN6
+IN[15] => OUT~0.IN7
+IN[15] => OUT~1.IN7
+IN[15] => OUT~2.IN7
+IN[15] => OUT~3.IN7
+IN[15] => OUT~4.IN7
+IN[15] => OUT~5.IN7
+IN[15] => OUT~6.IN7
+IN[15] => OUT~7.IN7
+IN[15] => OUT~8.IN7
+IN[15] => OUT~9.IN7
+IN[15] => OUT~10.IN7
+IN[15] => OUT~11.IN7
+IN[15] => OUT~12.IN7
+IN[15] => OUT~13.IN7
+IN[15] => OUT~14.IN7
+IN[15] => OUT~15.IN7
+IN[15] => OUT~16.IN7
+IN[15] => OUT~0.IN8
+IN[15] => OUT~1.IN8
+IN[15] => OUT~2.IN8
+IN[15] => OUT~3.IN8
+IN[15] => OUT~4.IN8
+IN[15] => OUT~5.IN8
+IN[15] => OUT~6.IN8
+IN[15] => OUT~7.IN8
+IN[15] => OUT~8.IN8
+IN[15] => OUT~9.IN8
+IN[15] => OUT~10.IN8
+IN[15] => OUT~11.IN8
+IN[15] => OUT~12.IN8
+IN[15] => OUT~13.IN8
+IN[15] => OUT~14.IN8
+IN[15] => OUT~15.IN8
+IN[15] => OUT~16.IN8
+IN[15] => OUT~0.IN9
+IN[15] => OUT~1.IN9
+IN[15] => OUT~2.IN9
+IN[15] => OUT~3.IN9
+IN[15] => OUT~4.IN9
+IN[15] => OUT~5.IN9
+IN[15] => OUT~6.IN9
+IN[15] => OUT~7.IN9
+IN[15] => OUT~8.IN9
+IN[15] => OUT~9.IN9
+IN[15] => OUT~10.IN9
+IN[15] => OUT~11.IN9
+IN[15] => OUT~12.IN9
+IN[15] => OUT~13.IN9
+IN[15] => OUT~14.IN9
+IN[15] => OUT~15.IN9
+IN[15] => OUT~16.IN9
+IN[15] => OUT~0.IN10
+IN[15] => OUT~1.IN10
+IN[15] => OUT~2.IN10
+IN[15] => OUT~3.IN10
+IN[15] => OUT~4.IN10
+IN[15] => OUT~5.IN10
+IN[15] => OUT~6.IN10
+IN[15] => OUT~7.IN10
+IN[15] => OUT~8.IN10
+IN[15] => OUT~9.IN10
+IN[15] => OUT~10.IN10
+IN[15] => OUT~11.IN10
+IN[15] => OUT~12.IN10
+IN[15] => OUT~13.IN10
+IN[15] => OUT~14.IN10
+IN[15] => OUT~15.IN10
+IN[15] => OUT~16.IN10
+IN[15] => OUT~0.IN11
+IN[15] => OUT~1.IN11
+IN[15] => OUT~2.IN11
+IN[15] => OUT~3.IN11
+IN[15] => OUT~4.IN11
+IN[15] => OUT~5.IN11
+IN[15] => OUT~6.IN11
+IN[15] => OUT~7.IN11
+IN[15] => OUT~8.IN11
+IN[15] => OUT~9.IN11
+IN[15] => OUT~10.IN11
+IN[15] => OUT~11.IN11
+IN[15] => OUT~12.IN11
+IN[15] => OUT~13.IN11
+IN[15] => OUT~14.IN11
+IN[15] => OUT~15.IN11
+IN[15] => OUT~16.IN11
+IN[15] => OUT~0.IN12
+IN[15] => OUT~1.IN12
+IN[15] => OUT~2.IN12
+IN[15] => OUT~3.IN12
+IN[15] => OUT~4.IN12
+IN[15] => OUT~5.IN12
+IN[15] => OUT~6.IN12
+IN[15] => OUT~7.IN12
+IN[15] => OUT~8.IN12
+IN[15] => OUT~9.IN12
+IN[15] => OUT~10.IN12
+IN[15] => OUT~11.IN12
+IN[15] => OUT~12.IN12
+IN[15] => OUT~13.IN12
+IN[15] => OUT~14.IN12
+IN[15] => OUT~15.IN12
+IN[15] => OUT~16.IN12
+IN[15] => OUT~0.IN13
+IN[15] => OUT~1.IN13
+IN[15] => OUT~2.IN13
+IN[15] => OUT~3.IN13
+IN[15] => OUT~4.IN13
+IN[15] => OUT~5.IN13
+IN[15] => OUT~6.IN13
+IN[15] => OUT~7.IN13
+IN[15] => OUT~8.IN13
+IN[15] => OUT~9.IN13
+IN[15] => OUT~10.IN13
+IN[15] => OUT~11.IN13
+IN[15] => OUT~12.IN13
+IN[15] => OUT~13.IN13
+IN[15] => OUT~14.IN13
+IN[15] => OUT~15.IN13
+IN[15] => OUT~16.IN13
+IN[15] => OUT~0.IN14
+IN[15] => OUT~1.IN14
+IN[15] => OUT~2.IN14
+IN[15] => OUT~3.IN14
+IN[15] => OUT~4.IN14
+IN[15] => OUT~5.IN14
+IN[15] => OUT~6.IN14
+IN[15] => OUT~7.IN14
+IN[15] => OUT~8.IN14
+IN[15] => OUT~9.IN14
+IN[15] => OUT~10.IN14
+IN[15] => OUT~11.IN14
+IN[15] => OUT~12.IN14
+IN[15] => OUT~13.IN14
+IN[15] => OUT~14.IN14
+IN[15] => OUT~15.IN14
+IN[15] => OUT~16.IN14
+IN[15] => OUT~0.IN15
+IN[15] => OUT~1.IN15
+IN[15] => OUT~2.IN15
+IN[15] => OUT~3.IN15
+IN[15] => OUT~4.IN15
+IN[15] => OUT~5.IN15
+IN[15] => OUT~6.IN15
+IN[15] => OUT~7.IN15
+IN[15] => OUT~8.IN15
+IN[15] => OUT~9.IN15
+IN[15] => OUT~10.IN15
+IN[15] => OUT~11.IN15
+IN[15] => OUT~12.IN15
+IN[15] => OUT~13.IN15
+IN[15] => OUT~14.IN15
+IN[15] => OUT~15.IN15
+IN[15] => OUT~16.IN15
+IN[15] => OUT~0.IN16
+IN[15] => OUT~1.IN16
+IN[15] => OUT~2.IN16
+IN[15] => OUT~3.IN16
+IN[15] => OUT~4.IN16
+IN[15] => OUT~5.IN16
+IN[15] => OUT~6.IN16
+IN[15] => OUT~7.IN16
+IN[15] => OUT~8.IN16
+IN[15] => OUT~9.IN16
+IN[15] => OUT~10.IN16
+IN[15] => OUT~11.IN16
+IN[15] => OUT~12.IN16
+IN[15] => OUT~13.IN16
+IN[15] => OUT~14.IN16
+IN[15] => OUT~15.IN16
+IN[15] => OUT~16.IN16
+
+
+|CPU|NEW_PC:inst1|PC_comb_logic:inst|shift_left_2_26bit:inst16
+OUT[0] <= <GND>
+OUT[1] <= <GND>
+OUT[2] <= IN[0].DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= IN[1].DB_MAX_OUTPUT_PORT_TYPE
+OUT[4] <= IN[2].DB_MAX_OUTPUT_PORT_TYPE
+OUT[5] <= IN[3].DB_MAX_OUTPUT_PORT_TYPE
+OUT[6] <= IN[4].DB_MAX_OUTPUT_PORT_TYPE
+OUT[7] <= IN[5].DB_MAX_OUTPUT_PORT_TYPE
+OUT[8] <= IN[6].DB_MAX_OUTPUT_PORT_TYPE
+OUT[9] <= IN[7].DB_MAX_OUTPUT_PORT_TYPE
+OUT[10] <= IN[8].DB_MAX_OUTPUT_PORT_TYPE
+OUT[11] <= IN[9].DB_MAX_OUTPUT_PORT_TYPE
+OUT[12] <= IN[10].DB_MAX_OUTPUT_PORT_TYPE
+OUT[13] <= IN[11].DB_MAX_OUTPUT_PORT_TYPE
+OUT[14] <= IN[12].DB_MAX_OUTPUT_PORT_TYPE
+OUT[15] <= IN[13].DB_MAX_OUTPUT_PORT_TYPE
+OUT[16] <= IN[14].DB_MAX_OUTPUT_PORT_TYPE
+OUT[17] <= IN[15].DB_MAX_OUTPUT_PORT_TYPE
+OUT[18] <= IN[16].DB_MAX_OUTPUT_PORT_TYPE
+OUT[19] <= IN[17].DB_MAX_OUTPUT_PORT_TYPE
+OUT[20] <= IN[18].DB_MAX_OUTPUT_PORT_TYPE
+OUT[21] <= IN[19].DB_MAX_OUTPUT_PORT_TYPE
+OUT[22] <= IN[20].DB_MAX_OUTPUT_PORT_TYPE
+OUT[23] <= IN[21].DB_MAX_OUTPUT_PORT_TYPE
+OUT[24] <= IN[22].DB_MAX_OUTPUT_PORT_TYPE
+OUT[25] <= IN[23].DB_MAX_OUTPUT_PORT_TYPE
+OUT[26] <= IN[24].DB_MAX_OUTPUT_PORT_TYPE
+OUT[27] <= IN[25].DB_MAX_OUTPUT_PORT_TYPE
+IN[0] => OUT[2].DATAIN
+IN[1] => OUT[3].DATAIN
+IN[2] => OUT[4].DATAIN
+IN[3] => OUT[5].DATAIN
+IN[4] => OUT[6].DATAIN
+IN[5] => OUT[7].DATAIN
+IN[6] => OUT[8].DATAIN
+IN[7] => OUT[9].DATAIN
+IN[8] => OUT[10].DATAIN
+IN[9] => OUT[11].DATAIN
+IN[10] => OUT[12].DATAIN
+IN[11] => OUT[13].DATAIN
+IN[12] => OUT[14].DATAIN
+IN[13] => OUT[15].DATAIN
+IN[14] => OUT[16].DATAIN
+IN[15] => OUT[17].DATAIN
+IN[16] => OUT[18].DATAIN
+IN[17] => OUT[19].DATAIN
+IN[18] => OUT[20].DATAIN
+IN[19] => OUT[21].DATAIN
+IN[20] => OUT[22].DATAIN
+IN[21] => OUT[23].DATAIN
+IN[22] => OUT[24].DATAIN
+IN[23] => OUT[25].DATAIN
+IN[24] => OUT[26].DATAIN
+IN[25] => OUT[27].DATAIN
+
+
+|CPU|lpm_mux10:inst9
+data0x[0] => sub_wire2[0].IN1
+data0x[1] => sub_wire2[1].IN1
+data0x[2] => sub_wire2[2].IN1
+data0x[3] => sub_wire2[3].IN1
+data0x[4] => sub_wire2[4].IN1
+data0x[5] => sub_wire2[5].IN1
+data0x[6] => sub_wire2[6].IN1
+data0x[7] => sub_wire2[7].IN1
+data0x[8] => sub_wire2[8].IN1
+data0x[9] => sub_wire2[9].IN1
+data0x[10] => sub_wire2[10].IN1
+data0x[11] => sub_wire2[11].IN1
+data0x[12] => sub_wire2[12].IN1
+data0x[13] => sub_wire2[13].IN1
+data0x[14] => sub_wire2[14].IN1
+data0x[15] => sub_wire2[15].IN1
+data1x[0] => sub_wire2[16].IN1
+data1x[1] => sub_wire2[17].IN1
+data1x[2] => sub_wire2[18].IN1
+data1x[3] => sub_wire2[19].IN1
+data1x[4] => sub_wire2[20].IN1
+data1x[5] => sub_wire2[21].IN1
+data1x[6] => sub_wire2[22].IN1
+data1x[7] => sub_wire2[23].IN1
+data1x[8] => sub_wire2[24].IN1
+data1x[9] => sub_wire2[25].IN1
+data1x[10] => sub_wire2[26].IN1
+data1x[11] => sub_wire2[27].IN1
+data1x[12] => sub_wire2[28].IN1
+data1x[13] => sub_wire2[29].IN1
+data1x[14] => sub_wire2[30].IN1
+data1x[15] => sub_wire2[31].IN1
+sel => sub_wire5.IN1
+result[0] <= lpm_mux:LPM_MUX_component.result
+result[1] <= lpm_mux:LPM_MUX_component.result
+result[2] <= lpm_mux:LPM_MUX_component.result
+result[3] <= lpm_mux:LPM_MUX_component.result
+result[4] <= lpm_mux:LPM_MUX_component.result
+result[5] <= lpm_mux:LPM_MUX_component.result
+result[6] <= lpm_mux:LPM_MUX_component.result
+result[7] <= lpm_mux:LPM_MUX_component.result
+result[8] <= lpm_mux:LPM_MUX_component.result
+result[9] <= lpm_mux:LPM_MUX_component.result
+result[10] <= lpm_mux:LPM_MUX_component.result
+result[11] <= lpm_mux:LPM_MUX_component.result
+result[12] <= lpm_mux:LPM_MUX_component.result
+result[13] <= lpm_mux:LPM_MUX_component.result
+result[14] <= lpm_mux:LPM_MUX_component.result
+result[15] <= lpm_mux:LPM_MUX_component.result
+
+
+|CPU|lpm_mux10:inst9|lpm_mux:LPM_MUX_component
+data[0][0] => mux_boc:auto_generated.data[0]
+data[0][1] => mux_boc:auto_generated.data[1]
+data[0][2] => mux_boc:auto_generated.data[2]
+data[0][3] => mux_boc:auto_generated.data[3]
+data[0][4] => mux_boc:auto_generated.data[4]
+data[0][5] => mux_boc:auto_generated.data[5]
+data[0][6] => mux_boc:auto_generated.data[6]
+data[0][7] => mux_boc:auto_generated.data[7]
+data[0][8] => mux_boc:auto_generated.data[8]
+data[0][9] => mux_boc:auto_generated.data[9]
+data[0][10] => mux_boc:auto_generated.data[10]
+data[0][11] => mux_boc:auto_generated.data[11]
+data[0][12] => mux_boc:auto_generated.data[12]
+data[0][13] => mux_boc:auto_generated.data[13]
+data[0][14] => mux_boc:auto_generated.data[14]
+data[0][15] => mux_boc:auto_generated.data[15]
+data[1][0] => mux_boc:auto_generated.data[16]
+data[1][1] => mux_boc:auto_generated.data[17]
+data[1][2] => mux_boc:auto_generated.data[18]
+data[1][3] => mux_boc:auto_generated.data[19]
+data[1][4] => mux_boc:auto_generated.data[20]
+data[1][5] => mux_boc:auto_generated.data[21]
+data[1][6] => mux_boc:auto_generated.data[22]
+data[1][7] => mux_boc:auto_generated.data[23]
+data[1][8] => mux_boc:auto_generated.data[24]
+data[1][9] => mux_boc:auto_generated.data[25]
+data[1][10] => mux_boc:auto_generated.data[26]
+data[1][11] => mux_boc:auto_generated.data[27]
+data[1][12] => mux_boc:auto_generated.data[28]
+data[1][13] => mux_boc:auto_generated.data[29]
+data[1][14] => mux_boc:auto_generated.data[30]
+data[1][15] => mux_boc:auto_generated.data[31]
+sel[0] => mux_boc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_boc:auto_generated.result[0]
+result[1] <= mux_boc:auto_generated.result[1]
+result[2] <= mux_boc:auto_generated.result[2]
+result[3] <= mux_boc:auto_generated.result[3]
+result[4] <= mux_boc:auto_generated.result[4]
+result[5] <= mux_boc:auto_generated.result[5]
+result[6] <= mux_boc:auto_generated.result[6]
+result[7] <= mux_boc:auto_generated.result[7]
+result[8] <= mux_boc:auto_generated.result[8]
+result[9] <= mux_boc:auto_generated.result[9]
+result[10] <= mux_boc:auto_generated.result[10]
+result[11] <= mux_boc:auto_generated.result[11]
+result[12] <= mux_boc:auto_generated.result[12]
+result[13] <= mux_boc:auto_generated.result[13]
+result[14] <= mux_boc:auto_generated.result[14]
+result[15] <= mux_boc:auto_generated.result[15]
+
+
+|CPU|lpm_mux10:inst9|lpm_mux:LPM_MUX_component|mux_boc:auto_generated
+data[0] => result_node[0]~31.IN1
+data[1] => result_node[1]~29.IN1
+data[2] => result_node[2]~27.IN1
+data[3] => result_node[3]~25.IN1
+data[4] => result_node[4]~23.IN1
+data[5] => result_node[5]~21.IN1
+data[6] => result_node[6]~19.IN1
+data[7] => result_node[7]~17.IN1
+data[8] => result_node[8]~15.IN1
+data[9] => result_node[9]~13.IN1
+data[10] => result_node[10]~11.IN1
+data[11] => result_node[11]~9.IN1
+data[12] => result_node[12]~7.IN1
+data[13] => result_node[13]~5.IN1
+data[14] => result_node[14]~3.IN1
+data[15] => result_node[15]~1.IN1
+data[16] => result_node[0]~30.IN1
+data[17] => result_node[1]~28.IN1
+data[18] => result_node[2]~26.IN1
+data[19] => result_node[3]~24.IN1
+data[20] => result_node[4]~22.IN1
+data[21] => result_node[5]~20.IN1
+data[22] => result_node[6]~18.IN1
+data[23] => result_node[7]~16.IN1
+data[24] => result_node[8]~14.IN1
+data[25] => result_node[9]~12.IN1
+data[26] => result_node[10]~10.IN1
+data[27] => result_node[11]~8.IN1
+data[28] => result_node[12]~6.IN1
+data[29] => result_node[13]~4.IN1
+data[30] => result_node[14]~2.IN1
+data[31] => result_node[15]~0.IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[15]~0.IN0
+sel[0] => _~0.IN0
+sel[0] => result_node[14]~2.IN0
+sel[0] => _~1.IN0
+sel[0] => result_node[13]~4.IN0
+sel[0] => _~2.IN0
+sel[0] => result_node[12]~6.IN0
+sel[0] => _~3.IN0
+sel[0] => result_node[11]~8.IN0
+sel[0] => _~4.IN0
+sel[0] => result_node[10]~10.IN0
+sel[0] => _~5.IN0
+sel[0] => result_node[9]~12.IN0
+sel[0] => _~6.IN0
+sel[0] => result_node[8]~14.IN0
+sel[0] => _~7.IN0
+sel[0] => result_node[7]~16.IN0
+sel[0] => _~8.IN0
+sel[0] => result_node[6]~18.IN0
+sel[0] => _~9.IN0
+sel[0] => result_node[5]~20.IN0
+sel[0] => _~10.IN0
+sel[0] => result_node[4]~22.IN0
+sel[0] => _~11.IN0
+sel[0] => result_node[3]~24.IN0
+sel[0] => _~12.IN0
+sel[0] => result_node[2]~26.IN0
+sel[0] => _~13.IN0
+sel[0] => result_node[1]~28.IN0
+sel[0] => _~14.IN0
+sel[0] => result_node[0]~30.IN0
+sel[0] => _~15.IN0
+
+
+|CPU|lpm_constantminusOne:inst8
+result[0] <= lpm_constant:LPM_CONSTANT_component.result
+result[1] <= lpm_constant:LPM_CONSTANT_component.result
+result[2] <= lpm_constant:LPM_CONSTANT_component.result
+result[3] <= lpm_constant:LPM_CONSTANT_component.result
+result[4] <= lpm_constant:LPM_CONSTANT_component.result
+result[5] <= lpm_constant:LPM_CONSTANT_component.result
+result[6] <= lpm_constant:LPM_CONSTANT_component.result
+result[7] <= lpm_constant:LPM_CONSTANT_component.result
+result[8] <= lpm_constant:LPM_CONSTANT_component.result
+result[9] <= lpm_constant:LPM_CONSTANT_component.result
+result[10] <= lpm_constant:LPM_CONSTANT_component.result
+result[11] <= lpm_constant:LPM_CONSTANT_component.result
+result[12] <= lpm_constant:LPM_CONSTANT_component.result
+result[13] <= lpm_constant:LPM_CONSTANT_component.result
+result[14] <= lpm_constant:LPM_CONSTANT_component.result
+result[15] <= lpm_constant:LPM_CONSTANT_component.result
+
+
+|CPU|lpm_constantminusOne:inst8|lpm_constant:LPM_CONSTANT_component
+result[0] <= <VCC>
+result[1] <= <VCC>
+result[2] <= <VCC>
+result[3] <= <VCC>
+result[4] <= <VCC>
+result[5] <= <VCC>
+result[6] <= <VCC>
+result[7] <= <VCC>
+result[8] <= <VCC>
+result[9] <= <VCC>
+result[10] <= <VCC>
+result[11] <= <VCC>
+result[12] <= <VCC>
+result[13] <= <VCC>
+result[14] <= <VCC>
+result[15] <= <VCC>
+
+
+|CPU|lpm_constantzero:inst7
+result[0] <= lpm_constant:LPM_CONSTANT_component.result
+result[1] <= lpm_constant:LPM_CONSTANT_component.result
+result[2] <= lpm_constant:LPM_CONSTANT_component.result
+result[3] <= lpm_constant:LPM_CONSTANT_component.result
+result[4] <= lpm_constant:LPM_CONSTANT_component.result
+result[5] <= lpm_constant:LPM_CONSTANT_component.result
+result[6] <= lpm_constant:LPM_CONSTANT_component.result
+result[7] <= lpm_constant:LPM_CONSTANT_component.result
+result[8] <= lpm_constant:LPM_CONSTANT_component.result
+result[9] <= lpm_constant:LPM_CONSTANT_component.result
+result[10] <= lpm_constant:LPM_CONSTANT_component.result
+result[11] <= lpm_constant:LPM_CONSTANT_component.result
+result[12] <= lpm_constant:LPM_CONSTANT_component.result
+result[13] <= lpm_constant:LPM_CONSTANT_component.result
+result[14] <= lpm_constant:LPM_CONSTANT_component.result
+result[15] <= lpm_constant:LPM_CONSTANT_component.result
+
+
+|CPU|lpm_constantzero:inst7|lpm_constant:LPM_CONSTANT_component
+result[0] <= <GND>
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <GND>
+result[7] <= <GND>
+result[8] <= <GND>
+result[9] <= <GND>
+result[10] <= <GND>
+result[11] <= <GND>
+result[12] <= <GND>
+result[13] <= <GND>
+result[14] <= <GND>
+result[15] <= <GND>
 
 
 |CPU|LPM_DFF:A_REG

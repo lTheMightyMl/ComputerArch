@@ -1,0 +1,561 @@
+Analysis & Synthesis report for HW6_1
+Thu May 07 20:59:08 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: lpm_shiftreg1:inst22|lpm_shiftreg:LPM_SHIFTREG_component
+ 12. Parameter Settings for User Entity Instance: PC_comb_logic:inst24|lpm_mux2:inst19|lpm_mux:LPM_MUX_component
+ 13. Parameter Settings for User Entity Instance: PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component
+ 14. lpm_shiftreg Parameter Settings by Entity Instance
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu May 07 20:59:08 2020           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; HW6_1                                           ;
+; Top-level Entity Name              ; pc_calculator_module                            ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 101                                             ;
+;     Total combinational functions  ; 101                                             ;
+;     Dedicated logic registers      ; 30                                              ;
+; Total registers                    ; 30                                              ;
+; Total pins                         ; 78                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                          ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+; Option                                                                     ; Setting              ; Default Value      ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+; Top-level entity name                                                      ; pc_calculator_module ; HW6_1              ;
+; Family name                                                                ; Cyclone II           ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                  ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                   ; On                 ;
+; Enable compact report table                                                ; Off                  ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                 ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                  ; Off                ;
+; Preserve fewer node names                                                  ; On                   ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                  ; Off                ;
+; Verilog Version                                                            ; Verilog_2001         ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993            ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                 ; Auto               ;
+; Safe State Machine                                                         ; Off                  ; Off                ;
+; Extract Verilog State Machines                                             ; On                   ; On                 ;
+; Extract VHDL State Machines                                                ; On                   ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                  ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                 ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                  ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                   ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                   ; On                 ;
+; Parallel Synthesis                                                         ; On                   ; On                 ;
+; DSP Block Balancing                                                        ; Auto                 ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                   ; On                 ;
+; Power-Up Don't Care                                                        ; On                   ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                  ; Off                ;
+; Remove Duplicate Registers                                                 ; On                   ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                  ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                  ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                  ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                  ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                  ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                   ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                  ; Off                ;
+; Optimization Technique                                                     ; Balanced             ; Balanced           ;
+; Carry Chain Length                                                         ; 70                   ; 70                 ;
+; Auto Carry Chains                                                          ; On                   ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                   ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                  ; Off                ;
+; Auto ROM Replacement                                                       ; On                   ; On                 ;
+; Auto RAM Replacement                                                       ; On                   ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto                 ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                 ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                   ; On                 ;
+; Strict RAM Replacement                                                     ; Off                  ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                   ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                  ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                  ; Off                ;
+; Auto Resource Sharing                                                      ; Off                  ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                  ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                  ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                  ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                   ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                  ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                  ; Off                ;
+; Report Parameter Settings                                                  ; On                   ; On                 ;
+; Report Source Assignments                                                  ; On                   ; On                 ;
+; Report Connectivity Checks                                                 ; On                   ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                  ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                    ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation   ; Normal compilation ;
+; HDL message level                                                          ; Level2               ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                  ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                 ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                 ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                  ; 100                ;
+; Clock MUX Protection                                                       ; On                   ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                  ; Off                ;
+; Block Design Naming                                                        ; Auto                 ; Auto               ;
+; SDC constraint protection                                                  ; Off                  ; Off                ;
+; Synthesis Effort                                                           ; Auto                 ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                   ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                  ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium               ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                 ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                   ; On                 ;
+; Synthesis Seed                                                             ; 1                    ; 1                  ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; FA_1bit.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/HW6/FA_1bit.bdf                         ;         ;
+; FA_4bit.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/HW6/FA_4bit.bdf                         ;         ;
+; FA_16bit.bdf                     ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/HW6/FA_16bit.bdf                        ;         ;
+; FA_32bit.bdf                     ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/HW6/FA_32bit.bdf                        ;         ;
+; sign_extend.bdf                  ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/HW6/sign_extend.bdf                     ;         ;
+; Shift_left2_32bit.bdf            ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/HW6/Shift_left2_32bit.bdf               ;         ;
+; shift_left_2_26bit.bdf           ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/HW6/shift_left_2_26bit.bdf              ;         ;
+; lpm_shiftreg1.v                  ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/HW6/lpm_shiftreg1.v                     ;         ;
+; lpm_constant0.v                  ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/HW6/lpm_constant0.v                     ;         ;
+; lpm_constant1.v                  ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/HW6/lpm_constant1.v                     ;         ;
+; lpm_mux2.v                       ; yes             ; User Wizard-Generated File         ; D:/altera/13.0sp1/Projects/HW6/lpm_mux2.v                          ;         ;
+; pc_calculator_module.bdf         ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/HW6/pc_calculator_module.bdf            ;         ;
+; PC_comb_logic.bdf                ; yes             ; User Block Diagram/Schematic File  ; D:/altera/13.0sp1/Projects/HW6/PC_comb_logic.bdf                   ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_shiftreg.tdf ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc       ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc   ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf      ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc       ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc     ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc     ;         ;
+; db/mux_9oc.tdf                   ; yes             ; Auto-Generated Megafunction        ; D:/altera/13.0sp1/Projects/HW6/db/mux_9oc.tdf                      ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 101    ;
+;                                             ;        ;
+; Total combinational functions               ; 101    ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 78     ;
+;     -- 3 input functions                    ; 11     ;
+;     -- <=2 input functions                  ; 12     ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 101    ;
+;     -- arithmetic mode                      ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 30     ;
+;     -- Dedicated logic registers            ; 30     ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 78     ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; Branch ;
+; Maximum fan-out                             ; 57     ;
+; Total fan-out                               ; 537    ;
+; Average fan-out                             ; 2.57   ;
++---------------------------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                  ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
+; |pc_calculator_module                       ; 101 (0)           ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 78   ; 0            ; |pc_calculator_module                                                                                       ; work         ;
+;    |PC_comb_logic:inst24|                   ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24                                                                  ; work         ;
+;       |FA_32bit:inst10|                     ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10                                                  ; work         ;
+;          |FA_16bit:inst1|                   ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1                                   ; work         ;
+;             |FA_4bit:inst1|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst1                     ; work         ;
+;                |FA_1bit:inst2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst2       ; work         ;
+;                |FA_1bit:inst3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst3       ; work         ;
+;                |FA_1bit:inst4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst4       ; work         ;
+;                |FA_1bit:inst|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst        ; work         ;
+;             |FA_4bit:inst2|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst2                     ; work         ;
+;                |FA_1bit:inst2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst2       ; work         ;
+;                |FA_1bit:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst3       ; work         ;
+;                |FA_1bit:inst4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst4       ; work         ;
+;                |FA_1bit:inst|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst        ; work         ;
+;             |FA_4bit:inst3|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst3                     ; work         ;
+;                |FA_1bit:inst2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst2       ; work         ;
+;                |FA_1bit:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst3       ; work         ;
+;                |FA_1bit:inst4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst4       ; work         ;
+;                |FA_1bit:inst|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst        ; work         ;
+;             |FA_4bit:inst|                  ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst                      ; work         ;
+;                |FA_1bit:inst2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst2        ; work         ;
+;                |FA_1bit:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst3        ; work         ;
+;                |FA_1bit:inst4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst4        ; work         ;
+;                |FA_1bit:inst|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst         ; work         ;
+;          |FA_16bit:inst|                    ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst                                    ; work         ;
+;             |FA_4bit:inst1|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst1                      ; work         ;
+;                |FA_1bit:inst2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst2        ; work         ;
+;                |FA_1bit:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst3        ; work         ;
+;                |FA_1bit:inst4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst4        ; work         ;
+;                |FA_1bit:inst|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst         ; work         ;
+;             |FA_4bit:inst2|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst2                      ; work         ;
+;                |FA_1bit:inst2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst2        ; work         ;
+;                |FA_1bit:inst3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst3        ; work         ;
+;                |FA_1bit:inst4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst4        ; work         ;
+;                |FA_1bit:inst|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst         ; work         ;
+;             |FA_4bit:inst|                  ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst                       ; work         ;
+;                |FA_1bit:inst2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst2         ; work         ;
+;                |FA_1bit:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst3         ; work         ;
+;                |FA_1bit:inst4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst4         ; work         ;
+;                |FA_1bit:inst|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst10|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst          ; work         ;
+;       |FA_32bit:inst20|                     ; 58 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20                                                  ; work         ;
+;          |FA_16bit:inst1|                   ; 31 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1                                   ; work         ;
+;             |FA_4bit:inst1|                 ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst1                     ; work         ;
+;                |FA_1bit:inst2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst2       ; work         ;
+;                |FA_1bit:inst3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst3       ; work         ;
+;                |FA_1bit:inst4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst4       ; work         ;
+;                |FA_1bit:inst|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst1|FA_1bit:inst        ; work         ;
+;             |FA_4bit:inst2|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2                     ; work         ;
+;                |FA_1bit:inst2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst2       ; work         ;
+;                |FA_1bit:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst3       ; work         ;
+;                |FA_1bit:inst4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst4       ; work         ;
+;                |FA_1bit:inst|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst        ; work         ;
+;             |FA_4bit:inst3|                 ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst3                     ; work         ;
+;                |FA_1bit:inst2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst2       ; work         ;
+;                |FA_1bit:inst3|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst3       ; work         ;
+;                |FA_1bit:inst4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst4       ; work         ;
+;                |FA_1bit:inst|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst3|FA_1bit:inst        ; work         ;
+;             |FA_4bit:inst|                  ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst                      ; work         ;
+;                |FA_1bit:inst2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst2        ; work         ;
+;                |FA_1bit:inst3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst3        ; work         ;
+;                |FA_1bit:inst4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst4        ; work         ;
+;                |FA_1bit:inst|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst|FA_1bit:inst         ; work         ;
+;          |FA_16bit:inst|                    ; 27 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst                                    ; work         ;
+;             |FA_4bit:inst1|                 ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst1                      ; work         ;
+;                |FA_1bit:inst2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst2        ; work         ;
+;                |FA_1bit:inst3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst3        ; work         ;
+;                |FA_1bit:inst4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst4        ; work         ;
+;                |FA_1bit:inst|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst1|FA_1bit:inst         ; work         ;
+;             |FA_4bit:inst2|                 ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst2                      ; work         ;
+;                |FA_1bit:inst2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst2        ; work         ;
+;                |FA_1bit:inst3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst3        ; work         ;
+;                |FA_1bit:inst4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst4        ; work         ;
+;                |FA_1bit:inst|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst2|FA_1bit:inst         ; work         ;
+;             |FA_4bit:inst3|                 ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst3                      ; work         ;
+;                |FA_1bit:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst3|FA_1bit:inst3        ; work         ;
+;                |FA_1bit:inst4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst3|FA_1bit:inst4        ; work         ;
+;             |FA_4bit:inst|                  ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst                       ; work         ;
+;                |FA_1bit:inst2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst2         ; work         ;
+;                |FA_1bit:inst3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst3         ; work         ;
+;                |FA_1bit:inst4|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst4         ; work         ;
+;                |FA_1bit:inst|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst|FA_4bit:inst|FA_1bit:inst          ; work         ;
+;       |lpm_mux2:inst18|                     ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|lpm_mux2:inst18                                                  ; work         ;
+;          |lpm_mux:LPM_MUX_component|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component                        ; work         ;
+;             |mux_9oc:auto_generated|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated ; work         ;
+;    |lpm_shiftreg1:inst22|                   ; 4 (0)             ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|lpm_shiftreg1:inst22                                                                  ; work         ;
+;       |lpm_shiftreg:LPM_SHIFTREG_component| ; 4 (4)             ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_calculator_module|lpm_shiftreg1:inst22|lpm_shiftreg:LPM_SHIFTREG_component                              ; work         ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                            ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                 ; IP Include File                                ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+------------------------------------------------+
+; Altera ; LPM_SHIFTREG ; 13.0    ; N/A          ; N/A          ; |pc_calculator_module|lpm_shiftreg1:inst22                      ; D:/altera/13.0sp1/Projects/HW6/lpm_shiftreg1.v ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |pc_calculator_module|PC_comb_logic:inst24|lpm_constant0:inst11 ; D:/altera/13.0sp1/Projects/HW6/lpm_constant0.v ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |pc_calculator_module|PC_comb_logic:inst24|lpm_constant1:inst13 ; D:/altera/13.0sp1/Projects/HW6/lpm_constant1.v ;
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |pc_calculator_module|PC_comb_logic:inst24|lpm_mux2:inst18      ; D:/altera/13.0sp1/Projects/HW6/lpm_mux2.v      ;
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |pc_calculator_module|PC_comb_logic:inst24|lpm_mux2:inst19      ; D:/altera/13.0sp1/Projects/HW6/lpm_mux2.v      ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                              ;
++------------------------------------------------------------------+------------------------------------------------------------------------------+
+; Register name                                                    ; Reason for Removal                                                           ;
++------------------------------------------------------------------+------------------------------------------------------------------------------+
+; lpm_shiftreg1:inst22|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; Merged with lpm_shiftreg1:inst22|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ;
+; lpm_shiftreg1:inst22|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; Stuck at GND due to stuck port data_in                                       ;
+; Total Number of Removed Registers = 2                            ;                                                                              ;
++------------------------------------------------------------------+------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 30    ;
+; Number of registers using Synchronous Clear  ; 26    ;
+; Number of registers using Synchronous Load   ; 26    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_shiftreg1:inst22|lpm_shiftreg:LPM_SHIFTREG_component ;
++------------------------+------------+-----------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                            ;
++------------------------+------------+-----------------------------------------------------------------+
+; LPM_WIDTH              ; 32         ; Signed Integer                                                  ;
+; LPM_DIRECTION          ; LEFT       ; Untyped                                                         ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                                         ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                                         ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                         ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                  ;
++------------------------+------------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PC_comb_logic:inst24|lpm_mux2:inst19|lpm_mux:LPM_MUX_component ;
++------------------------+------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                  ;
++------------------------+------------+-----------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                        ;
+; LPM_WIDTH              ; 32         ; Signed Integer                                                        ;
+; LPM_SIZE               ; 2          ; Signed Integer                                                        ;
+; LPM_WIDTHS             ; 1          ; Signed Integer                                                        ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                               ;
+; CBXI_PARAMETER         ; mux_9oc    ; Untyped                                                               ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                               ;
++------------------------+------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component ;
++------------------------+------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                  ;
++------------------------+------------+-----------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                        ;
+; LPM_WIDTH              ; 32         ; Signed Integer                                                        ;
+; LPM_SIZE               ; 2          ; Signed Integer                                                        ;
+; LPM_WIDTHS             ; 1          ; Signed Integer                                                        ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                               ;
+; CBXI_PARAMETER         ; mux_9oc    ; Untyped                                                               ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                               ;
++------------------------+------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; lpm_shiftreg Parameter Settings by Entity Instance                                    ;
++----------------------------+----------------------------------------------------------+
+; Name                       ; Value                                                    ;
++----------------------------+----------------------------------------------------------+
+; Number of entity instances ; 1                                                        ;
+; Entity Instance            ; lpm_shiftreg1:inst22|lpm_shiftreg:LPM_SHIFTREG_component ;
+;     -- LPM_WIDTH           ; 32                                                       ;
+;     -- LPM_DIRECTION       ; LEFT                                                     ;
++----------------------------+----------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu May 07 20:59:05 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HW6_1 -c HW6_1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file lpm_mux0.v
+    Info (12023): Found entity 1: lpm_mux0
+Info (12021): Found 1 design units, including 1 entities, in source file fa_1bit.bdf
+    Info (12023): Found entity 1: FA_1bit
+Info (12021): Found 1 design units, including 1 entities, in source file fa_4bit.bdf
+    Info (12023): Found entity 1: FA_4bit
+Info (12021): Found 1 design units, including 1 entities, in source file fa_16bit.bdf
+    Info (12023): Found entity 1: FA_16bit
+Info (12021): Found 1 design units, including 1 entities, in source file fa_32bit.bdf
+    Info (12023): Found entity 1: FA_32bit
+Info (12021): Found 1 design units, including 1 entities, in source file sign_extend.bdf
+    Info (12023): Found entity 1: sign_extend
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left2_32bit.bdf
+    Info (12023): Found entity 1: Shift_left2_32bit
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left_2_26bit.bdf
+    Info (12023): Found entity 1: shift_left_2_26bit
+Info (12021): Found 1 design units, including 1 entities, in source file lpm_shiftreg0.v
+    Info (12023): Found entity 1: lpm_shiftreg0
+Info (12021): Found 1 design units, including 1 entities, in source file lpm_shiftreg1.v
+    Info (12023): Found entity 1: lpm_shiftreg1
+Info (12021): Found 2 design units, including 2 entities, in source file lpm_constant0.v
+    Info (12023): Found entity 1: lpm_constant0_lpm_constant_v09
+    Info (12023): Found entity 2: lpm_constant0
+Info (12021): Found 1 design units, including 1 entities, in source file lpm_mux1.v
+    Info (12023): Found entity 1: lpm_mux1
+Info (12021): Found 2 design units, including 2 entities, in source file lpm_constant1.v
+    Info (12023): Found entity 1: lpm_constant1_lpm_constant_r09
+    Info (12023): Found entity 2: lpm_constant1
+Info (12021): Found 1 design units, including 1 entities, in source file lpm_mux2.v
+    Info (12023): Found entity 1: lpm_mux2
+Info (12021): Found 1 design units, including 1 entities, in source file pc_calculator_module.bdf
+    Info (12023): Found entity 1: pc_calculator_module
+Info (12021): Found 1 design units, including 1 entities, in source file pc_comb_logic.bdf
+    Info (12023): Found entity 1: PC_comb_logic
+Info (12127): Elaborating entity "pc_calculator_module" for the top level hierarchy
+Info (12128): Elaborating entity "lpm_shiftreg1" for hierarchy "lpm_shiftreg1:inst22"
+Info (12128): Elaborating entity "lpm_shiftreg" for hierarchy "lpm_shiftreg1:inst22|lpm_shiftreg:LPM_SHIFTREG_component"
+Info (12130): Elaborated megafunction instantiation "lpm_shiftreg1:inst22|lpm_shiftreg:LPM_SHIFTREG_component"
+Info (12133): Instantiated megafunction "lpm_shiftreg1:inst22|lpm_shiftreg:LPM_SHIFTREG_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "LEFT"
+    Info (12134): Parameter "lpm_type" = "LPM_SHIFTREG"
+    Info (12134): Parameter "lpm_width" = "32"
+Info (12128): Elaborating entity "PC_comb_logic" for hierarchy "PC_comb_logic:inst24"
+Warning (275083): Bus "PC4[31..28]" found using same base name as "PC", which might lead to a name conflict.
+Warning (275083): Bus "PC4[31..0]" found using same base name as "PC", which might lead to a name conflict.
+Warning (275011): Block or symbol "FA_32bit" of instance "inst20" overlaps another block or symbol
+Warning (275080): Converted elements in bus name "PC" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "PC[31..0]" to "PC31..0"
+Warning (275080): Converted elements in bus name "PC4" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "PC4[31..28]" to "PC431..28"
+    Warning (275081): Converted element name(s) from "PC4[31..0]" to "PC431..0"
+Info (12128): Elaborating entity "lpm_mux2" for hierarchy "PC_comb_logic:inst24|lpm_mux2:inst19"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "PC_comb_logic:inst24|lpm_mux2:inst19|lpm_mux:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "PC_comb_logic:inst24|lpm_mux2:inst19|lpm_mux:LPM_MUX_component"
+Info (12133): Instantiated megafunction "PC_comb_logic:inst24|lpm_mux2:inst19|lpm_mux:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "lpm_size" = "2"
+    Info (12134): Parameter "lpm_type" = "LPM_MUX"
+    Info (12134): Parameter "lpm_width" = "32"
+    Info (12134): Parameter "lpm_widths" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_9oc.tdf
+    Info (12023): Found entity 1: mux_9oc
+Info (12128): Elaborating entity "mux_9oc" for hierarchy "PC_comb_logic:inst24|lpm_mux2:inst19|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated"
+Info (12128): Elaborating entity "FA_32bit" for hierarchy "PC_comb_logic:inst24|FA_32bit:inst20"
+Info (12128): Elaborating entity "FA_16bit" for hierarchy "PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1"
+Info (12128): Elaborating entity "FA_4bit" for hierarchy "PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2"
+Info (12128): Elaborating entity "FA_1bit" for hierarchy "PC_comb_logic:inst24|FA_32bit:inst20|FA_16bit:inst1|FA_4bit:inst2|FA_1bit:inst4"
+Info (12128): Elaborating entity "lpm_constant0" for hierarchy "PC_comb_logic:inst24|lpm_constant0:inst11"
+Info (12128): Elaborating entity "lpm_constant0_lpm_constant_v09" for hierarchy "PC_comb_logic:inst24|lpm_constant0:inst11|lpm_constant0_lpm_constant_v09:lpm_constant0_lpm_constant_v09_component"
+Info (12128): Elaborating entity "lpm_constant1" for hierarchy "PC_comb_logic:inst24|lpm_constant1:inst13"
+Info (12128): Elaborating entity "lpm_constant1_lpm_constant_r09" for hierarchy "PC_comb_logic:inst24|lpm_constant1:inst13|lpm_constant1_lpm_constant_r09:lpm_constant1_lpm_constant_r09_component"
+Info (12128): Elaborating entity "Shift_left2_32bit" for hierarchy "PC_comb_logic:inst24|Shift_left2_32bit:inst15"
+Info (12128): Elaborating entity "sign_extend" for hierarchy "PC_comb_logic:inst24|sign_extend:inst14"
+Info (12128): Elaborating entity "shift_left_2_26bit" for hierarchy "PC_comb_logic:inst24|shift_left_2_26bit:inst16"
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[31]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[30]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[29]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[28]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[27]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[26]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[25]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[24]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[23]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[22]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[21]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[20]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[19]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[18]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[17]" and its non-tri-state driver.
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[28]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[30]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[27]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[29]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[26]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[28]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[25]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[27]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[24]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[26]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[23]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[25]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[22]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[24]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[21]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[23]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[20]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[22]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[19]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[21]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[18]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[20]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[17]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[19]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[16]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[18]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "PC_comb_logic:inst24|sign_extend:inst14|OUT[15]" to the node "PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component|mux_9oc:auto_generated|result_node[17]" into an OR gate
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "OUT[1]" is stuck at GND
+    Warning (13410): Pin "OUT[0]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 179 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 46 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 101 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 4602 megabytes
+    Info: Processing ended: Thu May 07 20:59:08 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
