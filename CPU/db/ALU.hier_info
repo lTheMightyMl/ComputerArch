@@ -20,10 +20,9 @@ instr[16] <= LPM_DFF:IR.q[16]
 instr[17] <= LPM_DFF:IR.q[17]
 instr[18] <= LPM_DFF:IR.q[18]
 instr[19] <= LPM_DFF:IR.q[19]
-inst_cache_en <= CU:inst3.INST_MEM_EN
 CLOCK => CU:inst3.clock
 CLOCK => LPM_DFF:IR.clock
-CLOCK => ICACHE40:inst14.clock
+CLOCK => ICACHE40:inst4.clock
 CLOCK => NEW_PC:inst1.CLOCK
 CLOCK => LPM_DFF:A_REG.clock
 CLOCK => HW7:RF.Clock
@@ -134,6 +133,71 @@ ReadDataTwo[31] <= HW7:RF.Read_Data_2[31]
 zero <= ALU:inst106.zero
 sgn <= ALU:inst106.sgn
 overflow <= ALU:inst106.overflow
+inst_cache_en <= <GND>
+ALU_1_IN[0] <= LPM_DFF:A_REG.q[0]
+ALU_1_IN[1] <= LPM_DFF:A_REG.q[1]
+ALU_1_IN[2] <= LPM_DFF:A_REG.q[2]
+ALU_1_IN[3] <= LPM_DFF:A_REG.q[3]
+ALU_1_IN[4] <= LPM_DFF:A_REG.q[4]
+ALU_1_IN[5] <= LPM_DFF:A_REG.q[5]
+ALU_1_IN[6] <= LPM_DFF:A_REG.q[6]
+ALU_1_IN[7] <= LPM_DFF:A_REG.q[7]
+ALU_1_IN[8] <= LPM_DFF:A_REG.q[8]
+ALU_1_IN[9] <= LPM_DFF:A_REG.q[9]
+ALU_1_IN[10] <= LPM_DFF:A_REG.q[10]
+ALU_1_IN[11] <= LPM_DFF:A_REG.q[11]
+ALU_1_IN[12] <= LPM_DFF:A_REG.q[12]
+ALU_1_IN[13] <= LPM_DFF:A_REG.q[13]
+ALU_1_IN[14] <= LPM_DFF:A_REG.q[14]
+ALU_1_IN[15] <= LPM_DFF:A_REG.q[15]
+ALU_1_IN[16] <= LPM_DFF:A_REG.q[16]
+ALU_1_IN[17] <= LPM_DFF:A_REG.q[17]
+ALU_1_IN[18] <= LPM_DFF:A_REG.q[18]
+ALU_1_IN[19] <= LPM_DFF:A_REG.q[19]
+ALU_1_IN[20] <= LPM_DFF:A_REG.q[20]
+ALU_1_IN[21] <= LPM_DFF:A_REG.q[21]
+ALU_1_IN[22] <= LPM_DFF:A_REG.q[22]
+ALU_1_IN[23] <= LPM_DFF:A_REG.q[23]
+ALU_1_IN[24] <= LPM_DFF:A_REG.q[24]
+ALU_1_IN[25] <= LPM_DFF:A_REG.q[25]
+ALU_1_IN[26] <= LPM_DFF:A_REG.q[26]
+ALU_1_IN[27] <= LPM_DFF:A_REG.q[27]
+ALU_1_IN[28] <= LPM_DFF:A_REG.q[28]
+ALU_1_IN[29] <= LPM_DFF:A_REG.q[29]
+ALU_1_IN[30] <= LPM_DFF:A_REG.q[30]
+ALU_1_IN[31] <= LPM_DFF:A_REG.q[31]
+ALU_2_IN[0] <= LPM_DFF:B_REG.q[0]
+ALU_2_IN[1] <= LPM_DFF:B_REG.q[1]
+ALU_2_IN[2] <= LPM_DFF:B_REG.q[2]
+ALU_2_IN[3] <= LPM_DFF:B_REG.q[3]
+ALU_2_IN[4] <= LPM_DFF:B_REG.q[4]
+ALU_2_IN[5] <= LPM_DFF:B_REG.q[5]
+ALU_2_IN[6] <= LPM_DFF:B_REG.q[6]
+ALU_2_IN[7] <= LPM_DFF:B_REG.q[7]
+ALU_2_IN[8] <= LPM_DFF:B_REG.q[8]
+ALU_2_IN[9] <= LPM_DFF:B_REG.q[9]
+ALU_2_IN[10] <= LPM_DFF:B_REG.q[10]
+ALU_2_IN[11] <= LPM_DFF:B_REG.q[11]
+ALU_2_IN[12] <= LPM_DFF:B_REG.q[12]
+ALU_2_IN[13] <= LPM_DFF:B_REG.q[13]
+ALU_2_IN[14] <= LPM_DFF:B_REG.q[14]
+ALU_2_IN[15] <= LPM_DFF:B_REG.q[15]
+ALU_2_IN[16] <= LPM_DFF:B_REG.q[16]
+ALU_2_IN[17] <= LPM_DFF:B_REG.q[17]
+ALU_2_IN[18] <= LPM_DFF:B_REG.q[18]
+ALU_2_IN[19] <= LPM_DFF:B_REG.q[19]
+ALU_2_IN[20] <= LPM_DFF:B_REG.q[20]
+ALU_2_IN[21] <= LPM_DFF:B_REG.q[21]
+ALU_2_IN[22] <= LPM_DFF:B_REG.q[22]
+ALU_2_IN[23] <= LPM_DFF:B_REG.q[23]
+ALU_2_IN[24] <= LPM_DFF:B_REG.q[24]
+ALU_2_IN[25] <= LPM_DFF:B_REG.q[25]
+ALU_2_IN[26] <= LPM_DFF:B_REG.q[26]
+ALU_2_IN[27] <= LPM_DFF:B_REG.q[27]
+ALU_2_IN[28] <= LPM_DFF:B_REG.q[28]
+ALU_2_IN[29] <= LPM_DFF:B_REG.q[29]
+ALU_2_IN[30] <= LPM_DFF:B_REG.q[30]
+ALU_2_IN[31] <= LPM_DFF:B_REG.q[31]
 ALU_INSTANT_OUT[0] <= ALU:inst106.out[0]
 ALU_INSTANT_OUT[1] <= ALU:inst106.out[1]
 ALU_INSTANT_OUT[2] <= ALU:inst106.out[2]
@@ -166,6 +230,10 @@ ALU_INSTANT_OUT[28] <= ALU:inst106.out[28]
 ALU_INSTANT_OUT[29] <= ALU:inst106.out[29]
 ALU_INSTANT_OUT[30] <= ALU:inst106.out[30]
 ALU_INSTANT_OUT[31] <= ALU:inst106.out[31]
+ALU_OPCODE[0] <= LPM_DFF:IR.q[16]
+ALU_OPCODE[1] <= LPM_DFF:IR.q[17]
+ALU_OPCODE[2] <= LPM_DFF:IR.q[18]
+ALU_OPCODE[3] <= LPM_DFF:IR.q[19]
 write_date[0] <= Write_Data[0].DB_MAX_OUTPUT_PORT_TYPE
 write_date[1] <= Write_Data[1].DB_MAX_OUTPUT_PORT_TYPE
 write_date[2] <= Write_Data[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -4575,7 +4643,7 @@ result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
 result[1] <= sum_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CPU|ICACHE40:inst14
+|CPU|ICACHE40:inst4
 address[0] => address[0]~14.IN1
 address[1] => address[1]~13.IN1
 address[2] => address[2]~12.IN1
@@ -4614,7 +4682,7 @@ q[18] <= altsyncram:altsyncram_component.q_a
 q[19] <= altsyncram:altsyncram_component.q_a
 
 
-|CPU|ICACHE40:inst14|altsyncram:altsyncram_component
+|CPU|ICACHE40:inst4|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -4694,7 +4762,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|CPU|ICACHE40:inst14|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated
+|CPU|ICACHE40:inst4|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -6809,7 +6877,7 @@ q_a[18] <= mux_3kb:mux2.result[18]
 q_a[19] <= mux_3kb:mux2.result[19]
 
 
-|CPU|ICACHE40:inst14|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|decode_9oa:deep_decode
+|CPU|ICACHE40:inst4|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|decode_9oa:deep_decode
 data[0] => w_anode661w[1]~2.IN0
 data[0] => w_anode678w[1].IN1
 data[0] => w_anode688w[1]~1.IN0
@@ -6852,7 +6920,7 @@ eq[6] <= w_anode728w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode738w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CPU|ICACHE40:inst14|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|mux_3kb:mux2
+|CPU|ICACHE40:inst4|altsyncram:altsyncram_component|altsyncram_ht71:auto_generated|mux_3kb:mux2
 data[0] => _~841.IN0
 data[0] => _~850.IN0
 data[1] => _~798.IN0
