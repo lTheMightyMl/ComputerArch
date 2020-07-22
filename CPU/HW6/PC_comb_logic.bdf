@@ -309,7 +309,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1424 576 1456 608)
+	(rect 1424 592 1456 624)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
 	(text "inst12" (rect 3 21 32 33)(font "Arial" )(invisible))
 	(port
@@ -563,19 +563,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1432 536)
-	(pt 1448 536)
-	(bus)
-)
-(connector
-	(pt 1440 576)
-	(pt 1440 552)
-)
-(connector
-	(pt 1440 552)
-	(pt 1448 552)
-)
-(connector
 	(text "sel[1]" (rect 1250 744 1277 756)(font "Arial" ))
 	(pt 1240 760)
 	(pt 1744 760)
@@ -583,16 +570,6 @@ applicable agreement for further details.
 (connector
 	(pt 1744 760)
 	(pt 1744 584)
-)
-(connector
-	(pt 1608 536)
-	(pt 1640 536)
-	(bus)
-)
-(connector
-	(pt 1640 536)
-	(pt 1640 560)
-	(bus)
 )
 (connector
 	(pt 1640 560)
@@ -637,22 +614,6 @@ applicable agreement for further details.
 (connector
 	(pt 760 680)
 	(pt 768 680)
-	(bus)
-)
-(connector
-	(pt 1168 392)
-	(pt 1192 392)
-	(bus)
-)
-(connector
-	(text "PC4[31..0]" (rect 1202 376 1255 388)(font "Arial" ))
-	(pt 1192 392)
-	(pt 1448 392)
-	(bus)
-)
-(connector
-	(pt 1448 392)
-	(pt 1448 520)
 	(bus)
 )
 (connector
@@ -722,11 +683,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1432 536)
-	(pt 1432 544)
-	(bus)
-)
-(connector
 	(pt 1336 728)
 	(pt 1336 576)
 )
@@ -738,6 +694,50 @@ applicable agreement for further details.
 (connector
 	(pt 1232 552)
 	(pt 1264 552)
+	(bus)
+)
+(connector
+	(pt 1640 560)
+	(pt 1640 536)
+	(bus)
+)
+(connector
+	(pt 1448 392)
+	(pt 1448 520)
+	(bus)
+)
+(connector
+	(pt 1432 544)
+	(pt 1432 536)
+	(bus)
+)
+(connector
+	(pt 1440 592)
+	(pt 1440 552)
+)
+(connector
+	(pt 1432 536)
+	(pt 1448 536)
+	(bus)
+)
+(connector
+	(pt 1440 552)
+	(pt 1448 552)
+)
+(connector
+	(pt 1168 392)
+	(pt 1192 392)
+	(bus)
+)
+(connector
+	(text "PC4[31..0]" (rect 1202 376 1255 388)(font "Arial" ))
+	(pt 1192 392)
+	(pt 1448 392)
+	(bus)
+)
+(connector
+	(pt 1608 536)
+	(pt 1640 536)
 	(bus)
 )
 (junction (pt 1192 392))

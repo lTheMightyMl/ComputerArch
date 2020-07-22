@@ -103,7 +103,7 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL ICACHE40.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL ICACHE40.inc FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL ICACHE40.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ICACHE40.bsf TRUE FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ICACHE40.bsf TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL ICACHE40_inst.v FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL ICACHE40_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf

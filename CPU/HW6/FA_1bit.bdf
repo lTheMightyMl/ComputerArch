@@ -121,7 +121,7 @@ applicable agreement for further details.
 		(pt 64 24)
 		(output)
 		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 48 15 62 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
 		(line (pt 42 24)(pt 64 24))
 	)
 	(drawing
@@ -153,7 +153,7 @@ applicable agreement for further details.
 		(pt 64 24)
 		(output)
 		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 48 15 62 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
 		(line (pt 42 24)(pt 64 24))
 	)
 	(drawing
@@ -185,7 +185,7 @@ applicable agreement for further details.
 		(pt 64 24)
 		(output)
 		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 48 15 62 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
 		(line (pt 48 24)(pt 64 24))
 	)
 	(drawing
@@ -218,7 +218,7 @@ applicable agreement for further details.
 		(pt 64 24)
 		(output)
 		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 48 15 62 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
 		(line (pt 49 24)(pt 64 24))
 	)
 	(drawing
@@ -252,7 +252,7 @@ applicable agreement for further details.
 		(pt 64 24)
 		(output)
 		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 48 15 62 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
 		(line (pt 49 24)(pt 64 24))
 	)
 	(drawing
@@ -267,10 +267,6 @@ applicable agreement for further details.
 (connector
 	(pt 408 136)
 	(pt 408 144)
-)
-(connector
-	(pt 408 144)
-	(pt 400 144)
 )
 (connector
 	(pt 728 120)
@@ -345,20 +341,12 @@ applicable agreement for further details.
 	(pt 728 136)
 )
 (connector
-	(pt 352 88)
-	(pt 360 88)
-)
-(connector
 	(pt 360 88)
 	(pt 528 88)
 )
 (connector
 	(pt 528 88)
 	(pt 584 88)
-)
-(connector
-	(pt 344 112)
-	(pt 352 112)
 )
 (connector
 	(pt 352 112)
@@ -372,5 +360,3 @@ applicable agreement for further details.
 (junction (pt 656 136))
 (junction (pt 528 88))
 (junction (pt 496 112))
-(junction (pt 360 88))
-(junction (pt 352 112))
