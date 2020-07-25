@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Wed Jul 22 17:07:51 2020
+Sun Jul 26 00:02:37 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -136,7 +136,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 22 17:07:50 2020           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jul 26 00:02:36 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; CPU                                             ;
@@ -243,7 +243,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 2      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -253,87 +253,87 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                              ; Library ;
 +----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
-; HW6/sign_extend.bdf              ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/sign_extend.bdf         ;         ;
-; HW6/Shift_left2_32bit.bdf        ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/Shift_left2_32bit.bdf   ;         ;
-; HW6/shift_left_2_26bit.bdf       ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/shift_left_2_26bit.bdf  ;         ;
-; HW6/PC_comb_logic.bdf            ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/PC_comb_logic.bdf       ;         ;
-; HW6/FA_32bit.bdf                 ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/FA_32bit.bdf            ;         ;
-; HW6/FA_16bit.bdf                 ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/FA_16bit.bdf            ;         ;
-; HW6/FA_4bit.bdf                  ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/FA_4bit.bdf             ;         ;
-; HW6/FA_1bit.bdf                  ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/FA_1bit.bdf             ;         ;
-; HW7/lpm_shiftreg0.v              ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v         ;         ;
-; HW7/lpm_mux1.v                   ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v              ;         ;
-; HW7/lpm_mux0.v                   ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux0.v              ;         ;
-; HW7/lpm_decode1.v                ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_decode1.v           ;         ;
-; HW7/lpm_constant0.v              ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_constant0.v         ;         ;
-; HW7/HW7.bdf                      ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/HW7.bdf                 ;         ;
-; ALU.bdf                          ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/ALU.bdf                     ;         ;
-; add.v                            ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/add.v                       ;         ;
-; sub.v                            ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/sub.v                       ;         ;
-; shr.v                            ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/shr.v                       ;         ;
-; shl.v                            ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/shl.v                       ;         ;
-; cmp.v                            ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/cmp.v                       ;         ;
-; min.v                            ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/min.v                       ;         ;
-; out.v                            ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/out.v                       ;         ;
-; zero.v                           ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/zero.v                      ;         ;
-; CPU.bdf                          ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/CPU.bdf                     ;         ;
-; ZERO_EXT10.bdf                   ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/ZERO_EXT10.bdf              ;         ;
-; CU.bdf                           ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/CU.bdf                      ;         ;
-; lpm_add_sub1.v                   ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/lpm_add_sub1.v              ;         ;
-; lpm_shiftreg2.v                  ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/lpm_shiftreg2.v             ;         ;
-; HW6/lpm_mux3.v                   ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/lpm_mux3.v              ;         ;
-; HW6/lpm_constant2.v              ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/lpm_constant2.v         ;         ;
-; HW6/lpm_constant3.v              ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/lpm_constant3.v         ;         ;
-; HW6/NEW_PC.bdf                   ; yes             ; User Block Diagram/Schematic File      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/NEW_PC.bdf              ;         ;
-; HW6/lpm_shiftreg5.v              ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/lpm_shiftreg5.v         ;         ;
-; lpm_constantzero.v               ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/lpm_constantzero.v          ;         ;
-; lpm_constantminusOne.v           ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/lpm_constantminusOne.v      ;         ;
-; lpm_mux10.v                      ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/lpm_mux10.v                 ;         ;
-; ICACHE40.v                       ; yes             ; User Wizard-Generated File             ; X:/University/BSc/Project/CA/ComputerArch/CPU/ICACHE40.v                  ;         ;
-; lpm_compare.tdf                  ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
-; comptree.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/comptree.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
-; db/cmpr_6mg.tdf                  ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/cmpr_6mg.tdf             ;         ;
-; db/cmpr_2hi.tdf                  ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/cmpr_2hi.tdf             ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; db/mux_hoc.tdf                   ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/mux_hoc.tdf              ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
-; addcore.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
-; look_add.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_4mi.tdf               ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/add_sub_4mi.tdf          ;         ;
-; db/add_sub_nfh.tdf               ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/add_sub_nfh.tdf          ;         ;
-; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_clshift.tdf         ;         ;
-; db/lpm_clshift_vjc.tdf           ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/lpm_clshift_vjc.tdf      ;         ;
-; db/lpm_clshift_ukb.tdf           ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/lpm_clshift_ukb.tdf      ;         ;
-; db/mux_9oc.tdf                   ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/mux_9oc.tdf              ;         ;
-; lpm_dff.tdf                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_dff.tdf             ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
-; lpm_shiftreg.tdf                 ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_shiftreg.tdf        ;         ;
-; db/add_sub_qnh.tdf               ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/add_sub_qnh.tdf          ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc              ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc              ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_ht71.tdf           ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/altsyncram_ht71.tdf      ;         ;
-; instruction4.mif                 ; yes             ; Auto-Found Memory Initialization File  ; X:/University/BSc/Project/CA/ComputerArch/CPU/instruction4.mif            ;         ;
-; db/decode_9oa.tdf                ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/decode_9oa.tdf           ;         ;
-; db/mux_3kb.tdf                   ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/mux_3kb.tdf              ;         ;
-; db/mux_boc.tdf                   ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/mux_boc.tdf              ;         ;
-; lpm_constant.tdf                 ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.tdf        ;         ;
-; db/mux_0qc.tdf                   ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/mux_0qc.tdf              ;         ;
-; lpm_decode.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.tdf          ;         ;
-; declut.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/declut.inc              ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
-; db/decode_isf.tdf                ; yes             ; Auto-Generated Megafunction            ; X:/University/BSc/Project/CA/ComputerArch/CPU/db/decode_isf.tdf           ;         ;
+; HW6/sign_extend.bdf              ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/sign_extend.bdf                        ;         ;
+; HW6/Shift_left2_32bit.bdf        ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/Shift_left2_32bit.bdf                  ;         ;
+; HW6/shift_left_2_26bit.bdf       ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/shift_left_2_26bit.bdf                 ;         ;
+; HW6/PC_comb_logic.bdf            ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/PC_comb_logic.bdf                      ;         ;
+; HW6/FA_32bit.bdf                 ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_32bit.bdf                           ;         ;
+; HW6/FA_16bit.bdf                 ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_16bit.bdf                           ;         ;
+; HW6/FA_4bit.bdf                  ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_4bit.bdf                            ;         ;
+; HW6/FA_1bit.bdf                  ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/FA_1bit.bdf                            ;         ;
+; HW7/lpm_shiftreg0.v              ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v                        ;         ;
+; HW7/lpm_mux1.v                   ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v                             ;         ;
+; HW7/lpm_mux0.v                   ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux0.v                             ;         ;
+; HW7/lpm_decode1.v                ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_decode1.v                          ;         ;
+; HW7/lpm_constant0.v              ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_constant0.v                        ;         ;
+; HW7/HW7.bdf                      ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW7/HW7.bdf                                ;         ;
+; ALU.bdf                          ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/ALU.bdf                                    ;         ;
+; add.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/add.v                                      ;         ;
+; sub.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/sub.v                                      ;         ;
+; shr.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/shr.v                                      ;         ;
+; shl.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/shl.v                                      ;         ;
+; cmp.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/cmp.v                                      ;         ;
+; min.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/min.v                                      ;         ;
+; out.v                            ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/out.v                                      ;         ;
+; zero.v                           ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/zero.v                                     ;         ;
+; CPU.bdf                          ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/CPU.bdf                                    ;         ;
+; ZERO_EXT10.bdf                   ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/ZERO_EXT10.bdf                             ;         ;
+; CU.bdf                           ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/CU.bdf                                     ;         ;
+; lpm_add_sub1.v                   ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/lpm_add_sub1.v                             ;         ;
+; lpm_shiftreg2.v                  ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/lpm_shiftreg2.v                            ;         ;
+; HW6/lpm_mux3.v                   ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_mux3.v                             ;         ;
+; HW6/lpm_constant2.v              ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_constant2.v                        ;         ;
+; HW6/lpm_constant3.v              ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_constant3.v                        ;         ;
+; HW6/NEW_PC.bdf                   ; yes             ; User Block Diagram/Schematic File      ; D:/altera/13.0sp1/Projects/CPU/HW6/NEW_PC.bdf                             ;         ;
+; HW6/lpm_shiftreg5.v              ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_shiftreg5.v                        ;         ;
+; lpm_constantzero.v               ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/lpm_constantzero.v                         ;         ;
+; lpm_constantminusOne.v           ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/lpm_constantminusOne.v                     ;         ;
+; lpm_mux10.v                      ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/lpm_mux10.v                                ;         ;
+; ICACHE40.v                       ; yes             ; User Wizard-Generated File             ; D:/altera/13.0sp1/Projects/CPU/ICACHE40.v                                 ;         ;
+; lpm_compare.tdf                  ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
+; comptree.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/comptree.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; db/cmpr_6mg.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/cmpr_6mg.tdf                            ;         ;
+; db/cmpr_2hi.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/cmpr_2hi.tdf                            ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; db/mux_hoc.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/mux_hoc.tdf                             ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_4mi.tdf               ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/add_sub_4mi.tdf                         ;         ;
+; db/add_sub_nfh.tdf               ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/add_sub_nfh.tdf                         ;         ;
+; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_clshift.tdf         ;         ;
+; db/lpm_clshift_vjc.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/lpm_clshift_vjc.tdf                     ;         ;
+; db/lpm_clshift_ukb.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/lpm_clshift_ukb.tdf                     ;         ;
+; db/mux_9oc.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/mux_9oc.tdf                             ;         ;
+; lpm_dff.tdf                      ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_dff.tdf             ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_shiftreg.tdf        ;         ;
+; db/add_sub_qnh.tdf               ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/add_sub_qnh.tdf                         ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_ht71.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/altsyncram_ht71.tdf                     ;         ;
+; instruction4.mif                 ; yes             ; Auto-Found Memory Initialization File  ; D:/altera/13.0sp1/Projects/CPU/instruction4.mif                           ;         ;
+; db/decode_9oa.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/decode_9oa.tdf                          ;         ;
+; db/mux_3kb.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/mux_3kb.tdf                             ;         ;
+; db/mux_boc.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/mux_boc.tdf                             ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.tdf        ;         ;
+; db/mux_0qc.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/mux_0qc.tdf                             ;         ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.tdf          ;         ;
+; declut.inc                       ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/declut.inc              ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                           ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; db/decode_isf.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/altera/13.0sp1/Projects/CPU/db/decode_isf.tdf                          ;         ;
 +----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
 
 
@@ -665,99 +665,99 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                           ;
-+--------+--------------+---------+--------------+--------------+----------------------------------------------------------+----------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                          ; IP Include File                                                      ;
-+--------+--------------+---------+--------------+--------------+----------------------------------------------------------+----------------------------------------------------------------------+
-; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst       ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/lpm_mux3.v         ;
-; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst2      ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/lpm_mux3.v         ;
-; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_constant2:inst3 ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/lpm_constant2.v    ;
-; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_constant3:inst4 ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/lpm_constant3.v    ;
-; Altera ; LPM_SHIFTREG ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|lpm_shiftreg5:inst9                    ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW6/lpm_shiftreg5.v    ;
-; Altera ; LPM_ADD_SUB  ; 13.0    ; N/A          ; N/A          ; |CPU|CU:inst3|lpm_add_sub1:inst9                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/lpm_add_sub1.v         ;
-; Altera ; LPM_SHIFTREG ; 13.0    ; N/A          ; N/A          ; |CPU|CU:inst3|lpm_shiftreg2:inst1000                     ; X:/University/BSc/Project/CA/ComputerArch/CPU/lpm_shiftreg2.v        ;
-; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |CPU|ICACHE40:inst4                                      ; X:/University/BSc/Project/CA/ComputerArch/CPU/ICACHE40.v             ;
-; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |CPU|lpm_constantzero:inst7                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/lpm_constantzero.v     ;
-; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |CPU|lpm_constantminusOne:inst8                          ; X:/University/BSc/Project/CA/ComputerArch/CPU/lpm_constantminusOne.v ;
-; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|lpm_mux10:inst9                                     ; X:/University/BSc/Project/CA/ComputerArch/CPU/lpm_mux10.v            ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|lpm_mux1:inst13                                     ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_ADD_SUB  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|add:inst                                ; X:/University/BSc/Project/CA/ComputerArch/CPU/add.v                  ;
-; Altera ; LPM_ADD_SUB  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|sub:inst1                               ; X:/University/BSc/Project/CA/ComputerArch/CPU/sub.v                  ;
-; Altera ; LPM_CLSHIFT  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|shr:inst2                               ; X:/University/BSc/Project/CA/ComputerArch/CPU/shr.v                  ;
-; Altera ; LPM_CLSHIFT  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|shl:inst3                               ; X:/University/BSc/Project/CA/ComputerArch/CPU/shl.v                  ;
-; Altera ; LPM_COMPARE  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|cmp:inst5                               ; X:/University/BSc/Project/CA/ComputerArch/CPU/cmp.v                  ;
-; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|min:inst6                               ; X:/University/BSc/Project/CA/ComputerArch/CPU/min.v                  ;
-; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|out:inst7                               ; X:/University/BSc/Project/CA/ComputerArch/CPU/out.v                  ;
-; Altera ; LPM_COMPARE  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|zero:inst8                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/zero.v                 ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst                           ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_CONSTANT ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_constant0:inst7                          ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_constant0.v    ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux0:inst10                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux0.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux0:inst11                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux0.v         ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst21                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst22                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst23                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst24                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst25                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst26                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst27                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst28                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst29                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst30                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst31                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst32                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst33                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst34                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst35                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst36                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst37                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst38                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst39                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst40                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst41                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst42                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst43                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst44                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst45                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst46                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst48                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst49                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst50                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_DECODE   ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_decode1:inst51                           ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_decode1.v      ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst53                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst54                         ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_shiftreg0.v    ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst59                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst60                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst61                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst62                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst63                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst64                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst65                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst66                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst67                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst68                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst69                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst70                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst71                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst72                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst73                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst74                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst75                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst76                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst77                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst78                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst79                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst80                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst81                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst82                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst83                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst84                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst85                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst86                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst87                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst88                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst89                              ; X:/University/BSc/Project/CA/ComputerArch/CPU/HW7/lpm_mux1.v         ;
-+--------+--------------+---------+--------------+--------------+----------------------------------------------------------+----------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                            ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                          ; IP Include File                                       ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-------------------------------------------------------+
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst       ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_mux3.v         ;
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_mux3:inst2      ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_mux3.v         ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_constant2:inst3 ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_constant2.v    ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|PC_comb_logic:inst|lpm_constant3:inst4 ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_constant3.v    ;
+; Altera ; LPM_SHIFTREG ; 13.0    ; N/A          ; N/A          ; |CPU|NEW_PC:inst1|lpm_shiftreg5:inst9                    ; D:/altera/13.0sp1/Projects/CPU/HW6/lpm_shiftreg5.v    ;
+; Altera ; LPM_ADD_SUB  ; 13.0    ; N/A          ; N/A          ; |CPU|CU:inst3|lpm_add_sub1:inst9                         ; D:/altera/13.0sp1/Projects/CPU/lpm_add_sub1.v         ;
+; Altera ; LPM_SHIFTREG ; 13.0    ; N/A          ; N/A          ; |CPU|CU:inst3|lpm_shiftreg2:inst1000                     ; D:/altera/13.0sp1/Projects/CPU/lpm_shiftreg2.v        ;
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |CPU|ICACHE40:inst4                                      ; D:/altera/13.0sp1/Projects/CPU/ICACHE40.v             ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |CPU|lpm_constantzero:inst7                              ; D:/altera/13.0sp1/Projects/CPU/lpm_constantzero.v     ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |CPU|lpm_constantminusOne:inst8                          ; D:/altera/13.0sp1/Projects/CPU/lpm_constantminusOne.v ;
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|lpm_mux10:inst9                                     ; D:/altera/13.0sp1/Projects/CPU/lpm_mux10.v            ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|lpm_mux1:inst13                                     ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_ADD_SUB  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|add:inst                                ; D:/altera/13.0sp1/Projects/CPU/add.v                  ;
+; Altera ; LPM_ADD_SUB  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|sub:inst1                               ; D:/altera/13.0sp1/Projects/CPU/sub.v                  ;
+; Altera ; LPM_CLSHIFT  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|shr:inst2                               ; D:/altera/13.0sp1/Projects/CPU/shr.v                  ;
+; Altera ; LPM_CLSHIFT  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|shl:inst3                               ; D:/altera/13.0sp1/Projects/CPU/shl.v                  ;
+; Altera ; LPM_COMPARE  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|cmp:inst5                               ; D:/altera/13.0sp1/Projects/CPU/cmp.v                  ;
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|min:inst6                               ; D:/altera/13.0sp1/Projects/CPU/min.v                  ;
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|out:inst7                               ; D:/altera/13.0sp1/Projects/CPU/out.v                  ;
+; Altera ; LPM_COMPARE  ; 13.0    ; N/A          ; N/A          ; |CPU|ALU:inst106|zero:inst8                              ; D:/altera/13.0sp1/Projects/CPU/zero.v                 ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst                           ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_CONSTANT ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_constant0:inst7                          ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_constant0.v    ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux0:inst10                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux0.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux0:inst11                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux0.v         ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst21                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst22                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst23                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst24                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst25                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst26                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst27                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst28                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst29                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst30                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst31                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst32                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst33                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst34                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst35                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst36                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst37                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst38                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst39                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst40                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst41                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst42                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst43                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst44                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst45                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst46                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst48                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst49                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst50                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_DECODE   ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_decode1:inst51                           ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_decode1.v      ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst53                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_SHIFTREG ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_shiftreg0:inst54                         ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_shiftreg0.v    ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst59                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst60                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst61                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst62                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst63                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst64                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst65                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst66                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst67                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst68                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst69                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst70                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst71                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst72                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst73                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst74                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst75                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst76                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst77                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst78                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst79                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst80                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst81                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst82                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst83                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst84                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst85                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst86                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst87                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst88                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |CPU|HW7:RF|lpm_mux1:inst89                              ; D:/altera/13.0sp1/Projects/CPU/HW7/lpm_mux1.v         ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2631,7 +2631,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:27     ;
+; Top            ; 00:00:16     ;
 +----------------+--------------+
 
 
@@ -2641,7 +2641,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jul 22 17:06:23 2020
+    Info: Processing started: Sun Jul 26 00:02:06 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file hw6/sign_extend.bdf
@@ -3023,9 +3023,9 @@ Info (21057): Implemented 3894 device resources after synthesis - the final reso
     Info (21061): Implemented 3476 logic cells
     Info (21064): Implemented 160 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 4696 megabytes
-    Info: Processing ended: Wed Jul 22 17:07:51 2020
-    Info: Elapsed time: 00:01:28
-    Info: Total CPU time (on all processors): 00:01:03
+    Info: Peak virtual memory: 4679 megabytes
+    Info: Processing ended: Sun Jul 26 00:02:37 2020
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:25
 
 
