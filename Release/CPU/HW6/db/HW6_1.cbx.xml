@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="HW6_1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|pc_calculator_module|PC_comb_logic:inst24|lpm_mux2:inst18|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pc_calculator_module|PC_comb_logic:inst24|lpm_mux2:inst19|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9oc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
